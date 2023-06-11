@@ -9,7 +9,6 @@ public class ChangeCameraFromToWhenTriggerd : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("I got Triggerd");
         cam1.enabled = (true);
         cam2.enabled = (false);
     }
