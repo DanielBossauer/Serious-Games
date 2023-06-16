@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7909904b8f7c96743b0ef74696f315fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  matchedIndexes: 0000000000
   shuffleNum: 0
 --- !u!4 &864833754
 Transform:
