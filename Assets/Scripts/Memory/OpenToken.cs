@@ -7,26 +7,32 @@ public class OpenToken : MonoBehaviour
     GameObject gameControl;
     SpriteRenderer spriteRenderer;
     public Sprite[] faces;
-    public Sprite back;
-    public int faceIndex;
+    public Sprite[] backs;
+    public int index;
     public bool matched;
+
+
+    public void Start() {
+        spriteRenderer.sprite = backs[index];
+    }
 
     public void OnMouseDown() {
         // get current matching
-        matched = gameControl.GetComponent<GameControl>().matchedIndexes[faceIndex];
+        matched = gameControl.GetComponent<GameControl>().matchedIndexes[index];
         // already matched token wll not react
         if (!matched) {
-            if(spriteRenderer.sprite == back) {
+            // token is not selected
+            if(spriteRenderer.sprite == backs[index]) {
                 if (!gameControl.GetComponent<GameControl>().TwoCardsUp()) {
-                    spriteRenderer.sprite = faces[faceIndex];
-                    gameControl.GetComponent<GameControl>().SelectToken(faceIndex);
+                    spriteRenderer.sprite = faces[index];
+                    gameControl.GetComponent<GameControl>().SelectToken(index);
                     gameControl.GetComponent<GameControl>().CheckMatch();
                 }
             } else
             {
                 // turn card
-                spriteRenderer.sprite = back;
-                gameControl.GetComponent<GameControl>().RemoveSelectedToken(faceIndex);
+                spriteRenderer.sprite = backs[index];
+                gameControl.GetComponent<GameControl>().RemoveSelectedToken(index);
             }
         }
     }

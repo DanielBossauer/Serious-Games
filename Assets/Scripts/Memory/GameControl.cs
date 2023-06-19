@@ -26,23 +26,23 @@ public class GameControl : MonoBehaviour
 
             // instantiate Open Tokens
             shuffleNum = rand.Next(0, (openIndexes.Count));
-            var temp2 = Instantiate(openToken, new Vector3(xPositionUp, yPositionUp, 0),
+            var temp = Instantiate(openToken, new Vector3(xPositionUp, yPositionUp, 0),
                 Quaternion.identity);
-            temp2.GetComponent<OpenToken>().faceIndex = openIndexes[shuffleNum];
+            temp.GetComponent<OpenToken>().index = openIndexes[shuffleNum];
             openIndexes.Remove(openIndexes[shuffleNum]);
             xPositionUp = xPositionUp + 3;
 
             // instantiate flippable Tokens
             shuffleNum = rand.Next(0, (flipIndexes.Count));
-            var temp = Instantiate(flipToken, new Vector3(xPositionDown, yPositionDown, 0),
+            var temp2 = Instantiate(flipToken, new Vector3(xPositionDown, yPositionDown, 0),
                 Quaternion.identity);
-            temp.GetComponent<FlippableToken>().faceIndex = flipIndexes[shuffleNum];
+            temp2.GetComponent<FlippableToken>().index = flipIndexes[shuffleNum];
             flipIndexes.Remove(flipIndexes[shuffleNum]);
             xPositionDown = xPositionDown + 3;
 
         }
-        flipToken.GetComponent<FlippableToken>().faceIndex = flipIndexes[0];
-        openToken.GetComponent<OpenToken>().faceIndex = openIndexes[0];
+        flipToken.GetComponent<FlippableToken>().index = flipIndexes[0];
+        openToken.GetComponent<OpenToken>().index = openIndexes[0];
     }
     
     public bool TwoCardsUp() {

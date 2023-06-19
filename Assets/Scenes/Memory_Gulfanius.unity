@@ -553,7 +553,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 5.41, y: 2.55}
-    newSize: {x: 5.41, y: 2.55}
+    newSize: {x: 5.71, y: 2.85}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -574,13 +574,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faces:
-  - {fileID: 21300000, guid: 86d52201397ac5b468be1382c8a7f684, type: 3}
-  - {fileID: 21300000, guid: 7909184c6a6ded64d97863a065cdfb46, type: 3}
-  - {fileID: 21300000, guid: 67b740dd19748824cac89ba10d66a276, type: 3}
-  - {fileID: 21300000, guid: d9934551780544240b5c773fc38b6e50, type: 3}
-  - {fileID: 21300000, guid: 6f0cdd126b8c1a2488da7bd7d4a957b1, type: 3}
+  - {fileID: 21300000, guid: fb18522542dcd6d4e8108267f99eceb3, type: 3}
+  - {fileID: 21300000, guid: 5066f090763d4bc4bb8411daab1722e8, type: 3}
+  - {fileID: 21300000, guid: 44cfa3911acdcaa458223c7cc59f2171, type: 3}
+  - {fileID: 21300000, guid: 07481f8a56488e6498c0b2ad7852c702, type: 3}
+  - {fileID: 21300000, guid: 3d00ea88992764f4bb8f76ce7cd5e288, type: 3}
   back: {fileID: 21300000, guid: 3655bc849734f1a4eaf468457466bb90, type: 3}
-  faceIndex: 0
+  index: 0
   matched: 0
 --- !u!212 &1730197672
 SpriteRenderer:
@@ -628,7 +628,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.41, y: 2.55}
+  m_Size: {x: 5.71, y: 2.85}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -729,7 +729,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.41, y: 2.55}
+  m_Size: {x: 5.71, y: 2.85}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -748,13 +748,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faces:
+  - {fileID: 21300000, guid: 9df375a1dbf41884dadcb72a5610184d, type: 3}
+  - {fileID: 21300000, guid: 042171adfdfc3bd479aec06847e4dfe2, type: 3}
+  - {fileID: 21300000, guid: 263e5136b55dedf4d9c30a0d2ebb2705, type: 3}
+  - {fileID: 21300000, guid: 963cc79b5a62ad74b90368afc29fd569, type: 3}
+  - {fileID: 21300000, guid: f1597f6527346764bba1698607326a34, type: 3}
+  backs:
   - {fileID: 21300000, guid: 9473c1ca5da708b49bb61c23ef72ba1d, type: 3}
   - {fileID: 21300000, guid: f02cf98554f523c4fab69839643f590f, type: 3}
   - {fileID: 21300000, guid: 44e96a7bcb689e94da8cb86f04dc2c66, type: 3}
   - {fileID: 21300000, guid: ba16d59e841750942be926b1c768202c, type: 3}
   - {fileID: 21300000, guid: 53761d3aa151bdc419061cb897783b70, type: 3}
-  back: {fileID: 21300000, guid: 3655bc849734f1a4eaf468457466bb90, type: 3}
-  faceIndex: 0
+  index: 0
   matched: 0
 --- !u!61 &1893499178
 BoxCollider2D:
@@ -774,7 +779,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 5.41, y: 2.55}
-    newSize: {x: 5.41, y: 2.55}
+    newSize: {x: 5.71, y: 2.85}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
