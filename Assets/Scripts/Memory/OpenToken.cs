@@ -17,23 +17,34 @@ public class OpenToken : MonoBehaviour
     }
 
     public void OnMouseDown() {
-        // get current matching
-        matched = gameControl.GetComponent<GameControl>().matchedIndexes[index];
-        // already matched token wll not react
-        if (!matched) {
+        // already matched token wll not react and it can only be the first flipped Token
+        if (!matched && !gameControl.GetComponent<GameControl>().TwoCardsSelected()) {
             // token is not selected
-            if(spriteRenderer.sprite == backs[index]) {
-                if (!gameControl.GetComponent<GameControl>().TwoCardsUp()) {
-                    spriteRenderer.sprite = faces[index];
-                    gameControl.GetComponent<GameControl>().SelectToken(index);
-                    gameControl.GetComponent<GameControl>().CheckMatch();
-                }
-            } else
-            {
-                // turn card
-                spriteRenderer.sprite = backs[index];
-                gameControl.GetComponent<GameControl>().RemoveSelectedToken(index);
+            if(spriteRenderer.sprite == backs[index] && gameControl.GetComponent<GameControl>().NoCardsSelected()) {
+                spriteRenderer.sprite = faces[index];
+                gameControl.GetComponent<GameControl>().SelectOpenToken(index);
+                gameControl.GetComponent<GameControl>().CheckMatch();
+            } else {
+                flipCardBack();
             }
+        }
+    }
+
+    public void flipCardBack() {
+        spriteRenderer.sprite = backs[index];
+        gameControl.GetComponent<GameControl>().RemoveSelectedOpenToken(index);
+    }
+
+    public void dramaticFlip(float dramaticFlipTime) {
+        StartCoroutine(drama(dramaticFlipTime));
+    }
+
+    public IEnumerator drama(float dramaticFlipTime) {
+        yield return new WaitForSeconds(dramaticFlipTime);
+        // flips when player did not flip the FlipToken
+        if (!matched && gameControl.GetComponent<GameControl>().TwoCardsSelected()) {
+            // animation hier wäre cool
+            flipCardBack();
         }
     }
 
@@ -41,4 +52,5 @@ public class OpenToken : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         gameControl = GameObject.Find("GameControl");
     }
+
 }

@@ -11,24 +11,39 @@ public class FlippableToken : MonoBehaviour
     public int index;
     public bool matched;
 
+
     public void OnMouseDown() {
-        // get current matching
-        matched = gameControl.GetComponent<GameControl>().matchedIndexes[index];
-        // already matched token wll not react
-        if (!matched) {
+        // already matched token wll not react and OpenToken must be flipped first
+        if (!matched && !gameControl.GetComponent<GameControl>().NoCardsSelected()) {
             // token is not selected
             if(spriteRenderer.sprite == back) {
-                if (!gameControl.GetComponent<GameControl>().TwoCardsUp()) {
+                if (!gameControl.GetComponent<GameControl>().TwoCardsSelected()) {
                     spriteRenderer.sprite = faces[index];
-                    gameControl.GetComponent<GameControl>().SelectToken(index);
+                    gameControl.GetComponent<GameControl>().SelectFlipToken(index);
                     gameControl.GetComponent<GameControl>().CheckMatch();
-                }
+                    }
             } else
             {
-                // turn card
-                spriteRenderer.sprite = back;
-                gameControl.GetComponent<GameControl>().RemoveSelectedToken(index);
+                flipCardBack();
             }
+        }
+    }
+
+    public void flipCardBack() {
+        spriteRenderer.sprite = back;
+        gameControl.GetComponent<GameControl>().RemoveSelectedFlipToken(index);
+    }
+
+    public void dramaticFlip(float dramaticFlipTime) {
+        StartCoroutine(drama(dramaticFlipTime));
+    }
+
+    public IEnumerator drama(float dramaticFlipTime) {
+        yield return new WaitForSeconds(dramaticFlipTime);
+        // flips
+        if (!matched) {
+            // animation hier wäre cool
+            flipCardBack();
         }
     }
 
@@ -36,4 +51,5 @@ public class FlippableToken : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         gameControl = GameObject.Find("GameControl");
     }
+
 }
