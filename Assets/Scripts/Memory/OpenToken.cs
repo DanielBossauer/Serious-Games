@@ -25,26 +25,26 @@ public class OpenToken : MonoBehaviour
                 gameControl.GetComponent<GameControl>().SelectOpenToken(index);
                 gameControl.GetComponent<GameControl>().CheckMatch();
             } else {
-                flipCardBack();
+                FlipCardBack();
             }
         }
     }
 
-    public void flipCardBack() {
+    public void FlipCardBack() {
         spriteRenderer.sprite = backs[index];
         gameControl.GetComponent<GameControl>().RemoveSelectedOpenToken(index);
     }
 
-    public void dramaticFlip(float dramaticFlipTime) {
-        StartCoroutine(drama(dramaticFlipTime));
+    public void DramaticFlip(float dramaticFlipTime) {
+        StartCoroutine(Drama(dramaticFlipTime));
     }
 
-    public IEnumerator drama(float dramaticFlipTime) {
+    public IEnumerator Drama(float dramaticFlipTime) {
         yield return new WaitForSeconds(dramaticFlipTime);
         // flips when player did not flip the FlipToken
         if (!matched && gameControl.GetComponent<GameControl>().TwoCardsSelected()) {
             // animation hier wäre cool
-            flipCardBack();
+            FlipCardBack();
         }
     }
 

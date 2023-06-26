@@ -9,6 +9,8 @@ public class GameControl : MonoBehaviour
     GameObject[] flipTokens;
     GameObject[] openTokens;
 
+    GameObject countDown;
+
     // Both Lists must be as long as size of Token Array
     List<int> openIndexes = new List<int> {0,1,2,3,4};
     List<int> flipIndexes = new List<int> {0,1,2,3,4};
@@ -17,16 +19,18 @@ public class GameControl : MonoBehaviour
     // first postion is OpenToken, second is FlipToken negative Value means unselected
     int[] selectedTokens = {-1, -2};
 
-    public float dramaticFlipTime = 1f;
+    // Parameters to be changed for each Instance of the Game (currently changing this value does nothing for some reason :) )
+    public float dramaticFlipTime = 3;
+    public float showTime = 300f;
 
 
     void Start() {
 
         int originalListLength = openIndexes.Count;
         float yPositionUp = 2.3f;
-        float xPositionUp = -2.2f;
+        float xPositionUp = -3.2f;
         float yPositionDown = -2.3f;
-        float xPositionDown = -2.2f;
+        float xPositionDown = -3.2f;
         flipTokens = new GameObject[openIndexes.Count];
         openTokens = new GameObject[openIndexes.Count];
 
@@ -55,6 +59,12 @@ public class GameControl : MonoBehaviour
         openTokens[openIndexes[0]].GetComponent<OpenToken>().index = openIndexes[0];
         flipTokens[flipIndexes[0]] = flipToken;
         flipTokens[flipIndexes[0]].GetComponent<FlippableToken>().index = flipIndexes[0];
+
+        //flip Tokens for Player
+        foreach (GameObject token in flipTokens) {
+            token.GetComponent<FlippableToken>().ShowCard(showTime);
+        }
+
     }
     
     public bool TwoCardsSelected() {
@@ -109,12 +119,14 @@ public class GameControl : MonoBehaviour
             selectedTokens[0] = -1;
             selectedTokens[1] = -2;
             CheckCleared();
+            countDown.GetComponent<CountDown>().NextNumber();
             return true;
         }
         if (TwoCardsSelected()) {
             //flip back selected automatically
-            openTokens[selectedTokens[0]].GetComponent<OpenToken>().dramaticFlip(dramaticFlipTime);
-            flipTokens[selectedTokens[1]].GetComponent<FlippableToken>().dramaticFlip(dramaticFlipTime);
+            openTokens[selectedTokens[0]].GetComponent<OpenToken>().DramaticFlip(dramaticFlipTime);
+            flipTokens[selectedTokens[1]].GetComponent<FlippableToken>().DramaticFlip(dramaticFlipTime);
+            countDown.GetComponent<CountDown>().NextNumber();
         }
         return false;
     }
@@ -126,13 +138,24 @@ public class GameControl : MonoBehaviour
                 return false;
             }
         }
-        print("Congrats!");
+        ClearedSuccess();
         return true;
+    }
+
+    public void ClearedSuccess() {
+       print("Congrats!");
+       // End Scene
+    }
+
+    public void CleardFailure() {
+        print("You can't even clear a memory Game? Pathetic!");
+        // Ende Scene
     }
 
     private void Awake() {
         flipToken = GameObject.Find("FlippableToken");
         openToken = GameObject.Find("OpenToken");
+        countDown = GameObject.Find("CountDown");
     }
 
 }

@@ -8,6 +8,7 @@ public class FlippableToken : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public Sprite[] faces;
     public Sprite back;
+    public Sprite[] unselectedFaces;
     public int index;
     public bool matched;
 
@@ -24,27 +25,38 @@ public class FlippableToken : MonoBehaviour
                     }
             } else
             {
-                flipCardBack();
+                FlipCardBack();
             }
         }
     }
 
-    public void flipCardBack() {
+    public void FlipCardBack() {
         spriteRenderer.sprite = back;
         gameControl.GetComponent<GameControl>().RemoveSelectedFlipToken(index);
     }
 
-    public void dramaticFlip(float dramaticFlipTime) {
-        StartCoroutine(drama(dramaticFlipTime));
+    public void DramaticFlip(float dramaticFlipTime) {
+        StartCoroutine(Drama(dramaticFlipTime));
     }
 
-    public IEnumerator drama(float dramaticFlipTime) {
+    public IEnumerator Drama(float dramaticFlipTime) {
         yield return new WaitForSeconds(dramaticFlipTime);
         // flips
         if (!matched) {
             // animation hier wäre cool
-            flipCardBack();
+            FlipCardBack();
         }
+    }
+
+    public void ShowCard(float showTime) {
+        spriteRenderer.sprite = unselectedFaces[index];
+        StartCoroutine(ShowTime(showTime));
+  
+    }
+
+    public IEnumerator ShowTime(float showTime) {
+        yield return new WaitForSeconds(showTime);
+        spriteRenderer.sprite = back;
     }
 
     private void Awake() {
