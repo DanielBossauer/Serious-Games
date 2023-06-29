@@ -433,7 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shuffleNum: 0
   dramaticFlipTime: 1
-  showTime: 1
+  showTime: 1.5
 --- !u!4 &864833754
 Transform:
   m_ObjectHideFlags: 0

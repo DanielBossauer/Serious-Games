@@ -20,8 +20,8 @@ public class GameControl : MonoBehaviour
     int[] selectedTokens = {-1, -2};
 
     // Parameters to be changed for each Instance of the Game (currently changing this value does nothing for some reason :) )
-    public float dramaticFlipTime = 3;
-    public float showTime = 300f;
+    public float dramaticFlipTime;
+    public float showTime;
 
 
     void Start() {
