@@ -6,9 +6,9 @@ public class FlippableToken : MonoBehaviour
 {
     GameObject gameControl;
     SpriteRenderer spriteRenderer;
-    public Sprite[] faces;
-    public Sprite back;
-    public Sprite[] unselectedFaces;
+    public Sprite[] faces; // selected FlippableTokens
+    public Sprite back; //Icon_hidden
+    public Sprite[] unselectedFaces; // unselected FlippableTokens
     public int index;
     public bool matched;
 

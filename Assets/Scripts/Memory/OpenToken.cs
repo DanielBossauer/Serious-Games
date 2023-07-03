@@ -6,8 +6,8 @@ public class OpenToken : MonoBehaviour
 {
     GameObject gameControl;
     SpriteRenderer spriteRenderer;
-    public Sprite[] faces;
-    public Sprite[] backs;
+    public Sprite[] faces; // selected Opentokens
+    public Sprite[] backs; // unselected Opentokens
     public int index;
     public bool matched;
 
