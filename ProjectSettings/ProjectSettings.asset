@@ -781,7 +781,8 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: TMP_PRESENT
+    Standalone: TMP_PRESENT;USE_PHYSICS2D
+    WebGL: USE_PHYSICS2D
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
