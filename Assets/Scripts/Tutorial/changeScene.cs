@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class changeScene : MonoBehaviour
 {
+    [SerializeField]
+    int index = 1;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(index);
         }
     }
 }
