@@ -14,8 +14,7 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
-        // update sceneIndex automatically
-        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        sceneIndex = GetCurrentSceneIndex();
     }
 
     // Update is called once per frame
@@ -43,27 +42,33 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void SaveGame() {
-        // add save function
-        print("not implemented yet");
+        sceneIndex = GetCurrentSceneIndex();
+        SaveSystem.SaveGame(sceneIndex);
     }
 
     public void LoadGame() {
-        // add load function
-        print("not implemented yet");
+        SaveData save = SaveSystem.LoadGame();
+        SceneManager.LoadScene(save.sceneIndex);
+        ResumeGame();
     }
 
     public void SkipScene() {
+        sceneIndex = GetCurrentSceneIndex();
         SceneManager.LoadScene(sceneIndex + 1);
         ResumeGame();
     }
 
     public void ShowInfoTexts() {
-        // ass infotexts
+        // add infotexts
         print("not implemented yet");
     }
 
     public void QuitGame() {
         Application.Quit();
+    }
+
+    private int GetCurrentSceneIndex() {
+        return SceneManager.GetActiveScene().buildIndex;
     }
 
 }
