@@ -48,6 +48,7 @@ public class SUPERCharacterAIO : MonoBehaviour{
     public float rotationWeight = 4;
     public float verticalRotationRange = 170.0f;
     public float standingEyeHeight = 0.8f;
+    public float standingEyeWidth = 0f;
     public float crouchingEyeHeight = 0.25f;
 
     //First person
@@ -295,8 +296,10 @@ public class SUPERCharacterAIO : MonoBehaviour{
     public bool enableGroundingDebugging = false, enableMovementDebugging = false, enableMouseAndCameraDebugging = false, enableVaultDebugging = false;
     #endregion
     void Start(){
-   
+
         
+
+
         
         #region Camera
         maxCameraDistInternal = maxCameraDistance;
@@ -420,7 +423,10 @@ public class SUPERCharacterAIO : MonoBehaviour{
         
     }
     void Update(){
-        if(!controllerPaused){
+
+        currentGroundSpeed = walkingSpeed;
+
+        if (!controllerPaused){
         #region Input
         #if ENABLE_INPUT_SYSTEM
             MouseXY.x = Mouse.current.delta.y.ReadValue()/50;
@@ -1731,7 +1737,8 @@ public class SuperFPEditor : Editor{
 
             if(t.cameraPerspective == PerspectiveModes._1stPerson){
                 t.viewInputMethods = (ViewInputModes)EditorGUILayout.EnumPopup(new GUIContent("Camera Input Methods", "The input method used to rotate the camera."),t.viewInputMethods);
-                t.standingEyeHeight = EditorGUILayout.Slider(new GUIContent("Standing Eye Height", "The Eye height of the player measured from the center of the character's capsule and upwards."),t.standingEyeHeight,0,1);
+                t.standingEyeHeight = EditorGUILayout.Slider(new GUIContent("Standing Eye Height", "The Eye height of the player measured from the center of the character's capsule and upwards."),t.standingEyeHeight,0,2);
+                t.standingEyeWidth = EditorGUILayout.Slider(new GUIContent("Standing Eye Width", "The Eye width of the player measured from the center of the character's capsule and upwards."), t.standingEyeWidth, 0, 2);
                 t.crouchingEyeHeight = EditorGUILayout.Slider(new GUIContent("Crouching Eye Height", "The Eye height of the player measured from the center of the character's capsule and upwards."),t.crouchingEyeHeight,0,1);
                 t.FOVKickAmount = EditorGUILayout.Slider(new GUIContent("FOV Kick Amount", "How much should the camera's FOV change based on the current movement speed?"),t.FOVKickAmount,0,50);
                 t.FOVSensitivityMultiplier = EditorGUILayout.Slider(new GUIContent("FOV Sensitivity Multiplier", "How much should the camera's FOV effect the mouse sensitivity? (Lower FOV = less sensitive)"),t.FOVSensitivityMultiplier,0,1);

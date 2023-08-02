@@ -38,7 +38,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Rose Poena
+      value: Actor
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -256,6 +256,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 5
+    fields:
+    - title: Name
+      value: TalkedOverHer
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -443,6 +457,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 84425df1-32fc-43bb-b4e6-f8f6313a381e
+        type: 0
+        typeString: 
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -552,11 +570,18 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(2);'
+          SetTimeout(2);
+
+          require SendMessage(MakeThoughtAppear,None
+          of them are going to listen anyways , IntrusiveThoughtManager)@Message(Typed)'
         type: 0
         typeString: 
       - title: Response Menu Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 4feb9f01-ced4-4da2-bd77-8ffe1d8ebdb0
         type: 0
         typeString: 
       conversationID: 1
@@ -830,8 +855,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 980.15356
-        y: 343.6609
+        x: 824.598
+        y: 380.69788
         width: 160
         height: 30
     - id: 11
@@ -1309,7 +1334,10 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(1);'
+          SetTimeout(1);
+
+          require SendMessage(ChangeVisuals,None
+          of them are going to listen anyways , IntrusiveThoughtManager)@Message(Typed);'
         type: 0
         typeString: 
       conversationID: 1
@@ -1341,13 +1369,13 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 19
         destinationConversationID: 1
-        destinationDialogueID: 23
+        destinationDialogueID: 9
         isConnector: 0
         priority: 2
       - originConversationID: 1
         originDialogueID: 19
         destinationConversationID: 1
-        destinationDialogueID: 9
+        destinationDialogueID: 23
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1635,8 +1663,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 731.94806
-        y: 510.38965
+        x: 870.8369
+        y: 519.6489
         width: 160
         height: 30
     - id: 25
@@ -1690,8 +1718,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 720.25977
-        y: 574.6754
+        x: 714.7042
+        y: 617.268
         width: 160
         height: 30
     - id: 26
@@ -1741,7 +1769,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["TalkedOverHer"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1780,7 +1808,10 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(0);'
+          SetTimeout(0);
+
+          require SendMessage(ChangeVisualsNervous0,,
+          VisualEffectsChanger)@Message(Typed);'
         type: 0
         typeString: 
       conversationID: 1
@@ -1795,6 +1826,12 @@ MonoBehaviour:
         originDialogueID: 27
         destinationConversationID: 1
         destinationDialogueID: 33
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 27
+        destinationConversationID: 1
+        destinationDialogueID: 55
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2073,8 +2110,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 289.47852
-        y: 1684.0374
+        x: 720.95996
+        y: 1685.8892
         width: 160
         height: 30
     - id: 33
@@ -2104,7 +2141,18 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(MakeThoughtAppear,Oh fuck! I just talked over
+          her! , IntrusiveThoughtManager)@Message(Typed);
+
+          require SendMessage(MakeThoughtAppear,I
+          need to apologize for what I have done! , IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,Apologize you stupid bitch! , IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,How do you still not know when to speak up?
+          , IntrusiveThoughtManager)@Message(Typed);'
         type: 0
         typeString: 
       conversationID: 1
@@ -2121,7 +2169,7 @@ MonoBehaviour:
         destinationDialogueID: 34
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: (Variable["TalkedOverHer"] == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2160,7 +2208,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: require SendMessage(MakeThoughtAppear,I have to fix things again!
+          Somehow! Quick! , IntrusiveThoughtManager)@Message(Typed);
         type: 0
         typeString: 
       conversationID: 1
@@ -2184,8 +2233,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 81.298706
-        y: 1808.4414
+        x: 83.15056
+        y: 1806.5896
         width: 160
         height: 30
     - id: 35
@@ -2249,13 +2298,13 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 35
         destinationConversationID: 1
-        destinationDialogueID: 40
+        destinationDialogueID: 41
         isConnector: 0
         priority: 2
       - originConversationID: 1
         originDialogueID: 35
         destinationConversationID: 1
-        destinationDialogueID: 41
+        destinationDialogueID: 40
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2542,8 +2591,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 680
-        y: 2170.779
+        x: 1109.8507
+        y: 2172.2717
         width: 160
         height: 30
     - id: 41
@@ -2908,7 +2957,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: require SendMessage(MakeThoughtAppear,Wait! Not like this!, IntrusiveThoughtManager)@Message(Typed);
         type: 0
         typeString: 
       conversationID: 1
@@ -2941,11 +2990,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 3
         type: 5
@@ -2957,15 +3006,18 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: Yeah, me too.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'require SendMessage(MakeNotebookAppear,, NotebookManager)@Message(Typed);
+
+          require
+          SendMessage(SadAndLonely,, VisualEffectsChanger)@Message(Typed);'
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -2973,13 +3025,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 48
-        destinationConversationID: 1
-        destinationDialogueID: 49
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -2988,7 +3034,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 879.99994
-        y: 2806.4934
+        y: 2805.001
         width: 160
         height: 30
     - id: 49
@@ -3028,13 +3074,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 49
-        destinationConversationID: 1
-        destinationDialogueID: 50
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -3042,8 +3082,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 878.7013
-        y: 2920.13
+        x: 1089.1489
+        y: 2902.2195
         width: 160
         height: 30
     - id: 50
@@ -3057,11 +3097,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 7
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 3
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3073,7 +3113,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: require SendMessage(MakeNotebookAppear,, NotebookManager)@Message(Typed)
         type: 0
         typeString: 
       conversationID: 1
@@ -3091,7 +3131,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 883.89606
+        x: 882.4035
         y: 3006.4934
         width: 160
         height: 30
@@ -3309,6 +3349,128 @@ MonoBehaviour:
         y: 1777.0303
         width: 160
         height: 30
+    - id: 55
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Wait, how?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'require SendMessage(MakeThoughtAppear,Why did you still not speak
+          up?, IntrusiveThoughtManager)@Message(Typed);
+
+          require SendMessage(MakeThoughtAppear,There
+          is no way. I should just give up. , IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,"I need to tell someone, anyone!" , IntrusiveThoughtManager)@Message(Typed);
+
+'
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 55
+        destinationConversationID: 1
+        destinationDialogueID: 56
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["TalkedOverHer"] == false
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 292.22223
+        y: 1572.222
+        width: 160
+        height: 30
+    - id: 56
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: My parents told him to give them back to me, but he said he left them
+          at his school.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'require SendMessage(MakeThoughtAppear,Nobody cares anyway..., IntrusiveThoughtManager)@Message(Typed);
+
+'
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 56
+        destinationConversationID: 1
+        destinationDialogueID: 35
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 301.48148
+        y: 1787.0369
+        width: 160
+        height: 30
     entryGroups:
     - name: Intrusive Thoughts 1
       rect:
@@ -3321,8 +3483,8 @@ MonoBehaviour:
     - name: Intrusive Thoughts 2
       rect:
         serializedVersion: 2
-        x: 256.7163
-        y: 1656.7151
+        x: 688.19775
+        y: 1658.5669
         width: 245.7761
         height: 130.85071
       color: {r: 1, g: 1, b: 1, a: 0.5}
@@ -3342,8 +3504,8 @@ MonoBehaviour:
         width: 224.88058
         height: 144.28357
       color: {r: 1, g: 1, b: 1, a: 0.5}
-    canvasScrollPosition: {x: 0, y: 1610.4479}
-    canvasZoom: 0.67
+    canvasScrollPosition: {x: 514.8147, y: 2359.2595}
+    canvasZoom: 0.54
   syncInfo:
     syncActors: 0
     syncItems: 0

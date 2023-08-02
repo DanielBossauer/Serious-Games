@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Restaurent_Daniel.unity
     guid: e9277e9e701a4bc439617615fa88957a
+  - enabled: 1
+    path: Assets/Scenes/Cafeteria.unity
+    guid: cc667776720dbe340a2fb028a4686f89
+  - enabled: 1
+    path: Assets/Scenes/Church_Friend.unity
+    guid: 722ada6ee1eae7441942244f7b2405c4
   m_configObjects: {}
