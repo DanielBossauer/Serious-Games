@@ -22,15 +22,18 @@ public class GameControl : MonoBehaviour
     // Parameters to be changed for each Instance of the Game (currently changing this value does nothing for some reason :) )
     public float dramaticFlipTime;
     public float showTime;
+    public bool finished = false;
+    public bool gameWon = false;
+    public float tokenDistance;
 
 
     void Start() {
 
         int originalListLength = openIndexes.Count;
-        float yPositionUp = 2.3f;
-        float xPositionUp = -3.2f;
-        float yPositionDown = -2.3f;
-        float xPositionDown = -3.2f;
+        float xPositionUp = openToken.GetComponent<OpenToken>().transform.position[0] + tokenDistance;
+        float yPositionUp = openToken.GetComponent<OpenToken>().transform.position[1];
+        float xPositionDown = flipToken.GetComponent<FlippableToken>().transform.position[0] + tokenDistance;
+        float yPositionDown = flipToken.GetComponent<FlippableToken>().transform.position[1];
         flipTokens = new GameObject[openIndexes.Count];
         openTokens = new GameObject[openIndexes.Count];
 
@@ -43,7 +46,7 @@ public class GameControl : MonoBehaviour
                 Quaternion.identity) as GameObject;
             openTokens[openIndexes[shuffleNum]].GetComponent<OpenToken>().index = openIndexes[shuffleNum];
             openIndexes.Remove(openIndexes[shuffleNum]);
-            xPositionUp = xPositionUp + 3;
+            xPositionUp = xPositionUp + tokenDistance;
 
             // instantiate flippable Tokens
             shuffleNum = rand.Next(0, (flipIndexes.Count));
@@ -51,12 +54,13 @@ public class GameControl : MonoBehaviour
                 Quaternion.identity) as GameObject;
             flipTokens[flipIndexes[shuffleNum]].GetComponent<FlippableToken>().index = flipIndexes[shuffleNum];
             flipIndexes.Remove(flipIndexes[shuffleNum]);
-            xPositionDown = xPositionDown + 3;
+            xPositionDown = xPositionDown + tokenDistance;
 
         }
         //last slot will be given to the OG Token
         openTokens[openIndexes[0]] = openToken;
         openTokens[openIndexes[0]].GetComponent<OpenToken>().index = openIndexes[0];
+        openToken.GetComponent<OpenToken>().UpdateBack();
         flipTokens[flipIndexes[0]] = flipToken;
         flipTokens[flipIndexes[0]].GetComponent<FlippableToken>().index = flipIndexes[0];
 
@@ -144,11 +148,15 @@ public class GameControl : MonoBehaviour
 
     public void ClearedSuccess() {
        print("Congrats!");
+       finished = true;
+       gameWon = true;
        // End Scene
     }
 
     public void CleardFailure() {
         print("You can't even clear a memory Game? Pathetic!");
+        finished = true;
+        gameWon = false;
         // Ende Scene
     }
 

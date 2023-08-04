@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenu;
+    public GameObject pauseScreen;
     public bool paused;
     // index of the current Scene
     public int sceneIndex;
@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenu.SetActive(false);
+        pauseScreen.SetActive(false);
         sceneIndex = GetCurrentSceneIndex();
     }
 
@@ -30,13 +30,13 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void PauseGame() {
-        pauseMenu.SetActive(true);
+        pauseScreen.SetActive(true);
         Time.timeScale = 0f;
         paused = true;
     }
 
     public void ResumeGame() {
-        pauseMenu.SetActive(false);
+        pauseScreen.SetActive(false);
         Time.timeScale = 1f;
         paused = false;
     }

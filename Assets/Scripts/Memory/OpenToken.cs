@@ -48,6 +48,10 @@ public class OpenToken : MonoBehaviour
         }
     }
 
+    public void UpdateBack() {
+        spriteRenderer.sprite = backs[index];
+    }
+
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         gameControl = GameObject.Find("GameControl");
