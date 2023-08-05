@@ -52,6 +52,10 @@ public class OpenToken : MonoBehaviour
         spriteRenderer.sprite = backs[index];
     }
 
+    public void killToken() {
+        Destroy(gameObject);
+    }
+
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         gameControl = GameObject.Find("GameControl");

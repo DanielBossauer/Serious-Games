@@ -59,6 +59,10 @@ public class FlippableToken : MonoBehaviour
         spriteRenderer.sprite = back;
     }
 
+    public void killToken() {
+        Destroy(gameObject);
+    }
+
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         gameControl = GameObject.Find("GameControl");

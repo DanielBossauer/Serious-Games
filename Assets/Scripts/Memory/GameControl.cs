@@ -19,13 +19,13 @@ public class GameControl : MonoBehaviour
     // first postion is OpenToken, second is FlipToken negative Value means unselected
     int[] selectedTokens = {-1, -2};
 
-    // Parameters to be changed for each Instance of the Game (currently changing this value does nothing for some reason :) )
+    public bool gameFinished = false;
+    public bool gameSuccess = false;
+
+    // Parameters to be changed for each Instance of the Game
     public float dramaticFlipTime;
     public float showTime;
-    public bool finished = false;
-    public bool gameWon = false;
     public float tokenDistance;
-
 
     void Start() {
 
@@ -136,7 +136,7 @@ public class GameControl : MonoBehaviour
     }
 
     public bool CheckCleared() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < openTokens.Length; i++) {
             // Check if alle tokens are matched
             if (!flipTokens[i].GetComponent<FlippableToken>().matched) {
                 return false;
@@ -147,17 +147,22 @@ public class GameControl : MonoBehaviour
     }
 
     public void ClearedSuccess() {
-       print("Congrats!");
-       finished = true;
-       gameWon = true;
-       // End Scene
+       gameFinished = true;
+       gameSuccess = true;
+       // End Scene in controller for Instantiation
     }
 
     public void CleardFailure() {
-        print("You can't even clear a memory Game? Pathetic!");
-        finished = true;
-        gameWon = false;
-        // Ende Scene
+        gameFinished = true;
+        gameSuccess = false;
+       // End Scene in controller for Instantiation
+    }
+
+    public void KillAllTokens() {
+         for (int i = 0; i < openTokens.Length; i++) {
+            flipTokens[i].GetComponent<FlippableToken>().killToken();
+            openTokens[i].GetComponent<OpenToken>().killToken();
+         }
     }
 
     private void Awake() {

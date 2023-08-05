@@ -18,7 +18,7 @@ public class CountDown : MonoBehaviour
         currentIndex -= 1;
         UpdateSprite(); 
         // Check for Loss
-        if (currentIndex == 0) {
+        if (currentIndex == 0 && !gameControl.GetComponent<GameControl>().gameSuccess) {
             gameControl.GetComponent<GameControl>().CleardFailure();
             return;
         }  
