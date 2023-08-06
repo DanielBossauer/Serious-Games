@@ -255,10 +255,10 @@ MonoBehaviour:
   memoryBackground: {fileID: 0}
   memoryPrefab: {fileID: 324605422692385503, guid: 469110b19bb75a644b5509760424fc98,
     type: 3}
+  conversation1: Scene_2_Before_Studying_1
+  conversation2: Scene_2_After_Studying_1
   gameDone: 0
-  gameWon: 0
   firstCoversationDone: 0
-  startSecondConversation: 0
 --- !u!4 &797719263
 Transform:
   m_ObjectHideFlags: 0

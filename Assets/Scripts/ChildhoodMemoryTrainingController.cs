@@ -10,12 +10,12 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
     public Sprite homeBackground;
     public Sprite memoryBackground;
     public GameObject memoryPrefab;
+    public string conversation1;
+    public string conversation2;
 
     public bool gameDone = false;
-    public bool gameWon = false;
 
     public bool firstCoversationDone = false;
-    public bool startSecondConversation = false;
     GameObject background;
 
 
@@ -23,7 +23,7 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
     void Start()
     {
         LoadBackground(homeBackground);
-        DialogueManager.StartConversation("Scene_2_Before_Training_1");
+        DialogueManager.StartConversation(conversation1);
     }
 
 
@@ -43,15 +43,14 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
 
     public void LoadSecondConversation() {
         if (memoryPrefab.GetComponentInChildren<GameControl>().gameSuccess) {
-            gameWon = true;
+            DialogueLua.SetVariable("gameWon", true);
         } else {
-            gameWon = false;
+            DialogueLua.SetVariable("gameWon", false);
         }
         gameDone = true;
         KillMemory();
-        startSecondConversation = true;
         LoadBackground(homeBackground);
-        DialogueManager.StartConversation("Scene_2_After_Training_1");
+        DialogueManager.StartConversation(conversation2);
     }
 
 
