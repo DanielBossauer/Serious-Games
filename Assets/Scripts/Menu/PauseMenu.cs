@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using PixelCrushers.DialogueSystem;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -54,6 +55,9 @@ public class PauseMenu : MonoBehaviour
 
     public void SkipScene() {
         sceneIndex = GetCurrentSceneIndex();
+        // Test for existing dialogue manager
+        // DialogueManager.StopAllConversations();
+        // Destroy(DialogueManager.instance.gameObject);
         SceneManager.LoadScene(sceneIndex + 1);
         ResumeGame();
     }
