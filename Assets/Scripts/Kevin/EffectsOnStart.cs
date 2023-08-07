@@ -51,7 +51,7 @@ public class EffectsOnStart : MonoBehaviour
         colorAdjustments.contrast.Override(colorAdjustmentsContrast);
 
 
-        lerpManager.SetSpeeds(lerpSpeed, moveSpeed);
+        if(lerpManager!=null) lerpManager.SetSpeeds(lerpSpeed, moveSpeed);
     }
 
     // Update is called once per frame

@@ -2681,6 +2681,8 @@ MonoBehaviour:
   LerpSpeed: 1
   MoveSpeed: 2
   deactivateGUI: 1
+  firstColor: {r: 0, g: 0, b: 0, a: 0}
+  secondColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &954030860
 Transform:
   m_ObjectHideFlags: 0
@@ -2729,7 +2731,9 @@ MonoBehaviour:
   notebook: {fileID: 6828721397298472063, guid: 142ac952f901ad542bad277420ea84c2,
     type: 3}
   canvas: {fileID: 880853264}
-  timer: {fileID: 0}
+  nextScene: 
+  useDefaultText: 0
+  defaultText: 
 --- !u!4 &959008368
 Transform:
   m_ObjectHideFlags: 0
@@ -4589,6 +4593,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 919132148771058329}
   visualEffectsChanger: {fileID: 1760801920}
+--- !u!1001 &1647592315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 939.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 511.0007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.498825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068363636803261717, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_Name
+      value: PauseMenu
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78950994aa5c6c248971c69626b46648, type: 3}
 --- !u!1 &1648389819
 GameObject:
   m_ObjectHideFlags: 0
@@ -4721,6 +4794,9 @@ MonoBehaviour:
   startSmoothnessVignette: 0.733
   startFilmGrainType: 1
   colorAdjustmentsContrast: 0
+  lerpManager: {fileID: 0}
+  lerpSpeed: 1
+  moveSpeed: 2
 --- !u!4 &1669233903
 Transform:
   m_ObjectHideFlags: 0

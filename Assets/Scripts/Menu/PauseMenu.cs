@@ -31,6 +31,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void PauseGame() {
+        DialogueTime.Mode = DialogueTime.TimeMode.Gameplay;
         pauseScreen.SetActive(true);
         Time.timeScale = 0f;
         paused = true;
@@ -56,6 +57,11 @@ public class PauseMenu : MonoBehaviour
     public void SkipScene() {
         sceneIndex = GetCurrentSceneIndex();
         // Test for existing dialogue manager
+        if (DialogueManager.instance != null)
+        {
+            DialogueManager.StopAllConversations();
+            Destroy(DialogueManager.instance.gameObject);
+        }
         // DialogueManager.StopAllConversations();
         // Destroy(DialogueManager.instance.gameObject);
         SceneManager.LoadScene(sceneIndex + 1);

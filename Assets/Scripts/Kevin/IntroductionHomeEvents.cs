@@ -38,6 +38,6 @@ public class IntroductionHomeEvents : MonoBehaviour
     {
         DialogueManager.StopAllConversations();
         Destroy(DialogueManager.instance.gameObject);
-        SceneManager.LoadScene("BackToTherapist");
+        SceneManager.LoadScene("BackToTherapist2");
     }
 }
