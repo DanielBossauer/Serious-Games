@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   homeBackground: {fileID: 21300000, guid: a7b798f1cad01cb418aa7502eaa23014, type: 3}
   memoryBackground: {fileID: 0}
-  memoryPrefab: {fileID: 918126837985005470, guid: 71c2780750ee2694c850a4b21c71755e,
+  memoryPrefab: {fileID: 324605422692385503, guid: 469110b19bb75a644b5509760424fc98,
     type: 3}
   conversation1: Scene_5_Before_Studying_4
   conversation2: Scene_5_After_Studying_4
