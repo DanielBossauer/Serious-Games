@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using PixelCrushers.DialogueSystem.UnityGUI;
 
-public class DialogueManager : MonoBehaviour
+public class Dialogue_Manager : MonoBehaviour
 {
     public Queue<DialogueObject> dialogueQueue = new Queue<DialogueObject>();
     public GameObject rightNameTag;
