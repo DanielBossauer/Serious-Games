@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Restaurant.meta
 guid: 7d66eb61df8cc284baab6e8d48be7475
 folderAsset: yes
+========
+guid: b08bfedb2630a274fab6075a91472d79
+>>>>>>>> 126d854c07ab956ba4577c7de6b3dac71e6d690e:Assets/Scenes/Sequence_Childhood_Gulfanius/1_School_Beginning.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

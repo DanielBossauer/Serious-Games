@@ -6,9 +6,69 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/IntroductionFirstRealFriend.unity
+    guid: b1f4ec43a08ce1f47adefd7b81198be2
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/IntroductionHome.unity
+    guid: 49919a4ee5b00fb4cba1dfa4494e489f
+  - enabled: 1
     path: Assets/Scenes/Tutorial_Daniel.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Restaurent_Daniel.unity
     guid: e9277e9e701a4bc439617615fa88957a
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/1_School_Beginning.unity
+    guid: b08bfedb2630a274fab6075a91472d79
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/2_Memory_Minigame_1.unity
+    guid: dea712338636cfd4f939eb347fce9f10
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/3_Memory_minigame_2.unity
+    guid: 04debedc22ca0854789abf88c8668b10
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/4_Memory_Minigame_3.unity
+    guid: c58adc38753c032489b916c679bd844d
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/5_Memory_Minigame_4.unity
+    guid: b0a85ea87a4b13a499bded12ef4f2e6f
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/6_School_Exam.unity
+    guid: d3ad398d8db39984aad7e3c8678d8cb5
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/7_Memory_Minigame_Test.unity
+    guid: c1b2628707f8c2349adf4d9173c2fbb4
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/8_Family_Dinner.unity
+    guid: 8d02438dd341c3449bfc3973a61073c9
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/9_Mental_Breakdown.unity
+    guid: 6587a7075af5a0c4faca3b2cc22af12e
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/Cafeteria.unity
+    guid: cc667776720dbe340a2fb028a4686f89
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/Church_Friend_Before.unity
+    guid: 55f0cb3cddc47e942b3b6520217c5244
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/Church_Friend.unity
+    guid: 722ada6ee1eae7441942244f7b2405c4
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/BackToTherapist.unity
+    guid: fd160a682ec349c4dab67c9e3f196514
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/FirstRealFriend.unity
+    guid: 667ae90bd3124424fa7722ffc5a04874
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/CantGetOutOfBed.unity
+    guid: a3ee2b859cfdb9e459317edf0ca86441
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/Home.unity
+    guid: 3755999b08b981c4c9f8875e90ad3bcf
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/BackToTherapist2.unity
+    guid: 12d25ef49a3bb654ba3065e4dbf47bf5
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Kevin/Church_Attack.unity
+    guid: acf5cffd953dc1b40b2cdb498b98ba32
   m_configObjects: {}
