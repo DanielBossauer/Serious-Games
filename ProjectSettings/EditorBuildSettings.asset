@@ -36,11 +36,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Sequence_Childhood_Gulfanius/6_School_Exam.unity
     guid: d3ad398d8db39984aad7e3c8678d8cb5
   - enabled: 1
-    path: Assets/Scenes/Sequence_Childhood_Gulfanius/7_Memory_Minigame_Exam.unity
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/7_Memory_Minigame_Test.unity
     guid: c1b2628707f8c2349adf4d9173c2fbb4
   - enabled: 1
     path: Assets/Scenes/Sequence_Childhood_Gulfanius/8_Family_Dinner.unity
     guid: 8d02438dd341c3449bfc3973a61073c9
+  - enabled: 1
+    path: Assets/Scenes/Sequence_Childhood_Gulfanius/9_Mental_Breakdown.unity
+    guid: 6587a7075af5a0c4faca3b2cc22af12e
   - enabled: 1
     path: Assets/Scenes/Sequence_Kevin/Cafeteria.unity
     guid: cc667776720dbe340a2fb028a4686f89
