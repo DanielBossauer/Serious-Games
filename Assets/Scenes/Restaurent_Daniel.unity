@@ -674,8 +674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2d9a25ee6d421409c4b500f85d087c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightNameTag: {fileID: 2089400427}
-  leftNameTag: {fileID: 1271531839}
+  rightNameTag: {fileID: 1271531839}
+  leftNameTag: {fileID: 2089400427}
   dialogPanel: {fileID: 1684706705}
   questionOptions: {fileID: 1538245016}
   defaultButton: {fileID: 5722960371749780273, guid: 0ff5aaeeece49674785fe3b5b0e4e6a5,
@@ -710,10 +710,10 @@ RectTransform:
   m_Father: {fileID: 1191864151}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1191864147
 GameObject:
@@ -910,7 +910,7 @@ GameObject:
   - component: {fileID: 1271531842}
   - component: {fileID: 1271531841}
   m_Layer: 5
-  m_Name: Left Name Tag
+  m_Name: Right Name Tag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2333,7 +2333,7 @@ GameObject:
   - component: {fileID: 2089400430}
   - component: {fileID: 2089400429}
   m_Layer: 5
-  m_Name: Right Name Tag
+  m_Name: Left Name Tag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
