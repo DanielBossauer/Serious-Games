@@ -16,7 +16,8 @@ public class CountDownTest : MonoBehaviour
 
     public void NextNumber() {      
         currentIndex -= 1;
-        UpdateSprite(); 
+        UpdateSprite();
+        UpdateScale(0.8f / (currentIndex + 0.3f)); 
         // Check for Loss
         if (currentIndex == 0 && !gameControl.GetComponent<GameControlTest>().gameSuccess) {
             gameControl.GetComponent<GameControlTest>().CleardFailure();
@@ -26,6 +27,10 @@ public class CountDownTest : MonoBehaviour
 
     private void UpdateSprite() {
         spriteRenderer.sprite = counter[currentIndex];
+    }
+
+    private void UpdateScale(float scaling) {
+        this.transform.localScale = this.transform.localScale + new Vector3(scaling, scaling, 0);
     }
 
     private void Awake() {

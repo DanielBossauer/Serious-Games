@@ -12,10 +12,11 @@ public class GameControlTest : MonoBehaviour
     GameObject[] openTokens;
 
     GameObject countDown;
+    GameObject background;
 
     // Both Lists must be as long as size of Token Array
-    List<int> openIndexes = new List<int> {0,1,2,3,4};
-    List<int> flipIndexes = new List<int> {0,1,2,3,4};
+    List<int> openIndexes = new List<int> {0,1,2,3,4,5,6,7,8,9};
+    List<int> flipIndexes = new List<int> {0,1,2,3,4,5,6,7,8,9};
     public static System.Random rand = new System.Random();
     public int shuffleNum = 0;
     // first postion is OpenToken, second is FlipToken negative Value means unselected
@@ -28,14 +29,19 @@ public class GameControlTest : MonoBehaviour
     public float dramaticFlipTime;
     public float showTime;
     public float tokenDistance;
+    public float tokenDistanceVertical;
+    public Sprite[] backgrounds;
 
     void Start() {
 
         int originalListLength = openIndexes.Count;
-        float xPositionUp = openToken.GetComponent<OpenTokenTest>().transform.position[0] + tokenDistance;
-        float yPositionUp = openToken.GetComponent<OpenTokenTest>().transform.position[1];
-        float xPositionDown = flipToken.GetComponent<FlippableTokenTest>().transform.position[0] + tokenDistance;
-        float yPositionDown = flipToken.GetComponent<FlippableTokenTest>().transform.position[1];
+        float ogXPostionOpen = openToken.GetComponent<OpenTokenTest>().transform.position[0];
+        float ogXPostionFlip = flipToken.GetComponent<FlippableTokenTest>().transform.position[0];
+
+        float xPositionOpen = ogXPostionOpen + tokenDistance;
+        float yPositionOpen = openToken.GetComponent<OpenTokenTest>().transform.position[1];
+        float xPositionFlip = ogXPostionFlip + tokenDistance;
+        float yPositionFlip = flipToken.GetComponent<FlippableTokenTest>().transform.position[1];
         flipTokens = new GameObject[openIndexes.Count];
         openTokens = new GameObject[openIndexes.Count];
 
@@ -43,20 +49,29 @@ public class GameControlTest : MonoBehaviour
         for (int i = 1; i < originalListLength; i++) {
 
             // instantiate Open Tokens (DO NOT PRINT INDEX OF CURRENT TOKEN IT DESTORYS EVERYTHING AND I HAVE NO REASON WHY!!!!! (I want my Friday Evening back..))
+            // make colomns with 2 tokens each
+
+            //go left and down
+            if (i % 2 == 0) {
+                yPositionOpen = yPositionOpen - tokenDistanceVertical;
+                xPositionOpen = ogXPostionOpen;
+                yPositionFlip = yPositionFlip - tokenDistanceVertical;
+                xPositionFlip = ogXPostionFlip;
+            }
             shuffleNum = rand.Next(0, (openIndexes.Count));
-            openTokens[openIndexes[shuffleNum]] = Instantiate(openToken, new Vector3(xPositionUp, yPositionUp, 0),
+            openTokens[openIndexes[shuffleNum]] = Instantiate(openToken, new Vector3(xPositionOpen, yPositionOpen, 0),
                 Quaternion.identity) as GameObject;
             openTokens[openIndexes[shuffleNum]].GetComponent<OpenTokenTest>().index = openIndexes[shuffleNum];
             openIndexes.Remove(openIndexes[shuffleNum]);
-            xPositionUp = xPositionUp + tokenDistance;
+            xPositionOpen = xPositionOpen + tokenDistance;
 
             // instantiate flippable Tokens
             shuffleNum = rand.Next(0, (flipIndexes.Count));
-            flipTokens[flipIndexes[shuffleNum]] = Instantiate(flipToken, new Vector3(xPositionDown, yPositionDown, 0),
+            flipTokens[flipIndexes[shuffleNum]] = Instantiate(flipToken, new Vector3(xPositionFlip, yPositionFlip, 0),
                 Quaternion.identity) as GameObject;
             flipTokens[flipIndexes[shuffleNum]].GetComponent<FlippableTokenTest>().index = flipIndexes[shuffleNum];
             flipIndexes.Remove(flipIndexes[shuffleNum]);
-            xPositionDown = xPositionDown + tokenDistance;
+            xPositionFlip = xPositionFlip + tokenDistance;
 
         }
         //last slot will be given to the OG Token
@@ -65,6 +80,9 @@ public class GameControlTest : MonoBehaviour
         openToken.GetComponent<OpenTokenTest>().UpdateBack();
         flipTokens[flipIndexes[0]] = flipToken;
         flipTokens[flipIndexes[0]].GetComponent<FlippableTokenTest>().index = flipIndexes[0];
+
+        // Start Text
+         DialogueManager.StartConversation("Szene_8_Start");
 
         //flip Tokens for Player
         foreach (GameObject token in flipTokens) {
@@ -129,9 +147,11 @@ public class GameControlTest : MonoBehaviour
             return true;
         }
         if (TwoCardsSelected()) {
-            //flip back selected automatically
+            //flip back selected automatically && kill flipped Token
             openTokens[selectedTokens[0]].GetComponent<OpenTokenTest>().DramaticFlip(dramaticFlipTime);
-            flipTokens[selectedTokens[1]].GetComponent<FlippableTokenTest>().DramaticFlip(dramaticFlipTime);
+            int destroyFlipIndex = selectedTokens[1];
+            flipTokens[destroyFlipIndex].GetComponent<FlippableTokenTest>().FlipCardBack(); 
+            flipTokens[destroyFlipIndex].GetComponent<FlippableTokenTest>().killToken(); 
             countDown.GetComponent<CountDownTest>().NextNumber();
         }
         return false;
@@ -140,7 +160,7 @@ public class GameControlTest : MonoBehaviour
     public bool CheckCleared() {
         for (int i = 0; i < openTokens.Length; i++) {
             // Check if alle tokens are matched
-            if (!flipTokens[i].GetComponent<FlippableTokenTest>().matched) {
+            if (!openTokens[i].GetComponent<OpenTokenTest>().matched) {
                 return false;
             }
         }
@@ -184,10 +204,15 @@ public class GameControlTest : MonoBehaviour
          }
     }
 
+    public void UpdateBackground(int index) {
+        background.GetComponent<SpriteRenderer>().sprite = backgrounds[index];
+    }
+
     private void Awake() {
         flipToken = GameObject.Find("FlippableToken");
         openToken = GameObject.Find("OpenToken");
         countDown = GameObject.Find("CountDown");
+        background = GameObject.Find("Background").gameObject;
     }
 
 }

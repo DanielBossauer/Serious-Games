@@ -42,7 +42,7 @@ public class OpenTokenTest : MonoBehaviour
     public IEnumerator Drama(float dramaticFlipTime) {
         yield return new WaitForSeconds(dramaticFlipTime);
         // flips when player did not flip the FlipToken
-        if (!matched && gameControl.GetComponent<GameControlTest>().TwoCardsSelected()) {
+        if (!matched) {
             // animation hier wäre cool
             FlipCardBack();
         }
