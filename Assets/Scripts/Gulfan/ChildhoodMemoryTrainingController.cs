@@ -8,6 +8,7 @@ using PixelCrushers.DialogueSystem;
 public class ChildhoodMemoryTrainingController : MonoBehaviour
 {
     public Sprite homeBackground;
+    public Sprite homeBackgroundAfter;
     public Sprite memoryBackground;
     public GameObject memoryPrefab;
     public string conversation1;
@@ -49,7 +50,7 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
         }
         gameDone = true;
         KillMemory();
-        LoadBackground(homeBackground);
+        LoadBackground(homeBackgroundAfter);
         DialogueManager.StartConversation(conversation2);
     }
 

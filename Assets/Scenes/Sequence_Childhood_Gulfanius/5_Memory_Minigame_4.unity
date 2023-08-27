@@ -152,7 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da88a9618da0aea4b9b601dcd72ad0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  homeBackground: {fileID: 21300000, guid: a7b798f1cad01cb418aa7502eaa23014, type: 3}
+  homeBackground: {fileID: 21300000, guid: dc16619aafd964e49940026028de7038, type: 3}
+  homeBackgroundAfter: {fileID: 21300000, guid: 55a43eae50262724397130ce4ed77a33,
+    type: 3}
   memoryBackground: {fileID: 0}
   memoryPrefab: {fileID: 918126837985005470, guid: 71c2780750ee2694c850a4b21c71755e,
     type: 3}
@@ -309,7 +311,7 @@ SpriteRenderer:
   m_Size: {x: 17, y: 11.51}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1095601769

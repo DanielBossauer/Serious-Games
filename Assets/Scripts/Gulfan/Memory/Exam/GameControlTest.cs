@@ -82,7 +82,7 @@ public class GameControlTest : MonoBehaviour
         flipTokens[flipIndexes[0]].GetComponent<FlippableTokenTest>().index = flipIndexes[0];
 
         // Start Text
-         DialogueManager.StartConversation("Szene_8_Start");
+         DialogueManager.StartConversation("Szene_7_Start");
 
         //flip Tokens for Player
         foreach (GameObject token in flipTokens) {
