@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial_Daniel.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Tutorial_Second_Scene.unity
+    guid: de9c6fb5bf395414eae37416c7e91205
+  - enabled: 1
     path: Assets/Scenes/Restaurent_Daniel.unity
     guid: e9277e9e701a4bc439617615fa88957a
   - enabled: 1
