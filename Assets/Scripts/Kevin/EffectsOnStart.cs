@@ -20,7 +20,7 @@ public class EffectsOnStart : MonoBehaviour
     [SerializeField] float moveSpeed = 2f;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         VolumeProfile profile = m_Volume.sharedProfile;
         if (!profile.TryGet<FilmGrain>(out var grain))

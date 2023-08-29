@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
+using System.Linq;
 
 public class LerpManager : MonoBehaviour
 {
@@ -558,5 +559,150 @@ public class LerpManager : MonoBehaviour
             time -= Time.deltaTime * LerpSpeed;
             yield return null;
         }
+    }
+
+    public void CALLFadeInOneWay()
+    {
+        //StartCoroutine(FadeInOneWay());
+    }
+
+    /*
+    public IEnumerator FadeInOneWayCanvas()
+    {
+        DisableSecondaryAndTexts();
+
+
+        //Mesh mesh = Rect.GetComponent<MeshFilter>().mesh;
+
+        Material[] materials = CanvasRendererGetMaterials();
+
+        /*
+        Color[] startColors = new Color[mesh.colors.Length];
+        Color[] targetColors = new Color[mesh.colors.Length];
+        List<Color> currentColors = new List<Color>();
+        for (int i = 0; i < mesh.colors.Length; i++)
+        {
+            startColors[i] = new Color(mesh.colors[i].r, mesh.colors[i].g, mesh.colors[i].b, 0f);
+            targetColors[i] = mesh.colors[i];
+        }
+        */
+    /*
+    Color[] startColors = new Color[materials.Length];
+    Color[] targetColors = new Color[materials.Length];
+    List<Color> currentColors = new List<Color>();
+    for (int i = 0; i < materials.Length; i++)
+    {
+        startColors[i] = new Color(materials[i].color.r, materials[i].color.g, materials[i].color.b, 0f);
+        targetColors[i] = materials[i].color;
+    }
+
+
+    currentColors.Clear();
+    //mesh.GetColors(currentColors);
+    currentColors = CanvasRendererGetColors();
+    float time = 0;
+    float random = Random.value;
+    while (time < 1)
+    {
+            for (int i = 0; i < currentColors.Count; i++)
+            {
+                currentColors[i] = Color.Lerp(
+                    startColors[i],
+                    targetColors[i],
+                    Curve.Evaluate(time, random)
+                );
+            }
+
+        //mesh.SetColors(currentColors);
+        CanvasRendererSetColors(currentColors);
+
+        time += Time.deltaTime * LerpSpeed;
+        yield return null;
+    }
+}
+*/
+    public IEnumerator FadeInOneWayCanvas()
+    {
+        yield return null;
+    }
+
+    Material[] CanvasRendererGetMaterials()
+    {
+        Material[] materials = new Material[Rect.GetComponent<CanvasRenderer>().materialCount];
+        CanvasRenderer canvasRenderer = Rect.GetComponent<CanvasRenderer>();
+        for (int i = 0; i < canvasRenderer.materialCount; i++)
+        {
+            materials[i] = canvasRenderer.GetMaterial(i);
+        }
+        return materials;
+    }
+
+    List<Color> CanvasRendererGetColors()
+    {
+        Material[] tmp = CanvasRendererGetMaterials();
+        Color[] colors = new Color[tmp.Length];
+        for(int i=0;i<tmp.Length;i++)
+        {
+            colors[i] = tmp[i].color;
+        }
+        return colors.ToList();
+    }
+
+    void CanvasRendererSetColors(List<Color> currentColors)
+    {
+        Material[] tmp = CanvasRendererGetMaterials();
+        for (int i = 0; i < currentColors.Count; i++)
+        {
+            tmp[i].color = currentColors[i];
+        }
+        for (int i=0; i<tmp.Length;i++)
+        {
+            Rect.GetComponent<CanvasRenderer>().SetMaterial(tmp[0],i);
+        }
+        
+    }
+
+
+    public IEnumerator FadeOutOneWay()
+    {
+        DisableSecondaryAndTexts();
+        //Rect.transform.position = CenterTarget.position;
+        //Rect.transform.rotation = Quaternion.identity;
+
+        Mesh mesh = Rect.GetComponent<MeshFilter>().mesh;
+
+        Color[] startColors = new Color[mesh.colors.Length];
+        Color[] targetColors = new Color[mesh.colors.Length];
+        List<Color> currentColors = new List<Color>();
+        for (int i = 0; i < mesh.colors.Length; i++)
+        {
+            startColors[i] = mesh.colors[i];
+            targetColors[i] = new Color(mesh.colors[i].r, mesh.colors[i].g, mesh.colors[i].b, 0f);
+        }
+
+
+        currentColors.Clear();
+        mesh.GetColors(currentColors);
+        float time = 0;
+        float random = Random.value;
+        while (time < 1)
+        {
+            for (int i = 0; i < currentColors.Count; i++)
+            {
+                currentColors[i] = Color.Lerp(
+                    startColors[i],
+                    targetColors[i],
+                    Curve.Evaluate(time, random)
+                );
+            }
+
+            mesh.SetColors(currentColors);
+
+            time += Time.deltaTime * LerpSpeed;
+            yield return null;
+        }
+
+
+
     }
 }

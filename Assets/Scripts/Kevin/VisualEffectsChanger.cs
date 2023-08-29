@@ -28,6 +28,19 @@ public class VisualEffectsChanger : MonoBehaviour
         
     }
 
+    public void ChangeBloom(float intensity, Color color, float threshold)
+    {
+        VolumeProfile profile = m_Volume.sharedProfile;
+        if (!profile.TryGet<Bloom>(out var bloom))
+        {
+            bloom = profile.Add<Bloom>(false);
+        }
+
+        bloom.intensity.Override(intensity);
+        bloom.tint.Override(color);
+        bloom.threshold.Override(threshold);
+    }
+
     public void ChangeFilmGrain(string grainIntensity)
     {
         //GRAIN
@@ -53,6 +66,38 @@ public class VisualEffectsChanger : MonoBehaviour
             }
 
         }
+    }
+
+
+    public void ChangeVisuals2(float grainIntensity, float vignetteIntensity, float vignetteSmoothness, int filmGrainType, int colorAdjustmentsContrast)
+    {
+        VolumeProfile profile = m_Volume.sharedProfile;
+        if (!profile.TryGet<FilmGrain>(out var grain))
+        {
+            grain = profile.Add<FilmGrain>(false);
+        }
+
+        grain.intensity.Override(grainIntensity);
+        grain.type = new FilmGrainLookupParameter((FilmGrainLookup)filmGrainType, true);
+
+
+
+        if (!profile.TryGet<Vignette>(out var vignette))
+        {
+            vignette = profile.Add<Vignette>(false);
+        }
+
+        vignette.intensity.Override(vignetteIntensity);
+        vignette.smoothness.Override(vignetteSmoothness);
+
+
+
+        if (!profile.TryGet<ColorAdjustments>(out var colorAdjustments))
+        {
+            colorAdjustments = profile.Add<ColorAdjustments>(false);
+        }
+
+        colorAdjustments.contrast.Override(colorAdjustmentsContrast);
     }
 
 
@@ -358,5 +403,18 @@ public class VisualEffectsChanger : MonoBehaviour
     IEnumerator Lonely()
     {
         yield return new WaitForEndOfFrame();
+    }
+
+
+    public void HouseNightTime()
+    {
+        StopAllCoroutines();
+        ChangeVisuals2(1f,0.7f, 0.733f, 9,1);
+    }
+
+    public void HouseDayTime()
+    {
+        StopAllCoroutines();
+        ChangeVisuals2(0.9f,0.417f,0.733f,1,70);
     }
 }

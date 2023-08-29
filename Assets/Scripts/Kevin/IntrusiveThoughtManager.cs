@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,14 +13,15 @@ public class IntrusiveThoughtManager : MonoBehaviour
     [SerializeField] Canvas canvas;
     [SerializeField] GameObject indestructableBubble;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] OutOfBedClickButton energyButtonPrefab;
+    [SerializeField] OutOfBedClickButton depressionButtonPrefab;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] string[] depressionTexts;
+
+    List<GameObject> spawnedBubbles;
+    [SerializeField] bool keepTrackOfSpawnedBubbles;
+
+    public void Update()
     {
         
     }
@@ -53,6 +55,8 @@ public class IntrusiveThoughtManager : MonoBehaviour
         //textMeshPro.enableAutoSizing = true;
         //if (fontStyle == "bold") textMeshPro.fontStyle = FontStyles.Bold;
         StartCoroutine(GrowInSize(myBubble, 0.1f));
+
+        if(keepTrackOfSpawnedBubbles) spawnedBubbles.Add(myBubble);
     }
 
     public void MakeThoughtAppear(string text = "", int[] colorArr = null, string font = "default", string fontStyle = "", float growFactor = 1f)
@@ -75,6 +79,8 @@ public class IntrusiveThoughtManager : MonoBehaviour
         textMeshPro.enableAutoSizing = true;
         if(fontStyle == "bold") textMeshPro.fontStyle = FontStyles.Bold;
         StartCoroutine(GrowInSize(myBubble, growFactor));
+
+        if (keepTrackOfSpawnedBubbles) spawnedBubbles.Add(myBubble);
     }
 
     IEnumerator GrowInSize(GameObject bubble, float growFactor = 0.11f)
@@ -124,6 +130,8 @@ public class IntrusiveThoughtManager : MonoBehaviour
         //textMeshPro.enableAutoSizing = true;
         //if (fontStyle == "bold") textMeshPro.fontStyle = FontStyles.Bold;
         StartCoroutine(GrowInSize(myBubble, 0.1f));
+
+        if (keepTrackOfSpawnedBubbles) spawnedBubbles.Add(myBubble);
     }
 
     public void IndestructableBubble()
@@ -140,11 +148,113 @@ public class IntrusiveThoughtManager : MonoBehaviour
 
         StartCoroutine(GrowInSize(myBubble, 0.1f));
         StartCoroutine(DestroyAfterTime(4f,myBubble));
+
+        if (keepTrackOfSpawnedBubbles) spawnedBubbles.Add(myBubble);
+    }
+
+    public void MessengerBubbles(string text)
+    {
+        Vector3 worldPos = new Vector3(Screen.width * 0.5f, Screen.height * 0.25f, 0);
+
+        GameObject myBubble = Instantiate(intrusiveThoughtBubble, worldPos, Quaternion.identity) as GameObject;
+        myBubble.gameObject.transform.SetParent(canvas.transform);
+        TextMeshProUGUI textMeshPro = myBubble.gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        textMeshPro.text = text;
+        textMeshPro.color = Color.red;
+
+        StartCoroutine(SpreadInRandomDirection(myBubble));
+        StartCoroutine(DestroyAfterTime(4f, myBubble));
+
+        if (keepTrackOfSpawnedBubbles) spawnedBubbles.Add(myBubble);
+    }
+
+    IEnumerator SpreadInRandomDirection(GameObject myBubble)
+    {
+
+        Vector3 speed = new Vector3(Random.Range(-10f,10f), Random.Range(-10f, 10f), 0f);
+
+        while (myBubble != null)
+        {
+            myBubble.gameObject.transform.position += speed * Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
     }
 
     IEnumerator DestroyAfterTime(float time, GameObject bubble)
     {
         yield return new WaitForSeconds(time);
         Destroy(bubble);
+    }
+
+
+
+    //CANTGETOUTOFBEDMINIGAME
+    public OutOfBedClickButton MakeEnergyButtonAppear()
+    {
+        
+
+        Vector3 randomWorldPos = new Vector3(Random.Range(Screen.width * 0.1f, Screen.width - Screen.width * 0.1f), Random.Range(Screen.height * 0.1f, Screen.height - Screen.height * 0.1f), 0);
+
+
+        OutOfBedClickButton tmp = Instantiate(energyButtonPrefab,randomWorldPos,Quaternion.identity);
+        tmp.gameObject.transform.SetParent(canvas.transform);
+
+        tmp.energyButton = true;
+
+        //TextMeshProUGUI textMeshPro = tmp.gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        //textMeshPro.text = text;
+        //textMeshPro.color = color;
+        //textMeshPro.font = font;
+        //textMeshPro.enableAutoSizing = true;
+        //if (fontStyle == "bold") textMeshPro.fontStyle = FontStyles.Bold;
+        StartCoroutine(GrowInSize(tmp.gameObject, 0.1f));
+
+        if (keepTrackOfSpawnedBubbles) spawnedBubbles.Add(tmp.gameObject);
+
+        return tmp;
+    }
+
+    public OutOfBedClickButton MakeDepressionButtonAppear()
+    {
+        Vector3 randomWorldPos = new Vector3(Random.Range(Screen.width * 0.1f, Screen.width - Screen.width * 0.1f), Random.Range(Screen.height * 0.1f, Screen.height - Screen.height * 0.1f), 0);
+
+
+        OutOfBedClickButton tmp = Instantiate(depressionButtonPrefab, randomWorldPos, Quaternion.identity);
+        tmp.gameObject.transform.SetParent(canvas.transform);
+
+        TextMeshProUGUI textMeshPro = tmp.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        textMeshPro.text = depressionTexts[Random.Range(0,depressionTexts.Length)];
+
+        tmp.energyButton = false;
+
+        StartCoroutine(GrowInSize(tmp.gameObject, 0.1f));
+
+        if (keepTrackOfSpawnedBubbles) spawnedBubbles.Add(tmp.gameObject);
+
+        return tmp;
+    }
+
+    void SetSize(GameObject bubble, Vector3 newLocalScale)
+    {
+        //Vector3 localScale = bubble.gameObject.transform.localScale;
+        //float growth = 1 + growFactor * Time.deltaTime;
+        bubble.gameObject.transform.localScale = newLocalScale;
+        //bubble.gameObject.transform.position = new Vector3(bubble.transform.position.x + Random.Range(0, 1) * Time.deltaTime, bubble.transform.position.y + Random.Range(0, 1) * Time.deltaTime, bubble.transform.position.z);
+
+    }
+
+    public void KeepTrackOfSpawnedBubbles(bool b)
+    {
+        keepTrackOfSpawnedBubbles = b;
+        if (spawnedBubbles == null) spawnedBubbles = new List<GameObject>();
+    }
+
+    public void DeleteAllThoughts()
+    {
+        foreach (GameObject s in spawnedBubbles)
+        {
+            if (s != null) Destroy(s);
+        }
+        spawnedBubbles.Clear();
     }
 }
