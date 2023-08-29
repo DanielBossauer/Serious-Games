@@ -19,10 +19,15 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
     public bool firstCoversationDone = false;
     GameObject background;
 
+    private Vector3 homeBackgroundScale;
+    private Vector3 memoryScale;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        homeBackgroundScale = new Vector3(1.047f, 1.047f, 1f);
+        memoryScale = new Vector3(1f, 1f, 1f);
         LoadBackground(homeBackground);
         DialogueManager.StartConversation(conversation1);
     }
@@ -30,11 +35,14 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
 
     public void LoadBackground(Sprite sprite) {
         background.GetComponent<SpriteRenderer>().sprite = sprite;
+        background.transform.localScale = homeBackgroundScale;
     }
 
     public void LoadMemory () {
         LoadBackground(memoryBackground);
+        background.transform.localScale = memoryScale;
         memoryPrefab = Instantiate(memoryPrefab, new Vector3(5.105501f, 0.2665106f, -18.48575f), Quaternion.identity);
+        memoryPrefab.transform.localScale = memoryScale;
     }
 
     public void KillMemory () {

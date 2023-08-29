@@ -356,6 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 1618274648}
+  canTrigger: 0
 --- !u!4 &81756092
 Transform:
   m_ObjectHideFlags: 0
@@ -904,6 +905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 55445029}
+  canTrigger: 0
 --- !u!4 &409487883
 Transform:
   m_ObjectHideFlags: 0

@@ -154,6 +154,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 3
+    fields:
+    - title: Name
+      value: Finisched Introduction
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -983,7 +997,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Finisched_Introduction"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -991,7 +1005,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 100
+        y: 98.90109
         width: 160
         height: 30
     - id: 2
@@ -1920,7 +1934,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Finisched_Introduction"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls:
@@ -1939,7 +1953,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 626.7384
-        y: 198.93619
+        y: 196.7384
         width: 160
         height: 30
     entryGroups: []
