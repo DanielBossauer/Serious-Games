@@ -160,6 +160,7 @@ MonoBehaviour:
     type: 3}
   conversation1: Scene_5_Before_Studying_4
   conversation2: Scene_5_After_Studying_4
+  firstMemoryScene: 0
   gameDone: 0
   firstCoversationDone: 0
 --- !u!4 &159321450
@@ -573,6 +574,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4ef5837d1d01d8742a4a4d0522c168cd,
         type: 2}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.subtitleSettings.continueButton
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
 --- !u!1 &2038621422

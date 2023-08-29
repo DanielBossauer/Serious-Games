@@ -13,6 +13,7 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
     public GameObject memoryPrefab;
     public string conversation1;
     public string conversation2;
+    public bool firstMemoryScene;
 
     public bool gameDone = false;
 
@@ -43,6 +44,9 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
         background.transform.localScale = memoryScale;
         memoryPrefab = Instantiate(memoryPrefab, new Vector3(5.105501f, 0.2665106f, -18.48575f), Quaternion.identity);
         memoryPrefab.transform.localScale = memoryScale;
+        if (firstMemoryScene) {
+            DialogueManager.StartConversation("MemoryTutorial");
+        }
     }
 
     public void KillMemory () {
