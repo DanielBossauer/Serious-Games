@@ -38,7 +38,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Kira
+      value: Tutorial
       type: 0
       typeString: 
     - title: Pictures
@@ -158,6 +158,20 @@ MonoBehaviour:
     fields:
     - title: Name
       value: Finisched Introduction
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 4
+    fields:
+    - title: Name
+      value: Finished Scene
       type: 0
       typeString: 
     - title: Initial Value
@@ -1934,7 +1948,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Finisched_Introduction"] = true
+      userScript: 'Variable["Finisched_Introduction"] = true;
+
+        Variable["Finished_Scene"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls:
@@ -1953,7 +1970,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 626.7384
-        y: 196.7384
+        y: 195.63953
         width: 160
         height: 30
     entryGroups: []
@@ -2154,14 +2171,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Finished_Scene"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
-        y: 150
+        x: 81
+        y: 149
         width: 160
         height: 30
     entryGroups: []

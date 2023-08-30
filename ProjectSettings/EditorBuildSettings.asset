@@ -51,6 +51,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Sequence_Childhood_Gulfanius/9_Mental_Breakdown.unity
     guid: 6587a7075af5a0c4faca3b2cc22af12e
   - enabled: 1
+    path: Assets/Scenes/TherapyBeforeCafeteria.unity
+    guid: 693ee850d6793ea488c2b553bd97e077
+  - enabled: 1
     path: Assets/Scenes/Sequence_Kevin/Cafeteria.unity
     guid: cc667776720dbe340a2fb028a4686f89
   - enabled: 1

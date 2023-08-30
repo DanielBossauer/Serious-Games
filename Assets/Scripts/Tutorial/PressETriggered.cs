@@ -8,11 +8,7 @@ public class PressETriggered : MonoBehaviour
 
     public bool canTrigger;
 
-    void Start() {
-        canTrigger = true;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (canTrigger) {
             sprite.SetActive(true);
