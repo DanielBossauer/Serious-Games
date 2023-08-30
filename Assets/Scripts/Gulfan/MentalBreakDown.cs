@@ -13,6 +13,9 @@ public class MentalBreakDown : MonoBehaviour
 
     public bool firstCoversationDone = false;
     GameObject background;
+    
+    AudioSource audio1;
+    AudioSource audio2;
 
 
     // Start is called before the first frame update
@@ -20,6 +23,8 @@ public class MentalBreakDown : MonoBehaviour
     {
         LoadBackground(homeBackground);
         DialogueManager.StartConversation(conversation1);
+        audio1 = this.gameObject.transform.GetChild(0).GetComponent<AudioSource>();
+        audio2 = this.gameObject.transform.GetChild(1).GetComponent<AudioSource>();
     }
 
 
@@ -33,6 +38,13 @@ public class MentalBreakDown : MonoBehaviour
 
     public void LoadSecondConversation() {
         KillBackground();
+        audio1.Play();
+        StartCoroutine(DelaySecondConversation());
+    }
+
+    public IEnumerator DelaySecondConversation() {
+        yield return new WaitForSeconds(1.4f);
+        audio2.Play();
         DialogueManager.StartConversation(conversation2);
     }
 
@@ -57,10 +69,14 @@ public class MentalBreakDown : MonoBehaviour
         }     
 
         // Check if the second Conversation just finished
-        if (firstCoversationDone && !conversationActive()) {
+        if (FinishedScene() && firstCoversationDone && !conversationActive()) {
             LoadNextScene();
         }    
 
+    }
+
+    private bool FinishedScene() {
+        return DialogueLua.GetVariable("Finished_Scene").AsBool;
     }
 
     private bool conversationActive() {

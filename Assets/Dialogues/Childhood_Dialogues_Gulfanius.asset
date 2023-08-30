@@ -176,6 +176,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 4
+    fields:
+    - title: Name
+      value: Finished_Scene
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -4497,7 +4511,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Finished_Scene"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4508,8 +4522,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 26.096552, y: 47.391087}
-    canvasZoom: 1.1600008
+    canvasScrollPosition: {x: 0, y: 36.04541}
+    canvasZoom: 0.980001
   - id: 15
     fields:
     - title: Title

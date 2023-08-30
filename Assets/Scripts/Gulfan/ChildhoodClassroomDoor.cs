@@ -6,15 +6,23 @@ using PixelCrushers.DialogueSystem;
 
 public class ChildhoodClassroomDoor : MonoBehaviour
 {
+    AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     // Change Scene when Rose touches Door
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        audio.Play();
+        StartCoroutine(NextSceneWithDelay());
+    }
+
+
+    public IEnumerator NextSceneWithDelay() {
+        yield return new WaitForSeconds(0.2f);
         int sceneIndex = GetCurrentSceneIndex();
         // Test for existing dialogue manager
         if (DialogueManager.instance != null)
@@ -24,6 +32,7 @@ public class ChildhoodClassroomDoor : MonoBehaviour
         }
         SceneManager.LoadScene(sceneIndex + 1);
     }
+
 
     private int GetCurrentSceneIndex()
     {
