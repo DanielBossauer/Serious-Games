@@ -51,7 +51,6 @@ public class FlippableTokenTest : MonoBehaviour
     public void ShowCard(float showTime) {
         spriteRenderer.sprite = unselectedFaces[index];
         StartCoroutine(ShowTime(showTime));
-  
     }
 
     public IEnumerator ShowTime(float showTime) {

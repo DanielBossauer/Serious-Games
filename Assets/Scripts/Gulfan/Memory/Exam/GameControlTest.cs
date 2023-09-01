@@ -10,7 +10,7 @@ public class GameControlTest : MonoBehaviour
     GameObject openToken;
     GameObject[] flipTokens;
     GameObject[] openTokens;
-
+    AudioSource plop;
     GameObject countDown;
     GameObject background;
 
@@ -152,6 +152,7 @@ public class GameControlTest : MonoBehaviour
             int destroyFlipIndex = selectedTokens[1];
             flipTokens[destroyFlipIndex].GetComponent<FlippableTokenTest>().FlipCardBack(); 
             flipTokens[destroyFlipIndex].GetComponent<FlippableTokenTest>().killToken(); 
+            plop.Play();
             countDown.GetComponent<CountDownTest>().NextNumber();
         }
         return false;
@@ -213,6 +214,7 @@ public class GameControlTest : MonoBehaviour
         openToken = GameObject.Find("OpenToken");
         countDown = GameObject.Find("CountDown");
         background = GameObject.Find("Background").gameObject;
+        plop = this.gameObject.transform.GetChild(0).GetComponent<AudioSource>();
     }
 
 }

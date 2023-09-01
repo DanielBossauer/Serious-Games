@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
 	public Animator animator;
 
 	public float runSpeed = 40f;
+	public float currentSpeed = 0f;
 
 	float horizontalMove = 0f;
 	bool jump = false;
@@ -21,16 +22,18 @@ public class PlayerMovement : MonoBehaviour {
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+		currentSpeed = Mathf.Abs(horizontalMove);
 
 		if (Input.GetKeyDown(KeyCode.Z))
 		{
 			jump = true;
 		}
-
+		 /*
 		if (Input.GetKeyDown(KeyCode.C))
 		{
 			dash = true;
 		}
+		*/
 
 		/*if (Input.GetAxisRaw("Dash") == 1 || Input.GetAxisRaw("Dash") == -1) //RT in Unity 2017 = -1, RT in Unity 2019 = 1
 		{

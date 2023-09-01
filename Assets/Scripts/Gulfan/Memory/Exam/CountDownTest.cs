@@ -5,6 +5,9 @@ using UnityEngine;
 public class CountDownTest : MonoBehaviour
 {
     GameObject gameControl;
+    AudioSource audio1;
+    AudioSource audio2;
+    AudioSource audio3;
     SpriteRenderer spriteRenderer;
     public Sprite[] counter;
     public int currentIndex;
@@ -18,6 +21,13 @@ public class CountDownTest : MonoBehaviour
         currentIndex -= 1;
         UpdateSprite();
         UpdateScale(0.8f / (currentIndex + 0.3f)); 
+        if (currentIndex > 5) {
+            audio1.Play();
+        } else if(currentIndex > 3) {
+            audio2.Play();
+        } else {
+            audio3.Play();
+        }
         // Check for Loss
         if (currentIndex == 0 && !gameControl.GetComponent<GameControlTest>().gameSuccess) {
             gameControl.GetComponent<GameControlTest>().CleardFailure();
@@ -36,5 +46,8 @@ public class CountDownTest : MonoBehaviour
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         gameControl = GameObject.Find("GameControl");
+        audio1 = this.gameObject.transform.GetChild(0).GetComponent<AudioSource>();
+        audio2 = this.gameObject.transform.GetChild(1).GetComponent<AudioSource>();
+        audio3 = this.gameObject.transform.GetChild(2).GetComponent<AudioSource>();
     }
 }

@@ -307,7 +307,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Press \u201CEnter\u201D to continue "
+        value: "Press \u201CEnter\u201D or on the continue Button to proceed with
+          conversations"
         type: 0
         typeString: 
       - title: Sequence
@@ -417,8 +418,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Walk to the calendar using w/a/s/d or the Arrow Keys, to interact
-          with it
+        value: Walk to the calendar using w/a/s/d or the Arrow Keys, and interact
+          with it using E
         type: 0
         typeString: 
       - title: Sequence
@@ -447,7 +448,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 81
-        y: 198
+        y: 196
         width: 160
         height: 30
     - id: 4
