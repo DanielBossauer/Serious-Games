@@ -6,16 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class DialogueUtility : MonoBehaviour
 {
-    private Queue<DialogueObject> dialogueQueue = new Queue<DialogueObject>();
     private Dialogue_Manager dialogueManager;
     public DialogObjectPath path;
-    private dialogs dialogs;
 
     private void Start()
     {
         dialogueManager = GetComponent<Dialogue_Manager>();
-        dialogs = new dialogs();
-        path = dialogs.depressionQuestions;
+
     }
 
     public void SplitAndEnqueue(int choiceIndex)
@@ -30,10 +27,6 @@ public class DialogueUtility : MonoBehaviour
                 Destroy(DialogueManager.instance.gameObject);
             }
             SceneManager.LoadScene(sceneIndex + 1);
-        }
-        if (dialogueQueue.Count == 0)
-        {
-            path = dialogs.GetNewPath(choiceIndex);
         }
         path = path.choicePaths[choiceIndex];
         for (int i = 0; i < path.dialogObjects.Length; i++)

@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class dialogs
 {
-    public DialogueObject depressionQuestionDialog = new DialogueObject(false, new string[] {
+
+    public DialogueObject startDialogueQuestions = new DialogueObject(new string[] {
                 "I'm sorry I'm not as pretty as other girls.",
                 "I know I'm not your first choice. You'd probably rather be with someone better.",
                 "I hope we can still have a good time together, even if you might find someone better.",
@@ -20,28 +21,27 @@ public class dialogs
                 "I'm sorry for talking too much."},
                 true);
 
-    public DialogObjectPath depressionQuestions = new DialogObjectPath(
+    public DialogObjectPath startDialog = new DialogObjectPath(
         new DialogueObject[] {
-            new DialogueObject(false, new string[]{"sorry I am Late.", "I hope you didn't have to wait long."}, false),
-            new DialogueObject(true, new string[] {"Oh it's OK. I also arrived a short time ago"}, false),
+            new DialogueObject(new string[]{"sorry I am Late.", "I hope you didn't have to wait long."}),
+            new DialogueObject(new string[] {"Oh it's OK. I also arrived a short time ago"}, false, true, "Date"),
             null
         },
         null);
 
-    DialogObjectPath[] depressionQuestionsAnswers;
-
+    DialogObjectPath[] startQuestionsAnswers;
 
     public dialogs()
     {
-        DialogueObject[] objs = depressionQuestions.dialogObjects;
-        objs[objs.Length-1] = depressionQuestionDialog;
+        DialogueObject[] objs = startDialog.dialogObjects;
+        objs[objs.Length-1] = startDialogueQuestions;
         makeDepressionQuestionsAnswers();
-        //depressionQuestions.choicePaths = depressionQuestionsAnswers;
+        startDialog.choicePaths = startQuestionsAnswers;
     }
 
     public DialogObjectPath GetNewPath(int i)
     {
-        return depressionQuestionsAnswers[i];
+        return startQuestionsAnswers[i];
     }
 
     string[] ChooseStringsFromColumns()
@@ -120,8 +120,8 @@ public class dialogs
             throw new ArgumentException("dialogChoicesList is null or empty!");
         }
 
-        int numRows = 11;
-        int numCols = 4;
+        int numRows = dialogChoicesList.Length;
+        int numCols = dialogChoicesList[0].Length;
 
         string[] chosenStrings = new string[numRows];
 
@@ -136,10 +136,10 @@ public class dialogs
     private void makeDepressionQuestionsAnswers()
     {
         string[] chosenStrings = ChooseStringsFromColumns();
-        depressionQuestionsAnswers = new DialogObjectPath[11];
-        for (int i = 0; i < 11; i++)
+        startQuestionsAnswers = new DialogObjectPath[chosenStrings.Length];
+        for (int i = 0; i < chosenStrings.Length; i++)
         {
-            depressionQuestionsAnswers[i] = new DialogObjectPath(new DialogueObject[] { new DialogueObject(true, new string[] { chosenStrings[i] }, false), depressionQuestionDialog }, depressionQuestionsAnswers);
+            startQuestionsAnswers[i] = new DialogObjectPath(new DialogueObject[] { new DialogueObject(new string[] { chosenStrings[i] }, false, true, "Date"), startDialogueQuestions}, startQuestionsAnswers);
         }
     }
 }

@@ -16,9 +16,6 @@ public class Dialogue_Manager : MonoBehaviour
 
     private void Start()
     {
-        DialogueObject diaObj = new DialogueObject(false, new string[] { "Sorry I was Late."}, false);
-        dialogueQueue.Enqueue(diaObj);
-        dialogueQueue.Enqueue(new dialogs().depressionQuestionDialog);
         ShowNextDialogue();
     }
 
