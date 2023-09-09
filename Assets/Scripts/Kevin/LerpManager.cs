@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
+using System.Linq;
+using UnityEngine.UI;
 
 public class LerpManager : MonoBehaviour
 {
@@ -497,6 +499,17 @@ public class LerpManager : MonoBehaviour
         StartCoroutine(LerpColorAlphaSimpleTwoWay());
     }
 
+    public IEnumerator LerpColorAlphaSimpleTwoWayCanvas(float duration)
+    {
+        this.Rect.GetComponent<Image>().canvasRenderer.SetAlpha(0.01f);
+        
+        this.Rect.GetComponent<Image>().CrossFadeAlpha(1f, duration, false);
+
+        yield return new WaitForEndOfFrame();
+        
+        yield return null;
+    }
+
     public IEnumerator LerpColorAlphaSimpleTwoWay()
     {
         DisableSecondaryAndTexts();
@@ -558,5 +571,224 @@ public class LerpManager : MonoBehaviour
             time -= Time.deltaTime * LerpSpeed;
             yield return null;
         }
+    }
+
+    public void CALLFadeInOneWay()
+    {
+        //StartCoroutine(FadeInOneWay());
+    }
+
+    /*
+    public IEnumerator FadeInOneWayCanvas()
+    {
+        DisableSecondaryAndTexts();
+
+
+        //Mesh mesh = Rect.GetComponent<MeshFilter>().mesh;
+
+        Material[] materials = CanvasRendererGetMaterials();
+
+        /*
+        Color[] startColors = new Color[mesh.colors.Length];
+        Color[] targetColors = new Color[mesh.colors.Length];
+        List<Color> currentColors = new List<Color>();
+        for (int i = 0; i < mesh.colors.Length; i++)
+        {
+            startColors[i] = new Color(mesh.colors[i].r, mesh.colors[i].g, mesh.colors[i].b, 0f);
+            targetColors[i] = mesh.colors[i];
+        }
+        */
+    /*
+    Color[] startColors = new Color[materials.Length];
+    Color[] targetColors = new Color[materials.Length];
+    List<Color> currentColors = new List<Color>();
+    for (int i = 0; i < materials.Length; i++)
+    {
+        startColors[i] = new Color(materials[i].color.r, materials[i].color.g, materials[i].color.b, 0f);
+        targetColors[i] = materials[i].color;
+    }
+
+
+    currentColors.Clear();
+    //mesh.GetColors(currentColors);
+    currentColors = CanvasRendererGetColors();
+    float time = 0;
+    float random = Random.value;
+    while (time < 1)
+    {
+            for (int i = 0; i < currentColors.Count; i++)
+            {
+                currentColors[i] = Color.Lerp(
+                    startColors[i],
+                    targetColors[i],
+                    Curve.Evaluate(time, random)
+                );
+            }
+
+        //mesh.SetColors(currentColors);
+        CanvasRendererSetColors(currentColors);
+
+        time += Time.deltaTime * LerpSpeed;
+        yield return null;
+    }
+}
+*/
+    public void FadeInOneWayCanvas(bool updateFadeHasText, float fadeDuration)
+    {
+        //TODO: add the canvas fade in function
+        //Rect.SetActive(true);
+        //yield return null;
+
+        Rect.GetComponent<Image>().canvasRenderer.SetAlpha(0.01f);
+        if (updateFadeHasText) Rect.transform.GetChild(0).GetComponent<TextMeshProUGUI>().canvasRenderer.SetAlpha(0.01f);
+        Rect.SetActive(true);
+
+        timeToPass = 5f;
+        lastTime = Time.realtimeSinceStartup;
+
+        updateFadeOut = false;
+        updateFadeIn = true;
+
+        this.updateFadeHasText = updateFadeHasText;
+        this.fadeDuration = fadeDuration;
+    }
+
+    public void FadeOutOneWayCanvas(bool updateFadeHasText, float fadeDuration)
+    {
+        //TODO: add the canvas fade out function
+        //Rect.SetActive(false);
+        //yield return null;
+
+        Rect.GetComponent<Image>().canvasRenderer.SetAlpha(0.99f);
+        if (updateFadeHasText) Rect.transform.GetChild(0).GetComponent<TextMeshProUGUI>().canvasRenderer.SetAlpha(0.99f);
+        Rect.SetActive(true);
+
+        timeToPass = 5f;
+        lastTime = Time.realtimeSinceStartup;
+
+        updateFadeOut = true;
+        updateFadeIn = false;
+
+        this.updateFadeHasText = updateFadeHasText;
+        this.fadeDuration = fadeDuration;
+    }
+
+    bool updateFadeOut;
+    bool updateFadeIn;
+    bool updateFadeHasText;
+    float fadeDuration;
+
+    float lastTime;
+    float timeToPass;
+
+    private void Update()
+    {
+        if (updateFadeIn)
+        {
+            //this.Rect.GetComponent<Image>().canvasRenderer.SetAlpha(0.01f);
+            Rect.GetComponent<Image>().CrossFadeAlpha(1f, fadeDuration, false);
+            if(updateFadeHasText) Rect.transform.GetChild(0).GetComponent<TextMeshProUGUI>().CrossFadeAlpha(1f, fadeDuration, false);
+            if (Time.realtimeSinceStartup > lastTime + timeToPass)
+            {
+                lastTime = Time.realtimeSinceStartup;
+                updateFadeIn = false;
+                updateFadeOut = false;
+                //updateFadeOut = true;
+            }
+        }
+
+        if (updateFadeOut)
+        {
+            Rect.GetComponent<Image>().CrossFadeAlpha(0f, fadeDuration, false);
+            if (updateFadeHasText) Rect.transform.GetChild(0).GetComponent<TextMeshProUGUI>().CrossFadeAlpha(0f, fadeDuration, false);
+            if (Time.realtimeSinceStartup > lastTime + timeToPass)
+            {
+                lastTime = Time.realtimeSinceStartup;
+                updateFadeIn = false;
+                updateFadeOut = false;
+                //wordsAppearingMinigame.RemoveObjectOutOfInternal(this);
+                //Destroy(this.gameObject);
+            }
+        }
+    }
+
+    Material[] CanvasRendererGetMaterials()
+    {
+        Material[] materials = new Material[Rect.GetComponent<CanvasRenderer>().materialCount];
+        CanvasRenderer canvasRenderer = Rect.GetComponent<CanvasRenderer>();
+        for (int i = 0; i < canvasRenderer.materialCount; i++)
+        {
+            materials[i] = canvasRenderer.GetMaterial(i);
+        }
+        return materials;
+    }
+
+    List<Color> CanvasRendererGetColors()
+    {
+        Material[] tmp = CanvasRendererGetMaterials();
+        Color[] colors = new Color[tmp.Length];
+        for(int i=0;i<tmp.Length;i++)
+        {
+            colors[i] = tmp[i].color;
+        }
+        return colors.ToList();
+    }
+
+    void CanvasRendererSetColors(List<Color> currentColors)
+    {
+        Material[] tmp = CanvasRendererGetMaterials();
+        for (int i = 0; i < currentColors.Count; i++)
+        {
+            tmp[i].color = currentColors[i];
+        }
+        for (int i=0; i<tmp.Length;i++)
+        {
+            Rect.GetComponent<CanvasRenderer>().SetMaterial(tmp[0],i);
+        }
+        
+    }
+
+
+    public IEnumerator FadeOutOneWay()
+    {
+        DisableSecondaryAndTexts();
+        //Rect.transform.position = CenterTarget.position;
+        //Rect.transform.rotation = Quaternion.identity;
+
+        Mesh mesh = Rect.GetComponent<MeshFilter>().mesh;
+
+        Color[] startColors = new Color[mesh.colors.Length];
+        Color[] targetColors = new Color[mesh.colors.Length];
+        List<Color> currentColors = new List<Color>();
+        for (int i = 0; i < mesh.colors.Length; i++)
+        {
+            startColors[i] = mesh.colors[i];
+            targetColors[i] = new Color(mesh.colors[i].r, mesh.colors[i].g, mesh.colors[i].b, 0f);
+        }
+
+
+        currentColors.Clear();
+        mesh.GetColors(currentColors);
+        float time = 0;
+        float random = Random.value;
+        while (time < 1)
+        {
+            for (int i = 0; i < currentColors.Count; i++)
+            {
+                currentColors[i] = Color.Lerp(
+                    startColors[i],
+                    targetColors[i],
+                    Curve.Evaluate(time, random)
+                );
+            }
+
+            mesh.SetColors(currentColors);
+
+            time += Time.deltaTime * LerpSpeed;
+            yield return null;
+        }
+
+
+
     }
 }

@@ -413,7 +413,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(Talking,,ConversationAnimator);
+
+          required
+          SendMessage(Idle,,ConversationAnimator)@Message(Typed);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 1
@@ -2184,7 +2189,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Ooooooh... this is gonna be a nice joke.)
+        value: Ooooooh... this is gonna be funny!
         type: 0
         typeString: 
       - title: Sequence
@@ -2431,7 +2436,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 57, y: 469}
+    canvasScrollPosition: {x: 37, y: 376}
     canvasZoom: 1
   - id: 2
     fields:
@@ -3033,8 +3038,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77
-        y: 529
+        x: 78
+        y: 530
         width: 160
         height: 30
     - id: 42
@@ -3061,7 +3066,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: She is just there, getting paid... God! In Jesus' name! ...for just
-          sitting there and listening to whatever you have to say
+          sitting there and listening to whatever you have to say. God!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -3174,7 +3179,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: And then YOU have the audacity to say that this whore, this fraud,
           this greedy bastard who is just milking you and your parents for invented
-          psychosises you apparently have...
+          psychosises you supposedly have...
         type: 0
         typeString: 
       - title: Sequence
@@ -4194,7 +4199,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 43, y: 400}
+    canvasScrollPosition: {x: 0, y: 974}
     canvasZoom: 1
   - id: 3
     fields:

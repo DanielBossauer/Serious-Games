@@ -11,9 +11,9 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     [SerializeField] WordsAppearingObjects wordsAppearingPrefab;
 
-    [SerializeField] List<string> texts;
+    [SerializeField] List<string> textsPhase1;
 
-    [SerializeField] List<string> correctTexts;
+    [SerializeField] List<string> correctTextsPhase1;
 
     [SerializeField] LerpManager lerpManager;
 
@@ -21,13 +21,18 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     List<string> textsInternal;
 
-    WordsAppearingObjects[] internalObjects;
+    List<WordsAppearingObjects> internalObjects;
 
     [SerializeField] string nextCoversation;
 
     [SerializeField] BackToTherapist2 backToTherapist2;
 
     int correctChoices;
+
+    [SerializeField] string failConvo1 = "Fail1";
+
+    [SerializeField] delegate void MinigamePhase();
+    MinigamePhase minigamePhase;
 
     // Start is called before the first frame update
     void Start()
@@ -38,27 +43,41 @@ public class WordsAppearingMinigame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (correctChoices >= correctTextsPhase1.Count - 1)
+        {
+            AllCorrectChoices();
+        }
     }
 
     public void SetNextConversation(string convo)
     {
+        DialogueManager.StopAllConversations();
         nextCoversation = convo;
     }
 
-    public void StartWordsMinigame()
+    public void StartWordsMinigamePhase1()
     {
+        DialogueManager.StopAllConversations();
+
+        correctChoices = 0;
+
         //randomly shuffle words appearing array
         textsInternal = new List<string>();
-        foreach (string s in texts)
+        foreach (string s in textsPhase1)
         {
-            textsInternal.Add(s);
+            if(s != null && s != "") textsInternal.Add(s);
         }
         
         RandomShuffle.Shuffle<String>(textsInternal);
 
         running = true;
+        internalObjects = new List<WordsAppearingObjects>();
+
+        minigamePhase = StartWordsMinigamePhase1;
+
         StartCoroutine(SpawnWords());
+
+        
     }
 
     IEnumerator SpawnWords()
@@ -67,50 +86,77 @@ public class WordsAppearingMinigame : MonoBehaviour
 
         while (running)
         {
-            if (correctChoices >= correctTexts.Count)
-            {
-                AllCorrectChoices();
-            }
-
-
-            WordsAppearingObjects word = Instantiate(wordsAppearingPrefab);
             if (index >= textsInternal.Count)
             {
                 index = 0;
+                //reshuffle list
+                RandomShuffle.Shuffle<String>(textsInternal);
             }
-            word.SetText(textsInternal[index]);
-            if (correctTexts.Contains(textsInternal[index]))
+            if (textsInternal[index] != null || textsInternal[index] != "")
             {
-                word.SetCorrect(true);
+
+                WordsAppearingObjects word = Instantiate(wordsAppearingPrefab);
+                internalObjects.Add(word);
+                word.transform.SetParent(canvas.transform);
+                word.transform.position = new Vector3(UnityEngine.Random.Range(Screen.width * 0.2f, Screen.width * 0.8f), UnityEngine.Random.Range(Screen.height * 0.2f, Screen.height * 0.8f), 1f);
+
+                word.SetText(textsInternal[index]);
+                if (correctTextsPhase1.Contains(textsInternal[index]))
+                {
+                    word.SetCorrect(true);
+                }
+                else
+                {
+                    word.SetCorrect(false);
+                }
+                //word.SetLerpManager(lerpManager);
+                word.StartFading();
+                word.SetMinigame(this);
+
+                yield return new WaitForSeconds(UnityEngine.Random.Range(1, 5));
             }
-            else
-            {
-                word.SetCorrect(false);
-            }
-            word.SetLerpManager(lerpManager);
-            word.SetMinigame(this);
+            
             index++;
-            yield return new WaitForSeconds(UnityEngine.Random.Range(0,3));
+            yield return new WaitForEndOfFrame();
         }
     }
 
     public void RemoveTextOutOfInternal(string text)
     {
         textsInternal.Remove(text);
+
+        //index = 0;
+        //reshuffle list
+        //RandomShuffle.Shuffle<String>(textsInternal);
+
         correctChoices++;
+    }
+
+    public void RemoveObjectOutOfInternal(WordsAppearingObjects o)
+    {
+        if(o != null)
+        {
+            internalObjects.Remove(o);
+        }
     }
 
 
     public void EndWordsMinigame()
     {
-        running = false;
-        foreach (WordsAppearingObjects wordObject in internalObjects)
+        if (running)
         {
-            Destroy(wordObject);
-        }
+            running = false;
+            foreach (WordsAppearingObjects wordObject in internalObjects)
+            {
+                if (wordObject != null) Destroy(wordObject.gameObject);
+            }
 
-        backToTherapist2.GetComponent<DialogueSystemTrigger>().conversation = nextCoversation;
-        backToTherapist2.GetComponent<DialogueSystemTrigger>().OnUse();
+            DialogueManager.StopAllConversations();
+            DialogueManager.StartConversation("New Conversation 1");
+            DialogueManager.StopAllConversations();
+            backToTherapist2.GetComponent<DialogueSystemTrigger>().conversation = nextCoversation;
+            backToTherapist2.GetComponent<DialogueSystemTrigger>().OnUse();
+        }
     }
 
     void AllCorrectChoices()
@@ -120,7 +166,26 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     public void WrongChoice()
     {
-        EndWordsMinigame();
+        if (running)
+        {
+            running = false;
+            foreach (WordsAppearingObjects wordObject in internalObjects)
+            {
+                if (wordObject != null) Destroy(wordObject.gameObject);
+            }
+
+            DialogueManager.StopAllConversations();
+            DialogueManager.StartConversation("New Conversation 1");
+            DialogueManager.StopAllConversations();
+            DialogueManager.StartConversation(failConvo1);
+            //backToTherapist2.GetComponent<DialogueSystemTrigger>().conversation = failConvo1;
+            //backToTherapist2.GetComponent<DialogueSystemTrigger>().OnUse();
+        }
+    }
+
+    public void RestartMinigameAfterFail()
+    {
+        minigamePhase();
     }
 
 

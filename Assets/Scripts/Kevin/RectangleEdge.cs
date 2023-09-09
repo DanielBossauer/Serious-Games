@@ -19,6 +19,11 @@ public class RectangleEdge : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         
     }
 
+    private void OnDisable()
+    {
+        setTimeCalled = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -35,14 +40,21 @@ public class RectangleEdge : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void SetTime(float time)
     {
-        this.time = time;
-        absoluteGameTime = Time.realtimeSinceStartup;
-        setTimeCalled = true;
+        if (!setTimeCalled)
+        {
+            Debug.LogWarning("SetTime");
+            this.time = time;
+            absoluteGameTime = Time.realtimeSinceStartup;
+            setTimeCalled = true;
+        }
+        
     }
 
     public bool EnoughTimePassed()
     {
-        return Time.realtimeSinceStartup - absoluteGameTime > time + absoluteGameTime;
+        Debug.Log("Time.realtimeSinceStartup" + (Time.realtimeSinceStartup));
+        Debug.Log("time + absoluteGameTime" + (time + absoluteGameTime));
+        return ((Time.realtimeSinceStartup) > (time + absoluteGameTime));
     }
 
     public bool CheckForMouseOnTop()
@@ -83,5 +95,10 @@ public class RectangleEdge : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         Debug.Log("The cursor exited the selectable UI element.");
         mouseOverObject = false;
+    }
+
+    public void SetMouserOverObject(bool b)
+    {
+        mouseOverObject = b;
     }
 }

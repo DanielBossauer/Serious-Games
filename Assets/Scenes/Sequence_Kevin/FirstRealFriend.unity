@@ -426,6 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sand: {fileID: 1349033972}
+  lerpManager: {fileID: 266916943}
 --- !u!4 &69271615
 Transform:
   m_ObjectHideFlags: 0
@@ -2122,6 +2123,11 @@ MonoBehaviour:
   lerpManager: {fileID: 266916943}
   lerpSpeed: 1
   moveSpeed: 2
+  bloomThreshold: 0.9
+  bloomColor: {r: 0.42352942, g: 0.3019608, b: 0.12156863, a: 0}
+  bloomIntensity: 0.9
+  changeBloom: 1
+  visualEffectsChanger: {fileID: 788104277}
 --- !u!4 &905765808
 Transform:
   m_ObjectHideFlags: 0
@@ -2630,6 +2636,10 @@ MonoBehaviour:
   givenCamera: {fileID: 295000618}
   canvas: {fileID: 975689392}
   indestructableBubble: {fileID: 0}
+  energyButtonPrefab: {fileID: 0}
+  depressionButtonPrefab: {fileID: 0}
+  depressionTexts: []
+  keepTrackOfSpawnedBubbles: 0
 --- !u!4 &1029131165
 Transform:
   m_ObjectHideFlags: 0
@@ -2966,7 +2976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1349033973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2976,16 +2986,16 @@ RectTransform:
   m_GameObject: {fileID: 1349033972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.127, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1852799444}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -40}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1349033974
 MonoBehaviour:
@@ -3910,6 +3920,12 @@ MonoBehaviour:
   - {fileID: 5373492420389725814}
   - {fileID: 0}
   someEmpiricConstant: 0.05
+  lerpManager: {fileID: 0}
+  outsidePosition: {fileID: 0}
+  effectsOnStart: {fileID: 0}
+  friendConvo: 
+  blackScreen: {fileID: 0}
+  friend: {fileID: 0}
 --- !u!4 &1767201121
 Transform:
   m_ObjectHideFlags: 0
