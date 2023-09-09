@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float runSpeed = 40f;
 	public float currentSpeed = 0f;
 
-	float horizontalMove = 0f;
+	public float horizontalMove = 0f;
 	bool jump = false;
 	bool dash = false;
 
