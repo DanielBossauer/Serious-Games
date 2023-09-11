@@ -13813,7 +13813,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 6082}
+    canvasScrollPosition: {x: 14, y: 686}
     canvasZoom: 0.5
   - id: 12
     fields:
@@ -15234,7 +15234,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 806}
+    canvasScrollPosition: {x: 0, y: 483}
     canvasZoom: 1
   - id: 14
     fields:

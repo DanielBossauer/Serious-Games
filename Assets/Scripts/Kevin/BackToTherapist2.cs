@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BackToTherapist2 : MonoBehaviour
 {
@@ -58,6 +59,10 @@ public class BackToTherapist2 : MonoBehaviour
 
     [SerializeField] Canvas swapMindMap;
 
+    [SerializeField] SwapMinigame swapMinigame;
+
+    [SerializeField] Image swapMinigameHider;
+
     private void Awake()
     {
         notebookArrowLeft.gameObject.SetActive(false);
@@ -66,6 +71,8 @@ public class BackToTherapist2 : MonoBehaviour
 
         swapMindMap.gameObject.SetActive(false);
         finalMindMap.gameObject.SetActive(false);
+
+        swapMinigameHider.gameObject.SetActive(false);
 
         foreach (GameObject g in PIOSEEStages)
         {
@@ -501,7 +508,7 @@ public class BackToTherapist2 : MonoBehaviour
     {
         foreach (GameObject gameObject in backgroundToHide)
         {
-            gameObject.SetActive(false);
+            if (gameObject != null) gameObject.SetActive(false);
         }
     }
 
@@ -509,7 +516,7 @@ public class BackToTherapist2 : MonoBehaviour
     {
         foreach (GameObject gameObject in backgroundToHide)
         {
-            gameObject.SetActive(true);
+            if(gameObject != null) gameObject.SetActive(true);
         }
         
     }
@@ -659,7 +666,7 @@ public class BackToTherapist2 : MonoBehaviour
             notebookHideButton.SetClickable(false);
 
             //hide notebook
-            lerpManagers[0].SetSpeeds(1, 2);
+            lerpManagers[0].SetSpeeds(0.5f, 1);
 
             lerpManagers[0].Rect = notebookInstancesList[notebookCounter];
 
@@ -679,7 +686,7 @@ public class BackToTherapist2 : MonoBehaviour
             
             
 
-            lerpManagers[1].SetSpeeds(1, 2);
+            lerpManagers[1].SetSpeeds(0.5f, 1);
 
             //arrowLeftInstance = Instantiate(notebookArrowLeft);
             notebookArrowLeft.transform.parent = notebookCanvas.transform;
@@ -689,7 +696,7 @@ public class BackToTherapist2 : MonoBehaviour
             //StartCoroutine(lerpManagers[1].FadeOutOneWayCanvas());
             lerpManagers[1].FadeOutOneWayCanvas(true,1f);
 
-            lerpManagers[2].SetSpeeds(1, 2);
+            lerpManagers[2].SetSpeeds(0.5f, 1);
 
             //arrowRightInstance = Instantiate(notebookArrowRight);
             notebookArrowRight.transform.parent = notebookCanvas.transform;
@@ -826,6 +833,8 @@ public class BackToTherapist2 : MonoBehaviour
 
     public void ShowOverviewOfProblems()
     {
+        //swapMinigame.ShufflePositions();
+        swapMinigameHider.gameObject.SetActive(true);
         swapMindMap.gameObject.SetActive(true);
     }
 

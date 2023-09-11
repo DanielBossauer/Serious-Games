@@ -142,7 +142,8 @@ public class RightChoicesMinigame : MonoBehaviour
 
     void RemoveFromScrollingList(MinigameChoice m)
     {
-
+        choicesInCanvas.Remove(m);
+        m.transform.SetParent(null);
     }
 
     public void SetNextConvo()
@@ -174,6 +175,17 @@ public class RightChoicesMinigame : MonoBehaviour
         {
             choicesMinigameRunning = false;
             canvas.gameObject.SetActive(false);
+
+            List<MinigameChoice> tmpList = new List<MinigameChoice>();
+            foreach (MinigameChoice c in choicesInCanvas)
+            {
+                tmpList.Add(c);
+            }
+
+            foreach (MinigameChoice c in tmpList)
+            {
+                RemoveFromScrollingList(c);
+            }
 
             DialogueManager.StopAllConversations();
             backToTherapist2.gameObject.GetComponent<DialogueSystemTrigger>().conversation = "New Conversation 1";

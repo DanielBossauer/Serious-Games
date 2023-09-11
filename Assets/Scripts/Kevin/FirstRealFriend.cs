@@ -14,6 +14,7 @@ public class FirstRealFriend : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sand.gameObject.SetActive(false);
         this.GetComponent<DialogueSystemTrigger>().OnUse();
         DialogueManager.instance.transform.GetChild(0).GetComponent<Canvas>().sortingOrder = 200;
     }

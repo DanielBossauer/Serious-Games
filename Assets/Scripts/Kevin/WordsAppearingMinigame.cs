@@ -54,7 +54,7 @@ public class WordsAppearingMinigame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (correctTextsPhase != null && correctChoices >= correctTextsPhase.Count - 1)
+        if (correctTextsPhase != null && correctChoices > correctTextsPhase.Count - 1)
         {
             AllCorrectChoices();
         }

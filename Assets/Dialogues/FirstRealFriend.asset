@@ -3381,7 +3381,9 @@ MonoBehaviour:
           require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          require Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -7205,7 +7207,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 159.99997, y: 2735.3843}
+    canvasScrollPosition: {x: 339.9999, y: 1963.0759}
     canvasZoom: 0.65
   - id: 2
     fields:

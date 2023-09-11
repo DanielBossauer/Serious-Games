@@ -2,6 +2,7 @@ using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwapMinigame : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class SwapMinigame : MonoBehaviour
     [SerializeField] BackToTherapist2 backToTherapist2;
 
     [SerializeField] SwapMinigameButton[] allButtons;
+
+    [SerializeField] Image blueHideScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -70,11 +73,14 @@ public class SwapMinigame : MonoBehaviour
     {
         foreach (SwapMinigameButton button in allButtons)
         {
+            Debug.LogWarning(button.GetCurrentPosition() + " " + button.rightPosition);
             if (!button.CheckPosition())
             {
+                Debug.LogWarning("false");
                 return false;
             }
         }
+        Debug.LogWarning("true");
         return true;
     }
 
@@ -85,6 +91,8 @@ public class SwapMinigame : MonoBehaviour
             DialogueManager.StopAllConversations();
 
             ShufflePositions();
+
+            blueHideScreen.gameObject.SetActive(false);
 
             swapMinigameRunning = true;
             swappingCanvas.gameObject.SetActive(true);
@@ -101,6 +109,8 @@ public class SwapMinigame : MonoBehaviour
     {
         if (swapMinigameRunning)
         {
+            blueHideScreen.gameObject.SetActive(false);
+
             foreach (SwapMinigameButton button in allButtons)
             {
                 button.MakeUnClickable();

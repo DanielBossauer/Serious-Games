@@ -12,11 +12,16 @@ public class SwapMinigameButton : MonoBehaviour
 
     bool clickable;
 
-    [SerializeField] int rightPosition;
+    [SerializeField] public int rightPosition;
 
     int currentPosition;
 
     //[SerializeField] int rightNumber;
+
+    private void Awake()
+    {
+        currentPosition = rightPosition;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -90,6 +95,7 @@ public class SwapMinigameButton : MonoBehaviour
 
     public void SetCurrentPosition(int i)
     {
+        //if (i == 0) i = rightPosition;
         currentPosition = i;
         this.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = i.ToString();
     }
