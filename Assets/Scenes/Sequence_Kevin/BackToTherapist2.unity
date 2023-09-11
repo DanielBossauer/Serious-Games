@@ -16553,6 +16553,86 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: 754bec4d-5c23-4837-a3ba-a6cbcdcb1723
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982988}
+          m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
+          m_MethodName: ShowFinalMap
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 334e3f60-7511-411e-9fd3-92a097611bb2
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982988}
+          m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
+          m_MethodName: HideOverviewOfProblems
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 041c114f-c72b-41ad-8e31-95988bd7c780
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982988}
+          m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
+          m_MethodName: HideOverviewOfProblems
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: c4ecdd22-c1d3-4a8c-bedb-e63a05a7c8a4
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982988}
+          m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
+          m_MethodName: PIOSEEs_Activate
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 502c85f0-5592-4911-bd64-5e98bce6b174
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982988}
+          m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
+          m_MethodName: PIOSEEs_Deactivate
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1879438900
 Transform:
   m_ObjectHideFlags: 0
@@ -17238,10 +17318,17 @@ MonoBehaviour:
   - Church Bible Group
   textsPhase3:
   - Hide True Self
+  - Yearns to get rejected more
+  - Yearns to get rejected more
+  - Be her truest self
+  - Becomes evil
   correctTextsPhase3:
   - Hide True Self
   textsPhase4:
   - Be Open About Herself
+  - Be a good person
+  - Go to school
+  - Be a party pooper
   correctTextsPhase4:
   - Be Open About Herself
 --- !u!4 &1947674628

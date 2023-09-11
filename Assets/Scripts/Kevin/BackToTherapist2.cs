@@ -848,4 +848,9 @@ public class BackToTherapist2 : MonoBehaviour
     {
         finalMindMap.gameObject.SetActive(false);
     }
+
+    public void ShowFinalMap()
+    {
+        finalMindMap.gameObject.SetActive(true);
+    }
 }

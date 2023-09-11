@@ -85,7 +85,20 @@ public class SwapMinigameButton : MonoBehaviour
 
     public bool CheckPosition()
     {
+        //accept several combinations that are similar to the "correct" solution
         if (rightPosition == currentPosition)
+        {
+            return true;
+        }
+        else if(rightPosition == 7 && (currentPosition == 8 || currentPosition == 9))
+        {
+            return true;
+        }
+        else if (rightPosition == 8 && (currentPosition == 7 || currentPosition == 9))
+        {
+            return true;
+        }
+        else if (rightPosition == 9 && (currentPosition == 7 || currentPosition == 8))
         {
             return true;
         }

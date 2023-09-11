@@ -3171,7 +3171,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 2054}
+    canvasScrollPosition: {x: 3, y: 0}
     canvasZoom: 1
   - id: 2
     fields:
@@ -4067,7 +4067,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 4, y: 75}
+    canvasScrollPosition: {x: 1, y: 309}
     canvasZoom: 1
   - id: 4
     fields:
@@ -4559,7 +4559,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 19, y: 45}
+    canvasScrollPosition: {x: 36, y: 80}
     canvasZoom: 1
   - id: 5
     fields:
@@ -4994,7 +4994,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 137}
+    canvasScrollPosition: {x: 40, y: 97}
     canvasZoom: 1
   - id: 6
     fields:
@@ -5907,7 +5907,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 67}
+    canvasScrollPosition: {x: 0, y: 57}
     canvasZoom: 1
   - id: 9
     fields:
@@ -6676,7 +6676,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 16, y: 487}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
   - id: 10
     fields:
@@ -7224,7 +7224,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 7, y: 212}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
   - id: 11
     fields:
@@ -13813,8 +13813,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 5, y: 5780.5}
-    canvasZoom: 0.4
+    canvasScrollPosition: {x: 14, y: 686}
+    canvasZoom: 0.5
   - id: 12
     fields:
     - title: Title
@@ -14483,7 +14483,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 4.So her mind wants to prevent these negative experiences
+        value: So her mind wants to prevent these negative experiences
         type: 0
         typeString: 
       - title: Sequence
@@ -14538,7 +14538,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 5.And that's why she's using protection mechanisms
+        value: And that's why she's using protection mechanisms
         type: 0
         typeString: 
       - title: Sequence
@@ -14593,7 +14593,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 6.One of them is people pleasing
+        value: 4.One of them is people pleasing
         type: 0
         typeString: 
       - title: Sequence
@@ -14648,7 +14648,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 7.But no matter how much she pleases people, at the end she fails
+        value: 5.But no matter how much she pleases people, at the end she fails
           somehow.
         type: 0
         typeString: 
@@ -14704,7 +14704,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 8.This makes her be afraid of mistakes.
+        value: 6.This makes her be afraid of mistakes.
         type: 0
         typeString: 
       - title: Sequence
@@ -14759,7 +14759,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 9.And this subsequently gives her the need to be perfect. And the
+        value: 7.And this subsequently gives her the need to be perfect. And the
           omnipresent strong need to fix even the tiniest mistakes she does. No matter
           if in a conversation or at school.
         type: 0
@@ -14816,7 +14816,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10.Which leads to unnaturally high expectations of herself.
+        value: 8.Which leads to unnaturally high expectations of herself.
         type: 0
         typeString: 
       - title: Sequence
@@ -14871,8 +14871,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 11.Which as a result leads to lower self-esteem because she can't
-          possibly fulfill these standards.
+        value: 9.Which as a result leads to lower self-esteem because she can't possibly
+          fulfill these standards.
         type: 0
         typeString: 
       - title: Sequence
@@ -14927,7 +14927,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 12.This clouds her thoughts and makes her more anxious.
+        value: 10.This clouds her thoughts and makes her more anxious.
         type: 0
         typeString: 
       - title: Sequence
@@ -14982,8 +14982,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 13.which in returns makes her want to people please even more, be
-          even more perfect.
+        value: Which in returns makes her want to people please even more, be even
+          more perfect.
         type: 0
         typeString: 
       - title: Sequence
@@ -15234,7 +15234,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 483}
     canvasZoom: 1
   - id: 14
     fields:
