@@ -506,9 +506,27 @@ public class BackToTherapist : MonoBehaviour
         yield return new WaitForSeconds(15);
         intrusiveThoughtManager.StopSpawning();
 
-        background.color = new Color(0,0,0);
+        background.color = new Color(1f,1f,1f);
 
+        DialogueManager.StopAllConversations();
+        this.GetComponent<DialogueSystemTrigger>().conversation = "New Conversation 1";
+        this.GetComponent<DialogueSystemTrigger>().OnUse();
+        DialogueManager.StopAllConversations();
         this.GetComponent<DialogueSystemTrigger>().conversation = "New Conversation 10";
         this.GetComponent<DialogueSystemTrigger>().OnUse();
+    }
+
+    public void CallNextScene()
+    {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (DialogueManager.instance != null)
+        {
+            DialogueManager.StopAllConversations();
+            Destroy(DialogueManager.instance.gameObject);
+        }
+
+        SceneManager.LoadScene(sceneIndex + 1);
+        
     }
 }
