@@ -17,8 +17,6 @@ public class NotebookManager : MonoBehaviour
     [SerializeField] bool useDefaultText;
     [SerializeField] string defaultText;
 
-    GameObject notebookInstance;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +33,7 @@ public class NotebookManager : MonoBehaviour
     {
         Debug.Log("Make Notebook Appear");
 
-        notebookInstance = Instantiate(notebook);
+        GameObject notebookInstance = Instantiate(notebook);
 
         lerpManager.SetSpeeds(1, 2);
 
@@ -53,7 +51,7 @@ public class NotebookManager : MonoBehaviour
         lerpManager.Rect = notebookInstance;
 
 
-        Vector3 endPoint = new Vector3(Screen.width*0.5f, Screen.height * 0.40f, 0);
+        Vector3 endPoint = new Vector3(Screen.width*0.5f, Screen.height * 0.25f, 0);
         GameObject tmp = new GameObject();
         tmp.transform.position = endPoint;
         lerpManager.EndPoint = tmp.transform;
@@ -80,16 +78,9 @@ public class NotebookManager : MonoBehaviour
 
     public void CallNextScene()
     {
-        SaveText();
-
         DialogueManager.StopAllConversations();
         Destroy(DialogueManager.instance.gameObject);
         SceneManager.LoadScene(nextScene);
-    }
-
-    void SaveText()
-    {
-        StaticVariables.notebookDict.Add(SceneManager.GetActiveScene().name, notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text);
     }
 
 

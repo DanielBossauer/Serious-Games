@@ -75,10 +75,6 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    - title: Display Name
-      value: ???
-      type: 0
-      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -735,13 +731,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'require SendMessage(MakeThoughtAppear,Don''t get too dark,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,She will hate the weird stuff you are into
-          like everyone,IntrusiveThoughtManager);
-
-          {{default}};'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -867,7 +857,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 11
         destinationConversationID: 1
-        destinationDialogueID: 50
+        destinationDialogueID: 13
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1075,25 +1065,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-<<<<<<< Updated upstream
-        value: 'SendMessage(MakeThoughtAppear,Stop weirding her out,IntrusiveThoughtManager);
-
-          SendMessage(MakeThoughtAppear,Stop
-          talking too much like a waterfall,IntrusiveThoughtManager);
-
-          SendMessage(MakeThoughtAppear,Just
-          stay quiet you monster,IntrusiveThoughtManager);
-=======
-        value: 'require SendMessage(MakeThoughtAppear,Stop weirding her out,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,Stop talking too much like a waterfall,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,Just stay quiet you monster,IntrusiveThoughtManager);
->>>>>>> Stashed changes
-
-          {{default}};'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -2394,7 +2366,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 297
+        x: 296
         y: 2250
         width: 160
         height: 30
@@ -2703,19 +2675,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-<<<<<<< Updated upstream
-        value: 'SendMessage(MakeThoughtAppear, Nothing can ever last for you,IntrusiveThoughtManager);
-
-          SendMessage(MakeThoughtAppear,
-=======
-        value: 'require SendMessage(MakeThoughtAppear, Nothing can ever last for
-          you,IntrusiveThoughtManager);
-
-          require SendMessage(MakeThoughtAppear,
->>>>>>> Stashed changes
-          You should have learned by now,IntrusiveThoughtManager);
-
-          {{default}};'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -2795,7 +2755,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 75
-        y: 2548
+        y: 2549
         width: 160
         height: 30
     - id: 47
@@ -2825,20 +2785,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-<<<<<<< Updated upstream
-        value: 'SendMessage(MakeThoughtAppear,They will end up being betraying you
-          one day,IntrusiveThoughtManager);
-
-          SendMessage(MakeThoughtAppear,
-=======
-        value: 'require SendMessage(MakeThoughtAppear,They will end up being betraying
-          you one day,IntrusiveThoughtManager);
-
-          require SendMessage(MakeThoughtAppear,
->>>>>>> Stashed changes
-          Like always...,IntrusiveThoughtManager);
-
-          {{default}};'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -2894,19 +2841,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-<<<<<<< Updated upstream
-        value: 'SendMessage(MakeThoughtAppear, You will get hurt again,IntrusiveThoughtManager);
-
-          SendMessage(MakeThoughtAppear,
-          You will be alone again,IntrusiveThoughtManager);
-=======
-        value: 'require SendMessage(MakeThoughtAppear, You will get hurt again,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear, You will be alone again,IntrusiveThoughtManager);
->>>>>>> Stashed changes
-
-          {{default}};'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -2964,18 +2899,7 @@ MonoBehaviour:
         value: 'require SendMessage(MakeNotebookAppear,, NotebookManager)@Message(Typed);
 
           require
-          SendMessage(Happy,, VisualEffectsChanger)@Message(Typed);
-
-<<<<<<< Updated upstream
-          SendMessage(MakeThoughtAppear,
-          Like always...,IntrusiveThoughtManager);
-=======
-          require
-          SendMessage(MakeThoughtAppear, Like always...,IntrusiveThoughtManager);
->>>>>>> Stashed changes
-
-
-          {{default}};'
+          SendMessage(Happy,, VisualEffectsChanger)@Message(Typed);'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -2997,85 +2921,8 @@ MonoBehaviour:
         y: 2743
         width: 160
         height: 30
-    - id: 50
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-<<<<<<< Updated upstream
-        value: 'SendMessage(MakeThoughtAppear,TOO WEIRD,IntrusiveThoughtManager);
-
-          SendMessage(MakeThoughtAppear,APOLOGIZE,IntrusiveThoughtManager);
-
-          SendMessage(MakeThoughtAppear,APOLOGIZE,IntrusiveThoughtManager);
-
-=======
-        value: 'require SendMessage(MakeThoughtAppear,TOO WEIRD,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,APOLOGIZE,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,APOLOGIZE,IntrusiveThoughtManager);
-
-          require
->>>>>>> Stashed changes
-          SendMessage(MakeThoughtAppear,APOLOGIZE,IntrusiveThoughtManager);'
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 50
-        destinationConversationID: 1
-        destinationDialogueID: 13
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 303
-        y: 734
-        width: 160
-        height: 30
     entryGroups: []
-<<<<<<< Updated upstream
-    canvasScrollPosition: {x: 0, y: 2350}
-=======
-    canvasScrollPosition: {x: 0, y: 2386}
->>>>>>> Stashed changes
+    canvasScrollPosition: {x: 23, y: 965}
     canvasZoom: 1
   syncInfo:
     syncActors: 0

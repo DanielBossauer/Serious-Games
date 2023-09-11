@@ -7,11 +7,8 @@ public class SaveData
 {
     public int sceneIndex;
 
-    public Dictionary<string,string> notebookDict = new Dictionary<string, string>();
-
-    public SaveData (int currentScene, Dictionary<string, string> notebookDict) {
+    public SaveData (int currentScene) {
         sceneIndex = currentScene;
-        this.notebookDict = notebookDict;
     }
     
 }

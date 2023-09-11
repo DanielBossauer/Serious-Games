@@ -11,7 +11,7 @@ public static class SaveSystem
         string path = GetPath();
         BinaryFormatter formatter = GetBinaryFormatter();               //binaryencoder
         FileStream file = new FileStream(path, FileMode.Create);        
-        SaveData saveData = new SaveData(currentScene, StaticVariables.GetNotebookDict());
+        SaveData saveData = new SaveData(currentScene);
         formatter.Serialize(file, saveData);
         file.Close();
         return true;

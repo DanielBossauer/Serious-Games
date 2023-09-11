@@ -156,112 +156,6 @@ Transform:
   m_Father: {fileID: 543450653042911267}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &129743791
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 129743797}
-  - component: {fileID: 129743796}
-  - component: {fileID: 129743795}
-  - component: {fileID: 129743794}
-  - component: {fileID: 129743793}
-  - component: {fileID: 129743792}
-  m_Layer: 0
-  m_Name: ConversationAnimator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &129743792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129743791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 626dfc7ce4d293b4a94ab4beae8f3a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1604692833}
-  conversantID: 8
---- !u!114 &129743793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129743791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 626dfc7ce4d293b4a94ab4beae8f3a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1873336903}
-  conversantID: 4
---- !u!114 &129743794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129743791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 626dfc7ce4d293b4a94ab4beae8f3a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1381143503}
-  conversantID: 6
---- !u!114 &129743795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129743791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 626dfc7ce4d293b4a94ab4beae8f3a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1098976540}
-  conversantID: 5
---- !u!114 &129743796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129743791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 626dfc7ce4d293b4a94ab4beae8f3a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1555996379}
-  conversantID: 3
---- !u!4 &129743797
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129743791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.160835, y: 5.234505, z: -111.89163}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &152447708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -409,14 +303,6 @@ PrefabInstance:
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.inputSettings.responseTimeout
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
-      propertyPath: displaySettings.cameraSettings.defaultSequence
-      value: 'SendMessage(Talking,,ConversationAnimator);
-
-        required SendMessage(Idle,,ConversationAnimator)@Message(Typed);
-
-        Delay({{end}})'
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.inputSettings.responseTimeoutAction
@@ -2118,7 +2004,7 @@ Animator:
   m_GameObject: {fileID: 1098976539}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29a807b108e62e44d99ee4d6efb45ac4, type: 2}
+  m_Controller: {fileID: 9100000, guid: ea239539863717a4da57dfa0b3f874ba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2490,7 +2376,7 @@ Animator:
   m_GameObject: {fileID: 1381143501}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29a807b108e62e44d99ee4d6efb45ac4, type: 2}
+  m_Controller: {fileID: 9100000, guid: cfada3570aa46fe4fa1352319f50e56d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2605,7 +2491,7 @@ Animator:
   m_GameObject: {fileID: 1555996378}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29a807b108e62e44d99ee4d6efb45ac4, type: 2}
+  m_Controller: {fileID: 9100000, guid: ea239539863717a4da57dfa0b3f874ba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2805,7 +2691,7 @@ Animator:
   m_GameObject: {fileID: 1604692831}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29a807b108e62e44d99ee4d6efb45ac4, type: 2}
+  m_Controller: {fileID: 9100000, guid: cfada3570aa46fe4fa1352319f50e56d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2868,11 +2754,6 @@ MonoBehaviour:
   lerpManager: {fileID: 954030859}
   lerpSpeed: 0.5
   moveSpeed: 1
-  bloomThreshold: 0.9
-  bloomColor: {r: 0.42352942, g: 0.3019608, b: 0.12156863, a: 0}
-  bloomIntensity: 0.9
-  changeBloom: 1
-  visualEffectsChanger: {fileID: 1760801920}
 --- !u!4 &1669233903
 Transform:
   m_ObjectHideFlags: 0
@@ -3267,12 +3148,6 @@ MonoBehaviour:
   - {fileID: 5373492420389725814}
   - {fileID: 0}
   someEmpiricConstant: 0.05
-  lerpManager: {fileID: 0}
-  outsidePosition: {fileID: 0}
-  effectsOnStart: {fileID: 0}
-  friendConvo: 
-  blackScreen: {fileID: 0}
-  friend: {fileID: 0}
 --- !u!4 &1767201121
 Transform:
   m_ObjectHideFlags: 0
@@ -3456,27 +3331,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1873336896}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1873336903
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873336897}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4223d5d63504694449bbd55665ae76de, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1922221586
 GameObject:
   m_ObjectHideFlags: 0

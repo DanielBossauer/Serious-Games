@@ -258,7 +258,7 @@ MonoBehaviour:
   includeName: 0
   portraitImage: {fileID: 0}
   showPortraitImage: 0
-  doneTime: 6.4342446
+  doneTime: 0
   animationTransitions:
     showTrigger: Show
     hideTrigger: Hide
@@ -486,4 +486,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: My Phone
+  m_Text: Subtitle text.

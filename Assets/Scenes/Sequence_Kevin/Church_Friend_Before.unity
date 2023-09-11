@@ -4684,11 +4684,6 @@ MonoBehaviour:
   lerpManager: {fileID: 0}
   lerpSpeed: 1
   moveSpeed: 2
-  bloomThreshold: 0.9
-  bloomColor: {r: 0.13333334, g: 0.5529412, b: 0.84313726, a: 0}
-  bloomIntensity: 0.9
-  changeBloom: 1
-  visualEffectsChanger: {fileID: 0}
 --- !u!4 &1669233903
 Transform:
   m_ObjectHideFlags: 0
@@ -5171,12 +5166,6 @@ MonoBehaviour:
   - {fileID: 5373492420389725814}
   - {fileID: 0}
   someEmpiricConstant: 0.05
-  lerpManager: {fileID: 0}
-  outsidePosition: {fileID: 0}
-  effectsOnStart: {fileID: 0}
-  friendConvo: 
-  blackScreen: {fileID: 0}
-  friend: {fileID: 0}
 --- !u!4 &1767201121
 Transform:
   m_ObjectHideFlags: 0

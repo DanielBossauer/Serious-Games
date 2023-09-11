@@ -15,26 +15,16 @@ public class IntroductionHomeEvents : MonoBehaviour
         this.GetComponent<DialogueSystemTrigger>().OnUse();
     }
 
-    private void Awake()
-    {
-        DespawnRosesFriend();
-    }
-
     // Update is called once per frame
     void Update()
     {
         
     }
 
-    public void SpawnRosesFriend()
+    public void SpawnRosesFriend(string s = "true")
     {
-        objectToSpawn.SetActive(true);
-        
-    }
-
-    public void DespawnRosesFriend()
-    {
-        objectToSpawn.SetActive(false);
+        if(s == "true") objectToSpawn.SetActive(true);
+        else objectToSpawn.SetActive(false);
     }
 
     public void StartNextScene()

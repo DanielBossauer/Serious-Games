@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class RectanglePart : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    //public bool allowedToPass;
+    public bool allowedToPass;
 
     bool mouseOverObject;
 

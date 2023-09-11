@@ -413,12 +413,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(Talking,,ConversationAnimator);
-
-          required
-          SendMessage(Idle,,ConversationAnimator)@Message(Typed);
-
-          Delay({{end}})'
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -2189,7 +2184,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Ooooooh... this is gonna be funny!
+        value: Ooooooh... this is gonna be a nice joke.)
         type: 0
         typeString: 
       - title: Sequence
@@ -2436,11 +2431,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-<<<<<<< Updated upstream
-    canvasScrollPosition: {x: 37, y: 376}
-=======
-    canvasScrollPosition: {x: 14, y: 1228}
->>>>>>> Stashed changes
+    canvasScrollPosition: {x: 57, y: 469}
     canvasZoom: 1
   - id: 2
     fields:
@@ -3042,8 +3033,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 78
-        y: 530
+        x: 77
+        y: 529
         width: 160
         height: 30
     - id: 42
@@ -3070,7 +3061,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: She is just there, getting paid... God! In Jesus' name! ...for just
-          sitting there and listening to whatever you have to say. God!
+          sitting there and listening to whatever you have to say
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -3183,7 +3174,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: And then YOU have the audacity to say that this whore, this fraud,
           this greedy bastard who is just milking you and your parents for invented
-          psychosises you supposedly have...
+          psychosises you apparently have...
         type: 0
         typeString: 
       - title: Sequence
@@ -4203,11 +4194,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-<<<<<<< Updated upstream
-    canvasScrollPosition: {x: 0, y: 974}
-=======
-    canvasScrollPosition: {x: 1, y: 0}
->>>>>>> Stashed changes
+    canvasScrollPosition: {x: 43, y: 400}
     canvasZoom: 1
   - id: 3
     fields:
