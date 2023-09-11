@@ -2436,7 +2436,11 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
+<<<<<<< Updated upstream
     canvasScrollPosition: {x: 37, y: 376}
+=======
+    canvasScrollPosition: {x: 14, y: 1228}
+>>>>>>> Stashed changes
     canvasZoom: 1
   - id: 2
     fields:
@@ -4199,7 +4203,11 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
+<<<<<<< Updated upstream
     canvasScrollPosition: {x: 0, y: 974}
+=======
+    canvasScrollPosition: {x: 1, y: 0}
+>>>>>>> Stashed changes
     canvasZoom: 1
   - id: 3
     fields:

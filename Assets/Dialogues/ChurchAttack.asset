@@ -682,7 +682,11 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
+<<<<<<< Updated upstream
     canvasScrollPosition: {x: 7, y: 37}
+=======
+    canvasScrollPosition: {x: 0, y: 87}
+>>>>>>> Stashed changes
     canvasZoom: 1
   syncInfo:
     syncActors: 0

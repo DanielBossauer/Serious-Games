@@ -590,16 +590,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide
-          UI as soon as typewriter finishes.
+        value: 'require SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
+          // Hide UI as soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
-          SetDialoguePanel(true)@Message(Reappear);
-          // ...then show the UI again.
-
-          require '
+          require SetDialoguePanel(true)@Message(Reappear);
+          // ...then show the UI again.'
         type: 0
         typeString: 
       - title: EventGuid
@@ -672,7 +670,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(3);'
+          require SetTimeout(3);'
         type: 0
         typeString: 
       conversationID: 1
@@ -728,16 +726,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide
-          UI as soon as typewriter finishes.
+        value: 'require SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
+          // Hide UI as soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
-          SetDialoguePanel(true)@Message(Reappear);
-          // ...then show the UI again.
-
-          require '
+          require SetDialoguePanel(true)@Message(Reappear);
+          // ...then show the UI again.'
         type: 0
         typeString: 
       conversationID: 1
@@ -3374,6 +3370,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'Delay(2)@Message(Typed) -> Message(MyWait);
 
           SetDialoguePanel(false)@Message(MyWait)->
@@ -3385,6 +3382,20 @@ MonoBehaviour:
           ->Message(MyContinue);
 
           Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -4091,6 +4102,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'Delay(2)@Message(Typed) -> Message(MyWait);
 
           SetDialoguePanel(false)@Message(MyWait)->
@@ -4102,6 +4114,20 @@ MonoBehaviour:
           ->Message(MyContinue);
 
           Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -4218,13 +4244,18 @@ MonoBehaviour:
           require SendMessage(MakeThoughtAppear,I
           don''t wanna play that game!,IntrusiveThoughtManager);
 
-          SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
-          // Hide UI as soon as typewriter finishes.
+          require
+          SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide UI as
+          soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
+<<<<<<< Updated upstream
           SetDialoguePanel(true)@Message(Reappear);
+=======
+          require SetDialoguePanel(true)@Message(Reappear);
+>>>>>>> Stashed changes
           // ...then show the UI again. '
         type: 0
         typeString: 
@@ -4562,13 +4593,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide
-          UI as soon as typewriter finishes.
+        value: 'require SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
+          // Hide UI as soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
-          SetDialoguePanel(true)@Message(Reappear);
+          require SetDialoguePanel(true)@Message(Reappear);
           // ...then show the UI again.
 
           require SendMessage(MakeThoughtAppear,I
@@ -6035,11 +6066,12 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(15);
+          require SetTimeout(15);
 
-          require SendMessage(MakeThoughtAppear,I
-          CAN''T ENDURE THIS ANYMORE,IntrusiveThoughtManager);
+          require
+          SendMessage(MakeThoughtAppear,I CAN''T ENDURE THIS ANYMORE,IntrusiveThoughtManager);
 
+          require 
           SendMessage(MakeThoughtAppear,AAAAAAAH,IntrusiveThoughtManager);
 
           require
@@ -6110,6 +6142,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'Delay(2)@Message(Typed) -> Message(MyWait);
 
           SetDialoguePanel(false)@Message(MyWait)->
@@ -6121,6 +6154,20 @@ MonoBehaviour:
           ->Message(MyContinue);
 
           Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -7107,6 +7154,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'Delay(2)@Message(Typed) -> Message(MyWait);
 
           SetDialoguePanel(false)@Message(MyWait)->
@@ -7118,6 +7166,20 @@ MonoBehaviour:
           ->Message(MyContinue);
 
           Continue()@Message(MyContinue);
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);
+>>>>>>> Stashed changes
 
           {{default}};'
         type: 0
@@ -7203,7 +7265,11 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
+<<<<<<< Updated upstream
     canvasScrollPosition: {x: 166.15372, y: 2687.6924}
+=======
+    canvasScrollPosition: {x: 159.99997, y: 2735.3843}
+>>>>>>> Stashed changes
     canvasZoom: 0.65
   - id: 2
     fields:
@@ -7668,6 +7734,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'Delay(2)@Message(Typed) -> Message(MyWait);
 
           SetDialoguePanel(false)@Message(MyWait)->
@@ -7679,6 +7746,20 @@ MonoBehaviour:
           ->Message(MyContinue);
 
           Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 3
@@ -8064,6 +8145,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'Delay(2)@Message(Typed) -> Message(MyWait);
 
           SetDialoguePanel(false)@Message(MyWait)->
@@ -8075,6 +8157,20 @@ MonoBehaviour:
           ->Message(MyContinue);
 
           Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 3
@@ -8406,6 +8502,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'Delay(2)@Message(Typed) -> Message(MyWait);
 
           SetDialoguePanel(false)@Message(MyWait)->
@@ -8417,6 +8514,20 @@ MonoBehaviour:
           ->Message(MyContinue);
 
           Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 3
@@ -8526,6 +8637,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'Delay(2)@Message(Typed) -> Message(MyWait);
 
           SetDialoguePanel(false)@Message(MyWait)->
@@ -8537,6 +8649,20 @@ MonoBehaviour:
           ->Message(MyContinue);
 
           Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       - title: EventGuid
@@ -8803,7 +8929,11 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
+<<<<<<< Updated upstream
     canvasScrollPosition: {x: 5, y: 469}
+=======
+    canvasScrollPosition: {x: 0, y: 1070}
+>>>>>>> Stashed changes
     canvasZoom: 1
   - id: 4
     fields:

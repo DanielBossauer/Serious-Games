@@ -18,7 +18,7 @@ public class VisualEffectsChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        superCharacter = player.gameObject.GetComponent<SUPERCharacterAIO>();
+        if(player != null) superCharacter = player.gameObject.GetComponent<SUPERCharacterAIO>();
     }
 
     // Update is called once per frame
@@ -294,7 +294,11 @@ public class VisualEffectsChanger : MonoBehaviour
     {
         StopAllCoroutines();
         
+<<<<<<< Updated upstream
         StartCoroutine(NervousCafeteria());
+=======
+        if(m_Volume != null) StartCoroutine(NervousCafeteria());
+>>>>>>> Stashed changes
     }
 
 
@@ -625,4 +629,40 @@ public class VisualEffectsChanger : MonoBehaviour
     {
         StopAllCoroutines();
     }
+<<<<<<< Updated upstream
+=======
+
+    public void StopAllTherapist()
+    {
+        StopAllCoroutines();
+
+        if (m_Volume != null){
+            VolumeProfile profile = m_Volume.sharedProfile;
+
+            //VIGNETTE
+            if (!profile.TryGet<Vignette>(out var vignette))
+            {
+                vignette = profile.Add<Vignette>(false);
+            }
+
+
+            //COLORADJUSTMENTS
+
+            if (!profile.TryGet<ColorAdjustments>(out var colorAdjustments))
+            {
+                colorAdjustments = profile.Add<ColorAdjustments>(false);
+            }
+
+
+
+
+
+
+            colorAdjustments.contrast.Override(0f);
+            vignette.smoothness.Override(1f);
+        }
+
+        
+    }
+>>>>>>> Stashed changes
 }

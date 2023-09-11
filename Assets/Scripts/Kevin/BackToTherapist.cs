@@ -36,10 +36,19 @@ public class BackToTherapist : MonoBehaviour
     int breathingRounds = -1;
 
     [SerializeField] GameObject breatheTextObject;
+<<<<<<< Updated upstream
+=======
+
+    [SerializeField] IntrusiveThoughtManager intrusiveThoughtManager;
+
+    [SerializeField] SpriteRenderer background;
+>>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
     {
+        rectangle.gameObject.SetActive(false);
+
         this.GetComponent<DialogueSystemTrigger>().OnUse();
     }
 
@@ -480,5 +489,29 @@ public class BackToTherapist : MonoBehaviour
         topRightArea.gameObject.SetActive(false);
         bottomRightArea.gameObject.SetActive(false);
         bottomLeftArea.gameObject.SetActive(false);
+    }
+
+    public void CallConvo10()
+    {
+        StartCoroutine(Convo10());
+        Debug.Log("Convo10");
+    }
+
+    public IEnumerator Convo10()
+    {
+        //DialogueManager.StopAllConversations();
+
+        Debug.Log("Convo10");
+
+        background.color = new Color(0.6f, 0.5f, 0.5f);
+
+        StartCoroutine(intrusiveThoughtManager.SpawnIntrusiveThoughts());
+        yield return new WaitForSeconds(15);
+        intrusiveThoughtManager.StopSpawning();
+
+        background.color = new Color(0,0,0);
+
+        this.GetComponent<DialogueSystemTrigger>().conversation = "New Conversation 10";
+        this.GetComponent<DialogueSystemTrigger>().OnUse();
     }
 }

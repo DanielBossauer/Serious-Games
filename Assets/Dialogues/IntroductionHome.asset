@@ -3441,7 +3441,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: Continue()@Message(Typed)
+=======
+        value: require Continue()@Message(Typed)
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -3855,7 +3859,11 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
+<<<<<<< Updated upstream
     canvasScrollPosition: {x: 0, y: 18.823517}
+=======
+    canvasScrollPosition: {x: 17.647064, y: 2368.2363}
+>>>>>>> Stashed changes
     canvasZoom: 0.84999996
   - id: 2
     fields:
@@ -4044,10 +4052,17 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,S T A Y   H E R E...  W I T H    M
           E,IntrusiveThoughtManager);
 
           Delay({{end}})'
+=======
+        value: 'require SendMessage(MakeThoughtAppear,S T A Y   H E R E...  W I T
+          H    M E,IntrusiveThoughtManager);
+
+          require Delay({{end}})'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -4103,10 +4118,17 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,What is ever supposed to become of
           you?,IntrusiveThoughtManager)@Message(Typed);
 
           Delay({{end}})'
+=======
+        value: 'require SendMessage(MakeThoughtAppear,What is ever supposed to become
+          of you?,IntrusiveThoughtManager)@Message(Typed);
+
+          require Delay({{end}})'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -4162,9 +4184,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: ' SendMessage(MakeThoughtAppear,Only me could ever understand you,IntrusiveThoughtManager)@Message(Typed);
 
           Delay({{end}})'
+=======
+        value: 'require SendMessage(MakeThoughtAppear,Only me could ever understand
+          you,IntrusiveThoughtManager)@Message(Typed);
+
+          require Delay({{end}})'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -4189,7 +4218,11 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 81.614456
+<<<<<<< Updated upstream
         y: 241.37347
+=======
+        y: 240.16864
+>>>>>>> Stashed changes
         width: 160
         height: 30
     - id: 58
@@ -4221,6 +4254,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'require SendMessage(MakeThoughtAppear,THE LONELINESS. . .,IntrusiveThoughtManager)@Message(Typed);
 
+<<<<<<< Updated upstream
+=======
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4280,6 +4317,10 @@ MonoBehaviour:
         value: 'require SendMessage(MakeThoughtAppear,No one wants to see you...
           like THIS. HAHAHA,IntrusiveThoughtManager)@Message(Typed);
 
+<<<<<<< Updated upstream
+=======
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4337,6 +4378,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'require SendMessage(MakeThoughtAppear,You fucking monster...,IntrusiveThoughtManager)@Message(Typed);
 
+<<<<<<< Updated upstream
+=======
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4406,6 +4451,10 @@ MonoBehaviour:
           require
           SendMessage(MakeThoughtAppear,NO!,IntrusiveThoughtManager)@Message(Typed);
 
+<<<<<<< Updated upstream
+=======
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4516,6 +4565,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,NO!,IntrusiveThoughtManager)@Message(Typed);
 
           SendMessage(MakeThoughtAppear,What
@@ -4525,6 +4575,19 @@ MonoBehaviour:
           SendMessage(ChangeContrast,30,VisualEffectsChanger)@Message(Typed);
 
 
+=======
+        value: 'require SendMessage(MakeThoughtAppear,NO!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,What do I do?,IntrusiveThoughtManager)@Message(Typed);
+
+
+          require
+          SendMessage(ChangeContrast,30,VisualEffectsChanger)@Message(Typed);
+
+
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4584,8 +4647,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,What am I saying?,IntrusiveThoughtManager)@Message(Typed);
 
+=======
+        value: 'require SendMessage(MakeThoughtAppear,What am I saying?,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4697,6 +4766,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,Please don''t betray me again,IntrusiveThoughtManager)@Message(Typed);
 
           SendMessage(MakeThoughtAppear,Please...
@@ -4711,6 +4781,23 @@ MonoBehaviour:
           SendMessage(MakeThoughtAppear,Please...
           no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
 
+=======
+        value: 'require SendMessage(MakeThoughtAppear,Please don''t betray me again,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,Please... no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,Please... no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,Please... no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,Please... no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4766,6 +4853,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,Please... no more getting hurt!,IntrusiveThoughtManager)@Message(Typed);
 
           SendMessage(MakeThoughtAppear,Please...
@@ -4801,6 +4889,45 @@ MonoBehaviour:
           SendMessage(ChangeVisualsNervousHome,,VisualEffectsChanger)@Message(Typed);
 
 
+=======
+        value: 'require SendMessage(MakeThoughtAppear,Please... no more getting hurt!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,Please... no more getting hurt!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,Please... no more getting hurt!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppearYou suck!!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,You suck!!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear,You suck!!,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear, The world sucks,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear, The world sucks,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear, Life sucks,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear, Life sucks,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SetTimeout(4);
+
+
+          require SendMessage(ChangeVisualsNervousHome,,VisualEffectsChanger)@Message(Typed);
+
+
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -5040,9 +5167,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear, Fuck! That sounded waaay too harsh,IntrusiveThoughtManager);
 
           Delay({{end}})'
+=======
+        value: 'require SendMessage(MakeThoughtAppear, Fuck! That sounded waaay too
+          harsh,IntrusiveThoughtManager);
+
+          require Delay({{end}})'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -5098,9 +5232,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear, Can''t you formulate your thoughts
           knowing what meaning they carry?,IntrusiveThoughtManager);
 
+=======
+        value: 'require SendMessage(MakeThoughtAppear, Can''t you formulate your
+          thoughts knowing what meaning they carry?,IntrusiveThoughtManager);
+
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -5175,6 +5316,10 @@ MonoBehaviour:
           SendMessage(ChangeFilmType,9,VisualEffectsChanger);
 
 
+<<<<<<< Updated upstream
+=======
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -5292,6 +5437,10 @@ MonoBehaviour:
           require
           SendMessage(MakeThoughtAppear,YOU   HATE ME   THE INTRUSIVE THOUGHTS!,IntrusiveThoughtManager);
 
+<<<<<<< Updated upstream
+=======
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -5353,6 +5502,10 @@ MonoBehaviour:
           require SendMessage(MakeThoughtAppear,IRRITATED
           AT HAVING TO SHOOT ME DOWN ALL THE TIME,IntrusiveThoughtManager);
 
+<<<<<<< Updated upstream
+=======
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -5581,6 +5734,10 @@ MonoBehaviour:
           require
           SendMessage(MakeThoughtAppear,BE ANGRY AT ME,IntrusiveThoughtManager);
 
+<<<<<<< Updated upstream
+=======
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -6242,7 +6399,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: SendMessage(ChangeBloomRed,,VisualEffectsChanger )@Message(Typed);
+=======
+        value: require SendMessage(ChangeBloomRed,,VisualEffectsChanger )@Message(Typed);
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -6688,7 +6849,11 @@ MonoBehaviour:
           me again,IntrusiveThoughtManager);
 
 
+<<<<<<< Updated upstream
           Delay({{end}})'
+=======
+          require Delay({{end}})'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -6801,6 +6966,10 @@ MonoBehaviour:
         value: 'require SendMessage(MakeThoughtAppear,Loneliness your old friend,IntrusiveThoughtManager);
 
 
+<<<<<<< Updated upstream
+=======
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -7187,9 +7356,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,Why am I being so honest with her?,IntrusiveThoughtManager)@Message(Typed);
 
           Delay({{end}})'
+=======
+        value: 'require SendMessage(MakeThoughtAppear,Why am I being so honest with
+          her?,IntrusiveThoughtManager)@Message(Typed);
+
+          require Delay({{end}})'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -7244,9 +7420,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,There is no way she of all people will
           understand,IntrusiveThoughtManager)@Message(Typed);
 
+=======
+        value: 'require SendMessage(MakeThoughtAppear,There is no way she of all
+          people will understand,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -7303,9 +7486,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,I got to make up an excuse for her,IntrusiveThoughtManager)@Message(Typed);
 
           Delay({{end}})'
+=======
+        value: 'require SendMessage(MakeThoughtAppear,I got to make up an excuse
+          for her,IntrusiveThoughtManager)@Message(Typed);
+
+          require Delay({{end}})'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -7360,9 +7550,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,I don''t have the energy for making
           up one,IntrusiveThoughtManager)@Message(Typed);
 
+=======
+        value: 'require SendMessage(MakeThoughtAppear,I don''t have the energy for
+          making up one,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -7421,6 +7618,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
+<<<<<<< Updated upstream
           SetTimeout(2);
 
           SendMessage(MakeThoughtAppear,
@@ -7450,6 +7648,37 @@ MonoBehaviour:
 
           SendMessage(ChangeVignette,0.5|1,VisualEffectsChanger
           )@Message(Typed);'
+=======
+          require SetTimeout(2);
+
+          require
+          SendMessage(MakeThoughtAppear, DFNUGVBURBGZUGZSTFTVATVFOBDVFSZTVFEFZSZDVF,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear, DFNUGVBURBGZUGZSTFTVATVFOBDVFSZTVFEFZSZDVF,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear, dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear, dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear, dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear, dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+          SendMessage(MakeThoughtAppear, DFNUGVBURBGZUGZSTFTVATVFOBDVFSZTVFEFZSZDVF,IntrusiveThoughtManager)@Message(Typed);
+
+
+          require
+          SendMessage(ChangeBloomHalfRed,,VisualEffectsChanger )@Message(Typed);
+
+          require
+          SendMessage(ChangeVignette,0.5|1,VisualEffectsChanger )@Message(Typed);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -7803,7 +8032,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: SendMessage(MakeThoughtAppear, D O N T   F I G H T    I T,IntrusiveThoughtManager);
+=======
+        value: require SendMessage(MakeThoughtAppear, D O N T   F I G H T    I T,IntrusiveThoughtManager);
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -7858,8 +8091,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(MakeThoughtAppear,Just as expected...,IntrusiveThoughtManager)@Message(Typed);
 
+=======
+        value: 'require SendMessage(MakeThoughtAppear,Just as expected...,IntrusiveThoughtManager)@Message(Typed);
+
+          require
+>>>>>>> Stashed changes
           Delay({{end}})'
         type: 0
         typeString: 
@@ -8135,7 +8374,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: SendMessage(MakeThoughtAppear, D O N T   F I G H T    I T,IntrusiveThoughtManager);
+=======
+        value: require SendMessage(MakeThoughtAppear, D O N T   F I G H T    I T,IntrusiveThoughtManager);
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 2
@@ -8384,7 +8627,11 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
+<<<<<<< Updated upstream
     canvasScrollPosition: {x: 7.2289124, y: 913.2553}
+=======
+    canvasScrollPosition: {x: 69.87952, y: 1069.8779}
+>>>>>>> Stashed changes
     canvasZoom: 0.83
   syncInfo:
     syncActors: 0

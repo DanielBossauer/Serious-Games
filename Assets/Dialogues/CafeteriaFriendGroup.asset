@@ -570,17 +570,29 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(2);
+          require SetTimeout(2);
 
+<<<<<<< Updated upstream
           require SendMessage(MakeThoughtAppear,None
           of them are going to listen anyways , IntrusiveThoughtManager)@Message(Typed);
 
           require
           SendMessage(ChangeFilmGrain,0.8,VisualEffectsChanger)@Message(Typed);
+=======
+          require
+          SendMessage(MakeThoughtAppear,None of them are going to listen anyways
+          , IntrusiveThoughtManager)@Message(Typed);
+
+          require SendMessage(ChangeFilmGrain,0.8,VisualEffectsChanger)@Message(Typed);
+>>>>>>> Stashed changes
 
           require
           SendMessage(ChangeContrast,10,VisualEffectsChanger)@Message(Typed);
 
+<<<<<<< Updated upstream
+=======
+          require
+>>>>>>> Stashed changes
           SendMessage(ChangeBloomThreshold,0.8,VisualEffectsChanger)@Message(Typed);'
         type: 0
         typeString: 
@@ -1006,7 +1018,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(0)'
+          require SetTimeout(0)'
         type: 0
         typeString: 
       conversationID: 1
@@ -1287,7 +1299,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(1);'
+          require SetTimeout(1);'
         type: 0
         typeString: 
       conversationID: 1
@@ -1646,7 +1658,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(0)'
+          require SetTimeout(0)'
         type: 0
         typeString: 
       conversationID: 1
@@ -1758,7 +1770,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(1);'
+          require SetTimeout(1);'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -1815,10 +1827,15 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(0);
+          require SetTimeout(0);
 
+<<<<<<< Updated upstream
           require SendMessage(ChangeVisualsNervousCafeteria,,
           VisualEffectsChanger)@Message(Typed);'
+=======
+          require
+          SendMessage(ChangeVisualsNervousCafeteria,, VisualEffectsChanger)@Message(Typed);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -2148,7 +2165,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: SendMessage(ChangeFilmType,9, VisualEffectsChanger)@Message(Typed);
+=======
+        value: require SendMessage(ChangeFilmType,9, VisualEffectsChanger)@Message(Typed);
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       - title: EventGuid
@@ -2265,10 +2286,17 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
+<<<<<<< Updated upstream
           SetTimeout(4);
 
           SendMessage(ChangeFilmGrain,1,
           VisualEffectsChanger)@Message(Typed);'
+=======
+          require SetTimeout(4);
+
+          require
+          SendMessage(ChangeFilmGrain,1, VisualEffectsChanger)@Message(Typed);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -2349,7 +2377,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(1);'
+          require SetTimeout(1);'
         type: 0
         typeString: 
       conversationID: 1
@@ -2626,7 +2654,11 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
+<<<<<<< Updated upstream
           SetTimeout(2);'
+=======
+          require SetTimeout(2);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -2683,7 +2715,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(1);'
+          require SetTimeout(1);'
         type: 0
         typeString: 
       conversationID: 1
@@ -2740,7 +2772,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(0);'
+          require SetTimeout(0);'
         type: 0
         typeString: 
       conversationID: 1
@@ -2764,7 +2796,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 883.8962
+        x: 882.5975
         y: 2360.3892
         width: 160
         height: 30
@@ -2797,7 +2829,11 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
+<<<<<<< Updated upstream
           SetTimeout(0);'
+=======
+          require SetTimeout(0);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       - title: EventGuid
@@ -2857,8 +2893,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(ChangeBloomThreshold,0.2,VisualEffectsChanger)@Message(Typed);
 
+=======
+        value: 'require SendMessage(ChangeBloomThreshold,0.2,VisualEffectsChanger)@Message(Typed);
+
+          require
+>>>>>>> Stashed changes
           SendMessage(ChangeBloomRed,,VisualEffectsChanger)@Message(Typed);
 
           require
@@ -3400,7 +3442,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: SendMessage(ChangeFilmType,9, VisualEffectsChanger)@Message(Typed);
+=======
+        value: require SendMessage(ChangeFilmType,9, VisualEffectsChanger)@Message(Typed);
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -3867,10 +3913,19 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+<<<<<<< Updated upstream
         value: 'SendMessage(ChangeContrast,30,VisualEffectsChanger);
 
           SendMessage(ChangeVignette,0.5|1,VisualEffectsChanger);
 
+=======
+        value: 'require SendMessage(ChangeContrast,30,VisualEffectsChanger);
+
+          require
+          SendMessage(ChangeVignette,0.5|1,VisualEffectsChanger);
+
+          require
+>>>>>>> Stashed changes
           SendMessage(ChangeBloomThreshold,0.5,VisualEffectsChanger);'
         type: 0
         typeString: 
@@ -4345,7 +4400,11 @@ MonoBehaviour:
         width: 224.88058
         height: 144.28357
       color: {r: 1, g: 1, b: 1, a: 0.5}
+<<<<<<< Updated upstream
     canvasScrollPosition: {x: 0, y: 0}
+=======
+    canvasScrollPosition: {x: 631.16797, y: 2385.7158}
+>>>>>>> Stashed changes
     canvasZoom: 0.77
   syncInfo:
     syncActors: 0
