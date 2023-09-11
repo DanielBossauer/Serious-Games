@@ -147,11 +147,9 @@ public class IntrusiveThoughtManager : MonoBehaviour
         textMeshPro.color = Color.red;
 
         StartCoroutine(GrowInSize(myBubble, 0.1f));
-<<<<<<< Updated upstream
-        StartCoroutine(DestroyAfterTime(4f,myBubble));
-=======
+
         StartCoroutine(DestroyAfterTime(5f,myBubble));
->>>>>>> Stashed changes
+
 
         if (keepTrackOfSpawnedBubbles) spawnedBubbles.Add(myBubble);
     }
@@ -261,8 +259,7 @@ public class IntrusiveThoughtManager : MonoBehaviour
         }
         spawnedBubbles.Clear();
     }
-<<<<<<< Updated upstream
-=======
+
 
     bool spawnIntrusiveThoughts;
 
@@ -283,5 +280,5 @@ public class IntrusiveThoughtManager : MonoBehaviour
         spawnIntrusiveThoughts = false;
         DeleteAllThoughts();
     }
->>>>>>> Stashed changes
+
 }

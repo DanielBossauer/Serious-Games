@@ -25,8 +25,7 @@ public class RightChoicesMinigame : MonoBehaviour
 
     [SerializeField] bool skipMinigameDebug;
 
-<<<<<<< Updated upstream
-=======
+
     [SerializeField] BackToTherapist2 backToTherapist2;
 
     [SerializeField] string[] textsChoice2;
@@ -38,7 +37,7 @@ public class RightChoicesMinigame : MonoBehaviour
     string[] textsChoice;
     List<string> correctTextsChoice;
 
->>>>>>> Stashed changes
+
     private void Awake()
     {
         canvas.gameObject.SetActive(false);
@@ -53,25 +52,20 @@ public class RightChoicesMinigame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-        if(correctChoicesMade >= correctTextsChoice1.Count - 1)
-=======
+
         if(choicesMinigameRunning && correctChoicesMade > correctTextsChoice.Count - 1)
->>>>>>> Stashed changes
+
         {
             EndChoicesMinigame();
         }
     }
 
-<<<<<<< Updated upstream
-    public void StartChoicesMinigame()
-    {
-=======
+
     void StartChoices()
     {
         correctChoicesMade = 0;
 
->>>>>>> Stashed changes
+
         if (skipMinigameDebug)
         {
             EndChoicesMinigame();
@@ -83,11 +77,9 @@ public class RightChoicesMinigame : MonoBehaviour
         choicesInCanvas = new List<MinigameChoice>();
 
         textsInternal = new List<string>();
-<<<<<<< Updated upstream
-        foreach (string s in textsChoice1)
-=======
+
         foreach (string s in textsChoice)
->>>>>>> Stashed changes
+
         {
             if (s != null && s != "") textsInternal.Add(s);
         }
@@ -102,11 +94,10 @@ public class RightChoicesMinigame : MonoBehaviour
             MinigameChoice tmp = Instantiate(minigameChoicePrefab);
             tmp.SetText(s);
             tmp.SetChoicesMinigame(this);
-<<<<<<< Updated upstream
-            if (correctTextsChoice1.Contains(s))
-=======
+
+
             if (correctTextsChoice.Contains(s))
->>>>>>> Stashed changes
+
             {
                 tmp.SetCorrect(true);
             }
@@ -121,8 +112,7 @@ public class RightChoicesMinigame : MonoBehaviour
         choicesMinigameRunning = true;
     }
 
-<<<<<<< Updated upstream
-=======
+
     public void StartChoicesMinigame()
     {
         nextConvo = "New Conversation 3";
@@ -156,7 +146,7 @@ public class RightChoicesMinigame : MonoBehaviour
 
     }
 
->>>>>>> Stashed changes
+
     void AddToScrollingList(MinigameChoice m)
     {
         choicesInCanvas.Add(m);
@@ -193,12 +183,7 @@ public class RightChoicesMinigame : MonoBehaviour
 
     void EndChoicesMinigame()
     {
-<<<<<<< Updated upstream
-        canvas.gameObject.SetActive(false);
 
-        DialogueManager.StopAllConversations();
-        DialogueManager.StartConversation(nextConvo);
-=======
         if (choicesMinigameRunning)
         {
             choicesMinigameRunning = false;
@@ -213,6 +198,6 @@ public class RightChoicesMinigame : MonoBehaviour
             //DialogueManager.StartConversation(nextConvo);
         }
 
->>>>>>> Stashed changes
+
     }
 }

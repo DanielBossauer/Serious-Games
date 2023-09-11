@@ -34,8 +34,7 @@ public class WordsAppearingMinigame : MonoBehaviour
     [SerializeField] delegate void MinigamePhase();
     MinigamePhase minigamePhase;
 
-<<<<<<< Updated upstream
-=======
+
     [SerializeField] List<string> textsPhase2;
     [SerializeField] List<string> correctTextsPhase2;
 
@@ -47,7 +46,7 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     List<string> correctTextsPhase;
 
->>>>>>> Stashed changes
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,11 +56,9 @@ public class WordsAppearingMinigame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-        if (correctChoices >= correctTextsPhase1.Count - 1)
-=======
+
         if (correctTextsPhase != null && correctChoices >= correctTextsPhase.Count - 1)
->>>>>>> Stashed changes
+
         {
             AllCorrectChoices();
         }
@@ -75,33 +72,28 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     public void StartWordsMinigamePhase1()
     {
-<<<<<<< Updated upstream
-=======
+
         correctTextsPhase = correctTextsPhase1;
         StartWordsMinigame(1, StartWordsMinigamePhase1);
     }
 
     void StartWordsMinigame(int phase, MinigamePhase minigamePhase)
     {
->>>>>>> Stashed changes
+
         DialogueManager.StopAllConversations();
 
         correctChoices = 0;
 
         //randomly shuffle words appearing array
         textsInternal = new List<string>();
-<<<<<<< Updated upstream
-        foreach (string s in textsPhase1)
-        {
-            if(s != null && s != "") textsInternal.Add(s);
-=======
+
         if (phase == 1)
         {
             foreach (string s in textsPhase1)
             {
                 if (s != null && s != "") textsInternal.Add(s);
             }
->>>>>>> Stashed changes
+
         }
         else if (phase == 2)
         {
@@ -131,11 +123,9 @@ public class WordsAppearingMinigame : MonoBehaviour
         running = true;
         internalObjects = new List<WordsAppearingObjects>();
 
-<<<<<<< Updated upstream
-        minigamePhase = StartWordsMinigamePhase1;
-=======
+
         this.minigamePhase = minigamePhase;
->>>>>>> Stashed changes
+
 
         StartCoroutine(SpawnWords());
 
@@ -186,11 +176,9 @@ public class WordsAppearingMinigame : MonoBehaviour
                 word.transform.position = new Vector3(UnityEngine.Random.Range(Screen.width * 0.2f, Screen.width * 0.8f), UnityEngine.Random.Range(Screen.height * 0.2f, Screen.height * 0.8f), 1f);
 
                 word.SetText(textsInternal[index]);
-<<<<<<< Updated upstream
-                if (correctTextsPhase1.Contains(textsInternal[index]))
-=======
+
                 if (correctTextsPhase.Contains(textsInternal[index]))
->>>>>>> Stashed changes
+
                 {
                     word.SetCorrect(true);
                 }

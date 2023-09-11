@@ -294,11 +294,9 @@ public class VisualEffectsChanger : MonoBehaviour
     {
         StopAllCoroutines();
         
-<<<<<<< Updated upstream
-        StartCoroutine(NervousCafeteria());
-=======
+
         if(m_Volume != null) StartCoroutine(NervousCafeteria());
->>>>>>> Stashed changes
+
     }
 
 
@@ -629,8 +627,7 @@ public class VisualEffectsChanger : MonoBehaviour
     {
         StopAllCoroutines();
     }
-<<<<<<< Updated upstream
-=======
+
 
     public void StopAllTherapist()
     {
@@ -664,5 +661,5 @@ public class VisualEffectsChanger : MonoBehaviour
 
         
     }
->>>>>>> Stashed changes
+
 }
