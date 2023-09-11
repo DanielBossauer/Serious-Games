@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: b44287406db32964c864ca68b6dcf738
+  - enabled: 1
     path: Assets/Scenes/Sequence_Kevin/IntroductionFirstRealFriend.unity
     guid: b1f4ec43a08ce1f47adefd7b81198be2
   - enabled: 1
