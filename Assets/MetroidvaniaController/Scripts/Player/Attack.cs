@@ -35,6 +35,7 @@ public class Attack : MonoBehaviour
 			StartCoroutine(AttackCooldown());
 		}
 
+		/*
 		if (Input.GetKeyDown(KeyCode.V))
 		{
 			GameObject throwableWeapon = Instantiate(throwableObject, transform.position + new Vector3(transform.localScale.x * 0.5f,-0.2f), Quaternion.identity) as GameObject; 
@@ -42,6 +43,7 @@ public class Attack : MonoBehaviour
 			throwableWeapon.GetComponent<ThrowableWeapon>().direction = direction; 
 			throwableWeapon.name = "ThrowableWeapon";
 		}
+		*/
 	}
 
 	IEnumerator AttackCooldown()

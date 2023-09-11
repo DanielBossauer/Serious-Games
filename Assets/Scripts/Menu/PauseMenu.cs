@@ -65,7 +65,7 @@ public class PauseMenu : MonoBehaviour
             DialogueManager.StopAllConversations();
             Destroy(DialogueManager.instance.gameObject);
         }
-        
+
         SceneManager.LoadScene(sceneIndex + 1);
         ResumeGame();
     }

@@ -6,9 +6,13 @@ public class PressETriggered : MonoBehaviour
 {
     [SerializeField] GameObject sprite;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public bool canTrigger;
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        sprite.SetActive(true);
+        if (canTrigger) {
+            sprite.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

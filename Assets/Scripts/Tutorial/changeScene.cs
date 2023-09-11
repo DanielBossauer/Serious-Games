@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using PixelCrushers.DialogueSystem;
 
 public class changeScene : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class changeScene : MonoBehaviour
                 DialogueManager.StopAllConversations();
                 Destroy(DialogueManager.instance.gameObject);
             }
+            // Destroy(DialogueManager.instance.gameObject);
             SceneManager.LoadScene(sceneIndex + 1);
         }
     }

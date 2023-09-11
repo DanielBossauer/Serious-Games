@@ -152,12 +152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da88a9618da0aea4b9b601dcd72ad0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  homeBackground: {fileID: 21300000, guid: a7b798f1cad01cb418aa7502eaa23014, type: 3}
+  homeBackground: {fileID: 21300000, guid: 5f6b81e7a79abf14bbcd477218cef1c0, type: 3}
+  homeBackgroundAfter: {fileID: 21300000, guid: 698c1f1f357f2d947a5fc61f1717dc00,
+    type: 3}
   memoryBackground: {fileID: 0}
-  memoryPrefab: {fileID: 324605422692385503, guid: 469110b19bb75a644b5509760424fc98,
+  memoryPrefab: {fileID: 5471510324052243693, guid: 661eef54fa44a4d49b3e8e338fca6763,
     type: 3}
   conversation1: Scene_4_Before_Studying_3
   conversation2: Scene_4_After_Studying_3
+  firstMemoryScene: 0
   gameDone: 0
   firstCoversationDone: 0
 --- !u!4 &317506880
@@ -217,6 +220,7 @@ GameObject:
   - component: {fileID: 1433154310}
   - component: {fileID: 1433154309}
   - component: {fileID: 1433154308}
+  - component: {fileID: 1433154311}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -290,6 +294,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1433154311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433154307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &1559391626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -516,7 +553,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e0a7efb2a59d0e941ab0ce84c2c602b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f6b81e7a79abf14bbcd477218cef1c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -535,7 +572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934356611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5130774, y: 0.7317282, z: -1.9869949}
+  m_LocalPosition: {x: 0.33, y: 0.75, z: -1.9869949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -602,5 +639,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4ef5837d1d01d8742a4a4d0522c168cd,
         type: 2}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.subtitleSettings.continueButton
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}

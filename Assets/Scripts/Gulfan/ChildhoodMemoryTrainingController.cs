@@ -8,20 +8,27 @@ using PixelCrushers.DialogueSystem;
 public class ChildhoodMemoryTrainingController : MonoBehaviour
 {
     public Sprite homeBackground;
+    public Sprite homeBackgroundAfter;
     public Sprite memoryBackground;
     public GameObject memoryPrefab;
     public string conversation1;
     public string conversation2;
+    public bool firstMemoryScene;
 
     public bool gameDone = false;
 
     public bool firstCoversationDone = false;
     GameObject background;
 
+    private Vector3 homeBackgroundScale;
+    private Vector3 memoryScale;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        homeBackgroundScale = new Vector3(1.047f, 1.047f, 1f);
+        memoryScale = new Vector3(1f, 1f, 1f);
         LoadBackground(homeBackground);
         DialogueManager.StartConversation(conversation1);
     }
@@ -29,11 +36,17 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
 
     public void LoadBackground(Sprite sprite) {
         background.GetComponent<SpriteRenderer>().sprite = sprite;
+        background.transform.localScale = homeBackgroundScale;
     }
 
     public void LoadMemory () {
         LoadBackground(memoryBackground);
+        background.transform.localScale = memoryScale;
         memoryPrefab = Instantiate(memoryPrefab, new Vector3(5.105501f, 0.2665106f, -18.48575f), Quaternion.identity);
+        memoryPrefab.transform.localScale = memoryScale;
+        if (firstMemoryScene) {
+            DialogueManager.StartConversation("MemoryTutorial");
+        }
     }
 
     public void KillMemory () {
@@ -49,7 +62,7 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
         }
         gameDone = true;
         KillMemory();
-        LoadBackground(homeBackground);
+        LoadBackground(homeBackgroundAfter);
         DialogueManager.StartConversation(conversation2);
     }
 
