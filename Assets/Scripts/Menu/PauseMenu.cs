@@ -50,19 +50,22 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadGame() {
         SaveData save = SaveSystem.LoadGame();
+
+        StaticVariables.notebookDict = save.notebookDict;
+
         SceneManager.LoadScene(save.sceneIndex);
         ResumeGame();
     }
 
     public void SkipScene() {
         sceneIndex = GetCurrentSceneIndex();
-        // Test for existing dialogue manager
+        
         if (DialogueManager.instance != null)
         {
             DialogueManager.StopAllConversations();
             Destroy(DialogueManager.instance.gameObject);
         }
-        // Destroy(DialogueManager.instance.gameObject);
+
         SceneManager.LoadScene(sceneIndex + 1);
         ResumeGame();
     }

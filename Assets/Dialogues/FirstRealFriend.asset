@@ -323,7 +323,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -339,8 +339,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(MakeThoughtAppear,I really really hate the feeling
+        value: 'require SendMessage(MakeThoughtAppear,I really really hate the feeling
           of touching sand...,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -572,7 +574,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -588,16 +590,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide
-          UI as soon as typewriter finishes.
+        value: 'require SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
+          // Hide UI as soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
-          SetDialoguePanel(true)@Message(Reappear);
-          // ...then show the UI again.
-
-          require '
+          require SetDialoguePanel(true)@Message(Reappear);
+          // ...then show the UI again.'
         type: 0
         typeString: 
       - title: EventGuid
@@ -670,7 +670,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(3);'
+          require SetTimeout(3);'
         type: 0
         typeString: 
       conversationID: 1
@@ -694,8 +694,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32
-        y: 519
+        x: 1
+        y: 523.61536
         width: 160
         height: 30
     - id: 8
@@ -726,16 +726,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide
-          UI as soon as typewriter finishes.
+        value: 'require SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
+          // Hide UI as soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
-          SetDialoguePanel(true)@Message(Reappear);
-          // ...then show the UI again.
-
-          require '
+          require SetDialoguePanel(true)@Message(Reappear);
+          // ...then show the UI again.'
         type: 0
         typeString: 
       conversationID: 1
@@ -803,7 +801,9 @@ MonoBehaviour:
           SendMessage(MakeThoughtAppear,What a bitch!,IntrusiveThoughtManager);
 
           require
-          SendMessage(MakeThoughtAppear,I can''t,IntrusiveThoughtManager);'
+          SendMessage(MakeThoughtAppear,I can''t,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -1098,7 +1098,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 14
         destinationConversationID: 1
-        destinationDialogueID: 7
+        destinationDialogueID: 112
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1108,8 +1108,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 223.61536
-        y: 537.6923
+        x: 217.46152
+        y: 513.0769
         width: 160
         height: 30
     - id: 15
@@ -1218,8 +1218,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 6
-        y: 941
+        x: 2.9230728
+        y: 928.69226
         width: 160
         height: 30
     - id: 17
@@ -1265,7 +1265,9 @@ MonoBehaviour:
           H E   S A N D !,IntrusiveThoughtManager);
 
           require SendMessage(MakeThoughtAppear,T
-          H E   S A N D !,IntrusiveThoughtManager);'
+          H E   S A N D !,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -1302,7 +1304,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 8
-        y: 1001
+        y: 990.23083
         width: 160
         height: 30
     - id: 18
@@ -1357,7 +1359,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 4.8461456
-        y: 1077.4615
+        y: 1062.077
         width: 160
         height: 30
     - id: 19
@@ -1394,7 +1396,9 @@ MonoBehaviour:
           SendMessage(MakeThoughtAppear,I have to save the situation!,IntrusiveThoughtManager);
 
           require
-          SendMessage(MakeThoughtAppear,But she is a bitch!,IntrusiveThoughtManager);'
+          SendMessage(MakeThoughtAppear,But she is a bitch!,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -1644,8 +1648,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 245.76923
-        y: 889.1538
+        x: 253.46152
+        y: 901.46155
         width: 160
         height: 30
     - id: 24
@@ -1700,7 +1704,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 387
-        y: 1065
+        y: 1040.3846
         width: 160
         height: 30
     - id: 25
@@ -1802,7 +1806,9 @@ MonoBehaviour:
 
           require
           SendMessage(MakeThoughtAppear,I have never felt so bad for what I have
-          done before,IntrusiveThoughtManager);'
+          done before,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -1916,7 +1922,9 @@ MonoBehaviour:
           game,IntrusiveThoughtManager);
 
           require SendMessage(MakeThoughtAppear,Help!
-          I''m not a gamer!,IntrusiveThoughtManager);'
+          I''m not a gamer!,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -2007,8 +2015,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 218
-        y: 1314
+        x: 224.15384
+        y: 1298.6155
         width: 160
         height: 30
     - id: 30
@@ -2151,7 +2159,9 @@ MonoBehaviour:
         value: 'require SendMessage(MakeThoughtAppear,Why did I say that?!,IntrusiveThoughtManager);
 
           require
-          SendMessage(MakeThoughtAppear,How can I be so so stupid...,IntrusiveThoughtManager);'
+          SendMessage(MakeThoughtAppear,How can I be so so stupid...,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -2214,7 +2224,9 @@ MonoBehaviour:
 
           require
           SendMessage(MakeThoughtAppear,I need to do everything so she doesn''t hate
-          me,IntrusiveThoughtManager);'
+          me,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -2645,8 +2657,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 253.72223
-        y: 1461.6111
+        x: 266.0299
+        y: 1458.5342
         width: 160
         height: 30
     - id: 41
@@ -2829,8 +2841,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 173.16669
-        y: 1521.4443
+        x: 163.9359
+        y: 1524.5212
         width: 160
         height: 30
     - id: 44
@@ -2884,8 +2896,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 16.568375
-        y: 1644.5598
+        x: 38.106834
+        y: 1653.7906
         width: 160
         height: 30
     - id: 45
@@ -2994,7 +3006,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 312.94016
+        x: 320.63245
         y: 1611.6794
         width: 160
         height: 30
@@ -3159,8 +3171,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 432
-        y: 1719
+        x: 438.1538
+        y: 1726.6923
         width: 160
         height: 30
     - id: 50
@@ -3300,8 +3312,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(MakeThoughtAppear,What's happening? I can't believe
-          it,IntrusiveThoughtManager);
+        value: 'require SendMessage(MakeThoughtAppear,What''s happening? I can''t
+          believe it,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3356,7 +3370,32 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+<<<<<<< Updated upstream
+        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+
+          SetDialoguePanel(false)@Message(MyWait)->
+          Message(Hidden);
+
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -3652,7 +3691,9 @@ MonoBehaviour:
 
           require
           SendMessage(MakeThoughtAppear,But if I let go she will ask questions. She
-          will hate me.,IntrusiveThoughtManager);'
+          will hate me.,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3792,8 +3833,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 269.07693
-        y: 2369.231
+        x: 258.3077
+        y: 2370.7695
         width: 160
         height: 30
     - id: 61
@@ -3823,7 +3864,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(MakeThoughtAppear,I don''t really want to play
+          this game... It''s stressing me out...,IntrusiveThoughtManager);
+
+          require
+          SendMessage(MakeThoughtAppear,I will be so tired after this once she leaves.,IntrusiveThoughtManager);
+
+          require
+          SendMessage(MakeThoughtAppear,I gotta keep going, as long as she is here.,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3853,8 +3903,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 325
-        y: 2423
+        x: 320.3846
+        y: 2436.8462
         width: 160
         height: 30
     - id: 62
@@ -3884,14 +3934,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'require SendMessage(MakeThoughtAppear,I don''t really want to play
-          this game... It''s stressing me out...,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,I will be so tired after this once she leaves.,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,I gotta keep going, as long as she is here.,IntrusiveThoughtManager);'
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -3908,12 +3951,6 @@ MonoBehaviour:
         destinationDialogueID: 102
         isConnector: 0
         priority: 2
-      - originConversationID: 1
-        originDialogueID: 62
-        destinationConversationID: 1
-        destinationDialogueID: 103
-        isConnector: 0
-        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -3921,8 +3958,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 443.38458
-        y: 2542.1538
+        x: 389.53845
+        y: 2519.0767
         width: 160
         height: 30
     - id: 63
@@ -3952,7 +3989,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(MakeThoughtAppear,Oh THANKS GOD!,IntrusiveThoughtManager);
+        value: 'require SendMessage(MakeThoughtAppear,Oh THANKS GOD!,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3976,8 +4015,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 488
-        y: 2608.077
+        x: 483.38458
+        y: 2586.5386
         width: 160
         height: 30
     - id: 64
@@ -4032,8 +4071,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 170
-        y: 2529
+        x: 166.92307
+        y: 2521.3076
         width: 160
         height: 30
     - id: 65
@@ -4063,7 +4102,32 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+<<<<<<< Updated upstream
+        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+
+          SetDialoguePanel(false)@Message(MyWait)->
+          Message(Hidden);
+
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -4177,19 +4241,22 @@ MonoBehaviour:
         value: 'require SendMessage(MakeThoughtAppear,I have to become good at this
           game,IntrusiveThoughtManager);
 
-          require SendMessage(MakeThoughtAppear,Idon''t
-          wanna play that game!,IntrusiveThoughtManager);
+          require SendMessage(MakeThoughtAppear,I
+          don''t wanna play that game!,IntrusiveThoughtManager);
 
-          SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
-          // Hide UI as soon as typewriter finishes.
+          require
+          SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide UI as
+          soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
+<<<<<<< Updated upstream
           SetDialoguePanel(true)@Message(Reappear);
-          // ...then show the UI again.
-
-          require '
+=======
+          require SetDialoguePanel(true)@Message(Reappear);
+>>>>>>> Stashed changes
+          // ...then show the UI again. '
         type: 0
         typeString: 
       conversationID: 1
@@ -4410,7 +4477,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(MakeThoughtAppear,nobody can match my skills,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4434,8 +4503,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 445
-        y: 2949
+        x: 657.3077
+        y: 2936.6921
         width: 160
         height: 30
     - id: 72
@@ -4467,7 +4536,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(MakeThoughtAppear,I always liked this game,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4491,8 +4562,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 445
-        y: 2999
+        x: 661.9231
+        y: 3003.6155
         width: 160
         height: 30
     - id: 73
@@ -4522,16 +4593,19 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide
-          UI as soon as typewriter finishes.
+        value: 'require SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
+          // Hide UI as soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
-          SetDialoguePanel(true)@Message(Reappear);
+          require SetDialoguePanel(true)@Message(Reappear);
           // ...then show the UI again.
 
-          require '
+          require SendMessage(MakeThoughtAppear,I
+          don''t remember a time where I didn''t like doing it.,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4555,8 +4629,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 445
-        y: 3049
+        x: 661.9231
+        y: 3053.6155
         width: 160
         height: 30
     - id: 74
@@ -4587,26 +4661,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'require SendMessage(MakeThoughtAppear,nobody can match my skills,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,I always liked this game,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,I don''t remember a time where I didn''t
-          like doing it.,IntrusiveThoughtManager);
-
-          require SendMessage(MakeThoughtAppear,Everyone
-          including her are in awe looking at my skills.,IntrusiveThoughtManager);
+        value: 'require SendMessage(MakeThoughtAppear,Everyone including her are
+          in awe looking at my skills.,IntrusiveThoughtManager);
 
           require
           SendMessage(MakeThoughtAppear,I need to do it.,IntrusiveThoughtManager);
 
-          require
-          SendMessage(MakeThoughtAppear,It is me,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,This is my favourite game,IntrusiveThoughtManager);'
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4630,8 +4691,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 445
-        y: 3099
+        x: 661.9231
+        y: 3103.6155
         width: 160
         height: 30
     - id: 75
@@ -4661,7 +4722,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(MakeThoughtAppear,It is me,IntrusiveThoughtManager);
+
+          require
+          SendMessage(MakeThoughtAppear,This is my favourite game,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4685,8 +4751,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 446
-        y: 3154
+        x: 662.9231
+        y: 3158.6155
         width: 160
         height: 30
     - id: 76
@@ -4740,8 +4806,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 446
-        y: 3212
+        x: 662.9231
+        y: 3216.6155
         width: 160
         height: 30
     - id: 77
@@ -4796,7 +4862,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 12.0601425
-        y: 1370.0074
+        y: 1400.7766
         width: 160
         height: 30
     - id: 78
@@ -4988,7 +5054,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Wow! Just when I thought you were cool.
+        value: Wow! Just when I thought you were cool...
         type: 0
         typeString: 
       - title: Sequence
@@ -5071,7 +5137,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 142.83331
+        x: 145.91023
         y: 1828.1669
         width: 160
         height: 30
@@ -5127,8 +5193,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 631.72235
-        y: 1679.3888
+        x: 642.4915
+        y: 1677.8503
         width: 160
         height: 30
     - id: 84
@@ -5239,7 +5305,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1016.0553
-        y: 1748.8888
+        y: 1747.3503
         width: 160
         height: 30
     - id: 86
@@ -5415,8 +5481,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 755.5128
-        y: 1797.7264
+        x: 787.82056
+        y: 1751.5728
         width: 160
         height: 30
     - id: 89
@@ -5586,8 +5652,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 786.7692
-        y: 2510.2307
+        x: 854.46155
+        y: 2499.4614
         width: 160
         height: 30
     - id: 92
@@ -5642,7 +5708,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 939.07697
-        y: 2626.3845
+        y: 2624.8462
         width: 160
         height: 30
     - id: 93
@@ -5861,8 +5927,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 655.99994
-        y: 2840.231
+        x: 660.61536
+        y: 2821.7695
         width: 160
         height: 30
     - id: 97
@@ -5967,8 +6033,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 444.46155
-        y: 3263.5386
+        x: 661.38464
+        y: 3268.154
         width: 160
         height: 30
     - id: 99
@@ -6000,11 +6066,12 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(15);
+          require SetTimeout(15);
 
-          require SendMessage(MakeThoughtAppear,I
-          CAN''T ENDURE THIS ANYMORE,IntrusiveThoughtManager);
+          require
+          SendMessage(MakeThoughtAppear,I CAN''T ENDURE THIS ANYMORE,IntrusiveThoughtManager);
 
+          require 
           SendMessage(MakeThoughtAppear,AAAAAAAH,IntrusiveThoughtManager);
 
           require
@@ -6075,7 +6142,32 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+<<<<<<< Updated upstream
+        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+
+          SetDialoguePanel(false)@Message(MyWait)->
+          Message(Hidden);
+
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 1
@@ -6099,8 +6191,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 387
-        y: 1124.2307
+        x: 390.0769
+        y: 1110.3845
         width: 160
         height: 30
     - id: 101
@@ -6209,8 +6301,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 226.46152
-        y: 2684.4614
+        x: 164.92307
+        y: 2709.077
         width: 160
         height: 30
     - id: 103
@@ -6454,7 +6546,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(MakeThoughtAppear,I always liked this doing this,IntrusiveThoughtManager);
+        value: require SendMessage(MakeThoughtAppear,I always liked doing this,IntrusiveThoughtManager);
         type: 0
         typeString: 
       conversationID: 1
@@ -6704,8 +6796,480 @@ MonoBehaviour:
         y: 3411.3076
         width: 160
         height: 30
+    - id: 112
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Heeeeeey, your sandcastle is prettier than mine! This isn't the first
+          time you are doing this, I can see that.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 112
+        destinationConversationID: 1
+        destinationDialogueID: 113
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 862.0769
+        y: 146.15388
+        width: 160
+        height: 30
+    - id: 113
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: My name is Nana. And yours?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 113
+        destinationConversationID: 1
+        destinationDialogueID: 114
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 858.99994
+        y: 228.4616
+        width: 160
+        height: 30
+    - id: 114
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Rose. I am Rose.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 114
+        destinationConversationID: 1
+        destinationDialogueID: 115
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 858.99994
+        y: 293.84622
+        width: 160
+        height: 30
+    - id: 115
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Rose! Oh, what an adorable name!
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 115
+        destinationConversationID: 1
+        destinationDialogueID: 116
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 858.99994
+        y: 357.69238
+        width: 160
+        height: 30
+    - id: 116
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: My parents just called me Nana. Kinda lame if you think about it.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 116
+        destinationConversationID: 1
+        destinationDialogueID: 117
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 858.99994
+        y: 420.00006
+        width: 160
+        height: 30
+    - id: 117
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: If you say so, I find it really cute.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 117
+        destinationConversationID: 1
+        destinationDialogueID: 118
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 858.99994
+        y: 480.7693
+        width: 160
+        height: 30
+    - id: 118
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Oh, thank you!
+        type: 0
+        typeString: 
+      - title: Sequence
+<<<<<<< Updated upstream
+        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+
+          SetDialoguePanel(false)@Message(MyWait)->
+          Message(Hidden);
+
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          Continue()@Message(MyContinue);
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);
+>>>>>>> Stashed changes
+
+          {{default}};'
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 118
+        destinationConversationID: 1
+        destinationDialogueID: 119
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 858.99994
+        y: 530.7693
+        width: 160
+        height: 30
+    - id: 119
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Harrr! Yupp!
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 119
+        destinationConversationID: 1
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 857.4615
+        y: 591.5385
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 176.9231, y: 2673.8438}
+<<<<<<< Updated upstream
+    canvasScrollPosition: {x: 166.15372, y: 2687.6924}
+=======
+    canvasScrollPosition: {x: 159.99997, y: 2735.3843}
+>>>>>>> Stashed changes
     canvasZoom: 0.65
   - id: 2
     fields:
@@ -7099,7 +7663,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7170,7 +7734,32 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+<<<<<<< Updated upstream
+        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+
+          SetDialoguePanel(false)@Message(MyWait)->
+          Message(Hidden);
+
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 3
@@ -7276,7 +7865,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I am Rose.
+        value: Rose. I am Rose.
         type: 0
         typeString: 
       - title: Sequence
@@ -7556,7 +8145,32 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+<<<<<<< Updated upstream
+        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+
+          SetDialoguePanel(false)@Message(MyWait)->
+          Message(Hidden);
+
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 3
@@ -7607,7 +8221,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: (Harrr! Yupp!)
+        value: Harrr! Yupp!
         type: 0
         typeString: 
       - title: Sequence
@@ -7717,7 +8331,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Thinking they are so cool.
+        value: Thinking they are soooooo so cool.
         type: 0
         typeString: 
       - title: Sequence
@@ -7828,7 +8442,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: They deserve to have their faces covered in sand, wouldn't you agree?
+        value: Now... They deserve to have their faces covered in sand, wouldn't
+          you agree?
         type: 0
         typeString: 
       - title: Sequence
@@ -7887,7 +8502,32 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+<<<<<<< Updated upstream
+        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+
+          SetDialoguePanel(false)@Message(MyWait)->
+          Message(Hidden);
+
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
         type: 0
         typeString: 
       conversationID: 3
@@ -7911,8 +8551,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
-        y: 1065
+        x: 81
+        y: 1064
         width: 160
         height: 30
     - id: 27
@@ -7997,7 +8637,36 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+<<<<<<< Updated upstream
+        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+
+          SetDialoguePanel(false)@Message(MyWait)->
+          Message(Hidden);
+
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          Continue()@Message(MyContinue);'
+=======
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
+
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
+
+          require
+          Delay(2)@Message(Hidden)->Message(Reappear);
+
+          require SetDialoguePanel(true)@Message(Reappear)
+          ->Message(MyContinue);
+
+          require Continue()@Message(MyContinue);'
+>>>>>>> Stashed changes
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 86a4e32a-53bb-47c3-8765-d36366eeb21b
         type: 0
         typeString: 
       conversationID: 3
@@ -8260,7 +8929,11 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 50, y: 1067}
+<<<<<<< Updated upstream
+    canvasScrollPosition: {x: 5, y: 469}
+=======
+    canvasScrollPosition: {x: 0, y: 1070}
+>>>>>>> Stashed changes
     canvasZoom: 1
   - id: 4
     fields:

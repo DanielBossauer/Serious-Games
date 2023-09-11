@@ -9,6 +9,8 @@ public class FirstRealFriend : MonoBehaviour
 
     [SerializeField] GameObject sand;
 
+    [SerializeField] LerpManager lerpManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +31,10 @@ public class FirstRealFriend : MonoBehaviour
 
     IEnumerator ChangeImageToSandCoroutine()
     {
+        lerpManager.Rect = sand;
+        lerpManager.FadeInOneWayCanvas(false,2f);
         yield return new WaitForSeconds(3);
-        sand.SetActive(true);
+        //sand.SetActive(true);
         this.GetComponent<DialogueSystemTrigger>().conversation = "New Conversation 1";
         this.GetComponent<DialogueSystemTrigger>().OnUse();
     }

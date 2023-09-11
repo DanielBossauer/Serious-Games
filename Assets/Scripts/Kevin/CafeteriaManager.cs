@@ -36,15 +36,26 @@ public class CafeteriaManager : MonoBehaviour
         if (moveTable)
         {
             Transform tr = playerTable.gameObject.transform;
+            //Transform tr2 = playerTable.gameObject.transform.GetChild(0).transform;
 
             playerTable.gameObject.transform.localScale = new Vector3(tr.localScale.x + Time.deltaTime * speed * 0.8f, tr.localScale.y, tr.localScale.z);
+            //playerTable.gameObject.transform.GetChild(0).transform.localScale = new Vector3(tr2.localScale.x + Time.deltaTime * speed * 0.8f, tr2.localScale.y, tr2.localScale.z);
+
             //playerTable.gameObject.transform.position = new Vector3(tr.position.x - (((tr.localScale.x + Time.deltaTime * speed) - startScale) / 2), tr.position.y, tr.position.z);
+            
             playerTable.gameObject.transform.position = new Vector3(tr.position.x - Time.deltaTime * speed*0.8f, tr.position.y, tr.position.z);
+            //playerTable.gameObject.transform.GetChild(0).transform.position = new Vector3(tr2.position.x - Time.deltaTime * speed * 0.8f, tr2.position.y, tr2.position.z);
+
+
             Player.transform.position = new Vector3(Player.transform.position.x - Time.deltaTime * speed, playerEndPosition.y, playerEndPosition.z);
             if (tr.localScale.x + Time.deltaTime * speed >= endScale)
             {
                 playerTable.gameObject.transform.localScale = new Vector3(endScale, tr.localScale.y, tr.localScale.z);
                 playerTable.gameObject.transform.position = new Vector3(startPosTableX - ((endScale-startScale)/2), tr.position.y, tr.position.z);
+
+                //playerTable.gameObject.transform.GetChild(0).transform.localScale = new Vector3(endScale, tr2.localScale.y, tr2.localScale.z);
+                //playerTable.gameObject.transform.GetChild(0).transform.position = new Vector3(startPosTableX - ((endScale - startScale) / 2), tr2.position.y, tr2.position.z);
+
                 //Player.transform.position = new Vector3(Player.transform.position.x - 1f - ((endScale - startScale) / 2), tr.position.y, tr.position.z);
                 Player.transform.position = playerEndPosition;
                 moveTable = false;
