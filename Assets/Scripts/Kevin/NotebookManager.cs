@@ -89,6 +89,12 @@ public class NotebookManager : MonoBehaviour
 
     void SaveText()
     {
+        if(StaticVariables.notebookDict == null)
+        {
+            StaticVariables.notebookDict = new Dictionary<string, string>();
+
+
+        }
         StaticVariables.notebookDict.Add(SceneManager.GetActiveScene().name, notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text);
     }
 

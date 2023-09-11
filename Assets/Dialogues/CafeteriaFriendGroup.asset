@@ -2149,7 +2149,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(ChangeFilmType,9, VisualEffectsChanger)@Message(Typed);
+        value: 'require SendMessage(ChangeFilmType,9, VisualEffectsChanger)@Message(Typed);
+
+          {{default}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -2858,7 +2860,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'require SendMessage(ChangeBloomThreshold,0.2,VisualEffectsChanger)@Message(Typed);
+        value: '{{default}};
+
+          require SendMessage(ChangeBloomThreshold,0.2,VisualEffectsChanger)@Message(Typed);
 
           require
           SendMessage(ChangeBloomRed,,VisualEffectsChanger)@Message(Typed);
@@ -2921,7 +2925,9 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'require SendMessage(MakeThoughtAppear,Nana: Hey, you! Would you like
-          to play with me?, IntrusiveThoughtManager)@Message(Typed);'
+          to play with me?, IntrusiveThoughtManager)@Message(Typed);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3402,7 +3408,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(ChangeFilmType,9, VisualEffectsChanger)@Message(Typed);
+        value: 'require SendMessage(ChangeFilmType,9, VisualEffectsChanger)@Message(Typed);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3934,7 +3942,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(MakeThoughtAppear,Shut up, bitch! , IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,Shut up, bitch! , IntrusiveThoughtManager)@Message(Typed);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3989,8 +3999,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(MakeThoughtAppear,As if you could ever understand!
+        value: 'require SendMessage(MakeThoughtAppear,As if you could ever understand!
           , IntrusiveThoughtManager)@Message(Typed);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4349,7 +4361,7 @@ MonoBehaviour:
         width: 224.88058
         height: 144.28357
       color: {r: 1, g: 1, b: 1, a: 0.5}
-    canvasScrollPosition: {x: 631.16797, y: 2385.7158}
+    canvasScrollPosition: {x: 716.8831, y: 2171.4277}
     canvasZoom: 0.77
   syncInfo:
     syncActors: 0
