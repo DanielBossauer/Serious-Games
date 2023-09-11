@@ -16,6 +16,7 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
     public bool firstMemoryScene;
 
     public bool gameDone = false;
+    public bool sceneDone = false;
 
     public bool firstCoversationDone = false;
     GameObject background;
@@ -54,12 +55,18 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
         Destroy(memoryPrefab);
     }
 
-    public void LoadSecondConversation() {
+    public void LoadSecondConversation() {        
+        if (DialogueManager.instance != null)
+        {
+            DialogueManager.StopConversation();
+        }
+        
         if (memoryPrefab.GetComponentInChildren<GameControl>().gameSuccess) {
             DialogueLua.SetVariable("gameWon", true);
         } else {
             DialogueLua.SetVariable("gameWon", false);
         }
+
         gameDone = true;
         KillMemory();
         LoadBackground(homeBackgroundAfter);
@@ -70,6 +77,13 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
     public void LoadNextScene() {
         // get current SceneNumber and then load next Scene
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (DialogueManager.instance != null)
+        {
+            DialogueManager.StopAllConversations();
+            Destroy(DialogueManager.instance.gameObject);
+        }
+
         SceneManager.LoadScene(sceneIndex + 1);
     }
 
@@ -87,7 +101,7 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
         }
 
         // Check if the second Conversation just finished
-        if (firstCoversationDone && gameDone && !conversationActive()) {
+        if (firstCoversationDone && gameDone && DialogueLua.GetVariable("Finished_Scene").AsBool) {
             LoadNextScene();
         }    
 
