@@ -36,12 +36,13 @@ public class BackToTherapist : MonoBehaviour
     int breathingRounds = -1;
 
     [SerializeField] GameObject breatheTextObject;
-
+<<<<<<< Updated upstream
+=======
 
     [SerializeField] IntrusiveThoughtManager intrusiveThoughtManager;
 
     [SerializeField] SpriteRenderer background;
-
+>>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()

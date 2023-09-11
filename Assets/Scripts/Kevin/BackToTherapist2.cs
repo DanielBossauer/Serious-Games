@@ -54,23 +54,25 @@ public class BackToTherapist2 : MonoBehaviour
 
     [SerializeField] string startingConvo;
 
-
+<<<<<<< Updated upstream
+=======
     [SerializeField] Canvas finalMindMap;
 
     [SerializeField] Canvas swapMindMap;
 
-
+>>>>>>> Stashed changes
     private void Awake()
     {
         notebookArrowLeft.gameObject.SetActive(false);
         notebookArrowRight.gameObject.SetActive(false);
         notebookHideButton.gameObject.SetActive(false);
 
-
+<<<<<<< Updated upstream
+=======
         swapMindMap.gameObject.SetActive(false);
         finalMindMap.gameObject.SetActive(false);
 
-
+>>>>>>> Stashed changes
         foreach (GameObject g in PIOSEEStages)
         {
             g.SetActive(false);
@@ -201,37 +203,41 @@ public class BackToTherapist2 : MonoBehaviour
     public void StartConvo11()
     {
         DialogueManager.StopAllConversations();
-
+<<<<<<< Updated upstream
+=======
         ShowBackground();
-
+>>>>>>> Stashed changes
         StartConvo("New Conversation 11");
     }
 
     public void StartConvo12()
     {
         DialogueManager.StopAllConversations();
-
+<<<<<<< Updated upstream
+=======
         HideBackground();
         ShowOverviewOfProblems();
-
+>>>>>>> Stashed changes
         StartConvo("New Conversation 12");
     }
 
     public void StartConvo13()
     {
-
+<<<<<<< Updated upstream
+=======
         ShowFilledIn();
-
+>>>>>>> Stashed changes
         DialogueManager.StopAllConversations();
         StartConvo("New Conversation 13");
     }
 
     public void StartConvo14()
     {
-
+<<<<<<< Updated upstream
+=======
         HideOverviewOfProblems();
         ShowBackground();
-
+>>>>>>> Stashed changes
         DialogueManager.StopAllConversations();
         StartConvo("New Conversation 14");
     }
@@ -831,7 +837,8 @@ public class BackToTherapist2 : MonoBehaviour
     {
         PIOSEEStages[5].GetComponent<TextMeshProUGUI>().color = Color.white;
     }
-
+<<<<<<< Updated upstream
+=======
 
 
 
@@ -852,5 +859,5 @@ public class BackToTherapist2 : MonoBehaviour
     {
         finalMindMap.gameObject.SetActive(false);
     }
-
+>>>>>>> Stashed changes
 }
