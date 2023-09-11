@@ -486,14 +486,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187298917}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9396927, w: 0.34202018}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 664378379}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 140}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -257, y: 173}
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 23dc4f9bfdcb0984995e1a58909e85d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ed73cd20550631419d2a55b8cf39217, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1056,6 +1056,9 @@ MonoBehaviour:
   topRightArea: {fileID: 1670096618}
   bottomRightArea: {fileID: 1869937411}
   bottomLeftArea: {fileID: 1949015839}
+  minimumTime: 1
+  breatheTextObject: {fileID: 1656547286}
+  intrusiveThoughtManager: {fileID: 942488687}
 --- !u!4 &404982987
 Transform:
   m_ObjectHideFlags: 0
@@ -1413,6 +1416,7 @@ RectTransform:
   - {fileID: 1670096614}
   - {fileID: 1869937407}
   - {fileID: 1949015835}
+  - {fileID: 1656547289}
   m_Father: {fileID: 710973667}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1558,7 +1562,7 @@ RectTransform:
   m_GameObject: {fileID: 691569962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 664378379}
@@ -1566,8 +1570,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -210.59, y: -1.1645384}
-  m_SizeDelta: {x: 7.19, y: 248.8479}
+  m_AnchoredPosition: {x: -210.16, y: 3.924199}
+  m_SizeDelta: {x: 10, y: 219.061}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691569964
 MonoBehaviour:
@@ -1581,7 +1585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8f1c3748e3fad4fbbf4edf5347e03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowedToPass: 0
 --- !u!61 &691569965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1724,7 +1727,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &710973667
 RectTransform:
@@ -1915,7 +1918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &831435215
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2060,7 +2063,7 @@ RectTransform:
   m_GameObject: {fileID: 871873417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 664378379}
@@ -2068,8 +2071,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000054836, y: 128.29}
-  m_SizeDelta: {x: 428.38, y: 10.573}
+  m_AnchoredPosition: {x: 0.2219, y: 128.29}
+  m_SizeDelta: {x: 450, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &871873419
 MonoBehaviour:
@@ -2083,7 +2086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8f1c3748e3fad4fbbf4edf5347e03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowedToPass: 0
 --- !u!61 &871873420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2266,6 +2268,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &942488686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 942488688}
+  - component: {fileID: 942488687}
+  m_Layer: 0
+  m_Name: IntrusiveThoughtManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &942488687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942488686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c65aa615c848ea47bb1d561e1d83b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intrusiveThoughtBubble: {fileID: 8851606227396408196, guid: 9524b5df5bc958c4bb0f2e8147fc0d6e,
+    type: 3}
+  givenCamera: {fileID: 1446373723}
+  canvas: {fileID: 1355588813}
+  indestructableBubble: {fileID: 0}
+  energyButtonPrefab: {fileID: 0}
+  depressionButtonPrefab: {fileID: 0}
+  depressionTexts:
+  - Always maintain professionlism
+  - Don't bring in your own life experience
+  - Your own life is irrelevant
+  keepTrackOfSpawnedBubbles: 1
+--- !u!4 &942488688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942488686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 99.46315, y: 131.92052, z: 1.3152266}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1072308637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,6 +2397,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1145298755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145298757}
+  - component: {fileID: 1145298756}
+  m_Layer: 0
+  m_Name: VisualEffectsChanger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1145298756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145298755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03510722f814cef44a672cb8435d82a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  m_Volume: {fileID: 0}
+  suns: []
+--- !u!4 &1145298757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145298755}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 99.46315, y: 131.92052, z: 1.3152266}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1151366414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,7 +2473,7 @@ RectTransform:
   m_GameObject: {fileID: 1151366414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 664378379}
@@ -2377,7 +2482,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000095662, y: -120.3}
-  m_SizeDelta: {x: 428.38, y: 10.573}
+  m_SizeDelta: {x: 450, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1151366416
 MonoBehaviour:
@@ -2391,7 +2496,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8f1c3748e3fad4fbbf4edf5347e03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowedToPass: 0
 --- !u!61 &1151366417
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2456,6 +2560,106 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151366414}
   m_CullTransparentMesh: 1
+--- !u!1 &1355588810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1355588814}
+  - component: {fileID: 1355588813}
+  - component: {fileID: 1355588812}
+  - component: {fileID: 1355588811}
+  m_Layer: 5
+  m_Name: IntrusiveThoughtCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1355588811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355588810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1355588812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355588810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1355588813
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355588810}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1355588814
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355588810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1446373722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2612,8 +2816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209.2, y: 128.30196}
-  m_SizeDelta: {x: 10, y: 10}
+  m_AnchoredPosition: {x: -210.16, y: 128.4811}
+  m_SizeDelta: {x: 29.671, y: 30.0482}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448095039
 MonoBehaviour:
@@ -2661,7 +2865,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404982986}
         m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
-        m_MethodName: TopLeftToTopRight
+        m_MethodName: TopLeftStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2844,7 +3048,141 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e769a86077432429d111d73e759f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+--- !u!1 &1656547286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1656547289}
+  - component: {fileID: 1656547288}
+  - component: {fileID: 1656547287}
+  m_Layer: 5
+  m_Name: BreatheText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1656547287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656547286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Breathe In!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1656547288
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656547286}
+  m_CullTransparentMesh: 1
+--- !u!224 &1656547289
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656547286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 664378379}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.29768, y: 173}
+  m_SizeDelta: {x: 391.24, y: 50}
+  m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!1 &1658541997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,7 +3212,7 @@ RectTransform:
   m_GameObject: {fileID: 1658541997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 664378379}
@@ -2882,8 +3220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 211.48361, y: -1.1645384}
-  m_SizeDelta: {x: 7.19, y: 248.8479}
+  m_AnchoredPosition: {x: 210.46, y: 3.9242}
+  m_SizeDelta: {x: 10, y: 219.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1658541999
 MonoBehaviour:
@@ -2897,7 +3235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8f1c3748e3fad4fbbf4edf5347e03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowedToPass: 0
 --- !u!61 &1658542000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3083,8 +3420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 209.796, y: 128.30196}
-  m_SizeDelta: {x: 10, y: 10}
+  m_AnchoredPosition: {x: 210.57, y: 128.48}
+  m_SizeDelta: {x: 29.297, y: 30.048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1670096615
 MonoBehaviour:
@@ -3286,7 +3623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 23dc4f9bfdcb0984995e1a58909e85d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ed73cd20550631419d2a55b8cf39217, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3311,14 +3648,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775488629}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 664378379}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 256, y: 173}
@@ -3361,8 +3698,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 209.796, y: -120.27337}
-  m_SizeDelta: {x: 10, y: 10}
+  m_AnchoredPosition: {x: 210.46, y: -118.51}
+  m_SizeDelta: {x: 29.08, y: 30.113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869937408
 MonoBehaviour:
@@ -3596,6 +3933,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: HideArrow1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - guid: 48ca2653-ff63-4993-97ca-a897c831a0fa
     onExecute:
       m_PersistentCalls:
@@ -3679,6 +4028,350 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 24689a2a-c9ae-41cc-b50b-682e7126692a
+    onExecute:
+      m_PersistentCalls:
+        m_Calls: []
+  - guid: cfde0937-a3f6-4285-9493-729ae64a9403
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: ResetGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: ShowArrow1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: ca41eb4a-8b58-4b48-a6e6-fb4799696949
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: PrepareBreathingMinigame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: HideArrow1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 5dacd65c-a7b2-4909-b672-0ffd4fa0dff8
+    onExecute:
+      m_PersistentCalls:
+        m_Calls: []
+  - guid: bc3bacee-aa38-4785-9734-a661ee4ad032
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: ResetGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: ShowArrow1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 0b8422ce-9cd5-43d0-9387-f238b72ee798
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: HideArrow1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: PrepareBreathingMinigame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: f55c9f93-7206-4266-93dd-046ad6d5aed4
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: PrepareBreathingMinigame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 39297ba7-794b-4329-b43b-d681823c7d2b
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: FinalDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 47017d15-d9ec-4ad7-9a6c-769584ae55c6
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: HideRectangle
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 5045c5d3-1169-40a0-ad61-840a5927d517
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: HideRectangle
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 0b34ec82-0e59-4c37-b9a0-15691e8fbdb7
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: FinalFinalDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 0d857656-1858-4f82-9484-6f70cbda1852
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: FinalFinalDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: e5680e6c-acad-486f-8c6f-a94b58d453af
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: FinalFinalDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 5f29d245-387a-49c2-9edb-c47693bd31b5
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: FinalFinalDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 05706eb0-820a-4d3a-ad14-fdf4df0df1e7
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: ShowArrow1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 3ec8dcc1-88eb-4f1e-8611-2bb4a83fc268
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: ShowArrow2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: HideArrow1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: e80404b3-bd72-46b8-af00-011c05b03748
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: FinalDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: d0e5e86b-2721-455b-8ded-dd431de7d10b
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: FinalDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: addac573-b2de-4ee6-85e4-fd4f8e208ffb
+    onExecute:
+      m_PersistentCalls:
+        m_Calls: []
+  - guid: a7a0e21f-75b8-4353-b44c-73be779a998e
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982986}
+          m_TargetAssemblyTypeName: BackToTherapist, Assembly-CSharp
+          m_MethodName: CallConvo10
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3904,8 +4597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -208.92859, y: -120.27337}
-  m_SizeDelta: {x: 10, y: 10}
+  m_AnchoredPosition: {x: -210.05, y: -118.51}
+  m_SizeDelta: {x: 29.45, y: 30.119}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1949015836
 MonoBehaviour:

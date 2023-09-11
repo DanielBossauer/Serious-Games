@@ -19,8 +19,15 @@ public class EffectsOnStart : MonoBehaviour
     [SerializeField] float lerpSpeed = 1f;
     [SerializeField] float moveSpeed = 2f;
 
+    [SerializeField] float bloomThreshold;
+    [SerializeField] Color bloomColor;
+    [SerializeField] float bloomIntensity;
+
+    [SerializeField] bool changeBloom;
+    [SerializeField] VisualEffectsChanger visualEffectsChanger;
+
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         VolumeProfile profile = m_Volume.sharedProfile;
         if (!profile.TryGet<FilmGrain>(out var grain))
@@ -51,7 +58,20 @@ public class EffectsOnStart : MonoBehaviour
         colorAdjustments.contrast.Override(colorAdjustmentsContrast);
 
 
-        if(lerpManager!=null) lerpManager.SetSpeeds(lerpSpeed, moveSpeed);
+
+        if (changeBloom)
+        {
+            visualEffectsChanger.ChangeBloomThreshold(bloomThreshold);
+            visualEffectsChanger.ChangeBloomColor(bloomColor);
+            visualEffectsChanger.ChangeBloomIntensity(bloomIntensity);
+
+            //bloom.Release();
+        }
+
+
+
+
+        if (lerpManager!=null) lerpManager.SetSpeeds(lerpSpeed, moveSpeed);
     }
 
     // Update is called once per frame

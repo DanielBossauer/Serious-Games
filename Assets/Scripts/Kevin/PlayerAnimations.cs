@@ -8,6 +8,8 @@ public class PlayerAnimations : MonoBehaviour
     Animator animator;
     [SerializeField] SUPERCharacterAIO sUPERCharacterAIO;
 
+    bool disableAnimations;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,20 +20,35 @@ public class PlayerAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sUPERCharacterAIO.isIdle)
+        if (!disableAnimations)
         {
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isRunning", false);
+            if (sUPERCharacterAIO.isIdle)
+            {
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isRunning", false);
+            }
+            else if (sUPERCharacterAIO.isSprinting)
+            {
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                animator.SetBool("isWalking", true);
+                animator.SetBool("isRunning", false);
+            }
         }
-        else if (sUPERCharacterAIO.isSprinting)
-        {
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            animator.SetBool("isWalking", true);
-            animator.SetBool("isRunning", false);
-        }
+    }
+
+    public void DisableAnimations()
+    {
+        disableAnimations = true;
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isRunning", false);
+    }
+
+    public void EnableAnimations()
+    {
+        disableAnimations = false;
     }
 }
