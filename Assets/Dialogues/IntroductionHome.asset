@@ -2941,7 +2941,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: ...
         type: 0
         typeString: 
       - title: Sequence
@@ -3441,7 +3441,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require Continue()@Message(Typed)
+        value: //require Continue()@Message(Typed)
         type: 0
         typeString: 
       conversationID: 1
@@ -3855,7 +3855,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 17.647064, y: 2368.2363}
+    canvasScrollPosition: {x: 15.294128, y: 2118.8254}
     canvasZoom: 0.84999996
   - id: 2
     fields:
