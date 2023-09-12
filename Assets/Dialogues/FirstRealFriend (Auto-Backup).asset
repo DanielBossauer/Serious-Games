@@ -38,7 +38,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Rose
+      value: lel
       type: 0
       typeString: 
     - title: Pictures
@@ -342,6 +342,10 @@ MonoBehaviour:
         value: 'require SendMessage(MakeThoughtAppear,I really really hate the feeling
           of touching sand...,IntrusiveThoughtManager);
 
+
+          require SendMessage(SFX1,,SoundEffectsPlayer3)@Message(Typed);
+
+
           {{default}};'
         type: 0
         typeString: 
@@ -535,7 +539,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(Stop,,SoundEffectsPlayer);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -803,7 +809,14 @@ MonoBehaviour:
           require
           SendMessage(MakeThoughtAppear,I can''t,IntrusiveThoughtManager);
 
-          {{default}};'
+          {{default}};
+
+
+          require
+          SendMessage(SFX2,,SoundEffectsPlayer2);
+
+
+          require SendMessage(SFX1,,SoundEffectsPlayer)@Message(Typed);'
         type: 0
         typeString: 
       conversationID: 1
@@ -1053,7 +1066,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 402.46152
+        x: 400.92307
         y: 534.6154
         width: 160
         height: 30
@@ -1084,7 +1097,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: require SendMessage(SFX1,,SoundEffectsPlayer2);
         type: 0
         typeString: 
       conversationID: 1
@@ -1108,8 +1121,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 217.46152
-        y: 513.0769
+        x: 220.53845
+        y: 503.8462
         width: 160
         height: 30
     - id: 15
@@ -1139,7 +1152,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(Stop,,SoundEffectsPlayer);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -1194,7 +1209,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: '{{default}};
+
+          require SetTimeout(5);'
         type: 0
         typeString: 
       conversationID: 1
@@ -1266,6 +1283,12 @@ MonoBehaviour:
 
           require SendMessage(MakeThoughtAppear,T
           H E   S A N D !,IntrusiveThoughtManager);
+
+          {{default}};
+
+
+          require
+          SendMessage(SFX1,,SoundEffectsPlayer)@Message(Typed);
 
           {{default}};'
         type: 0
@@ -2391,7 +2414,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(MakeThoughtAppear,I''ll be lonely for my entire
+          life!,IntrusiveThoughtManager);
+
+          require SendMessage(MakeThoughtAppear,I
+          need to do everything so she doesn''t hate me,IntrusiveThoughtManager);
+
+          require
+          SendMessage(MakeThoughtAppear,I''ll be lonely for my entire life!,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3681,6 +3713,9 @@ MonoBehaviour:
           SendMessage(MakeThoughtAppear,But if I let go she will ask questions. She
           will hate me.,IntrusiveThoughtManager);
 
+
+          require SendMessage(SFX1,,SoundEffectsPlayer)@Message(Typed);
+
           {{default}};'
         type: 0
         typeString: 
@@ -3860,6 +3895,10 @@ MonoBehaviour:
 
           require
           SendMessage(MakeThoughtAppear,I gotta keep going, as long as she is here.,IntrusiveThoughtManager);
+
+
+          require
+          SendMessage(Stop,,SoundEffectsPlayer);
 
           {{default}};'
         type: 0
@@ -6051,7 +6090,10 @@ MonoBehaviour:
           SendMessage(MakeThoughtAppear,MAKE IT STOP,IntrusiveThoughtManager);
 
           require
-          SendMessage(MakeRed,,VisualEffectsChanger);'
+          SendMessage(MakeRed,,VisualEffectsChanger);
+
+
+          require SendMessage(SFX1,,SoundEffectsPlayer);'
         type: 0
         typeString: 
       conversationID: 1
@@ -6123,7 +6165,17 @@ MonoBehaviour:
           require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          require Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);
+
+
+          require
+          SendMessage(Stop,,SoundEffectsPlayer);
+
+
+          require SendMessage(SFX2,,SoundEffectsPlayer2)@Message(Typed);
+
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -6351,7 +6403,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 104
         destinationConversationID: 1
-        destinationDialogueID: 105
+        destinationDialogueID: 120
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6406,7 +6458,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 105
         destinationConversationID: 1
-        destinationDialogueID: 106
+        destinationDialogueID: 121
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6461,7 +6513,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 106
         destinationConversationID: 1
-        destinationDialogueID: 107
+        destinationDialogueID: 122
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6516,7 +6568,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 107
         destinationConversationID: 1
-        destinationDialogueID: 108
+        destinationDialogueID: 123
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6572,7 +6624,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 108
         destinationConversationID: 1
-        destinationDialogueID: 109
+        destinationDialogueID: 124
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6628,7 +6680,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 109
         destinationConversationID: 1
-        destinationDialogueID: 110
+        destinationDialogueID: 125
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6683,7 +6735,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 110
         destinationConversationID: 1
-        destinationDialogueID: 111
+        destinationDialogueID: 126
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6780,7 +6832,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(Stop,,SoundEffectsPlayer);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -7206,8 +7260,393 @@ MonoBehaviour:
         y: 591.5385
         width: 160
         height: 30
+    - id: 120
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: require SendMessage(SFX2,,SoundEffectsPlayer2);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 120
+        destinationConversationID: 1
+        destinationDialogueID: 105
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1
+        y: 3009.7693
+        width: 160
+        height: 30
+    - id: 121
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: require SendMessage(SFX2,,SoundEffectsPlayer2);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 121
+        destinationConversationID: 1
+        destinationDialogueID: 106
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3.0769253
+        y: 3064.6128
+        width: 160
+        height: 30
+    - id: 122
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: require SendMessage(SFX2,,SoundEffectsPlayer2);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 122
+        destinationConversationID: 1
+        destinationDialogueID: 107
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 6.153841
+        y: 3119.9976
+        width: 160
+        height: 30
+    - id: 123
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: require SendMessage(SFX2,,SoundEffectsPlayer2);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 123
+        destinationConversationID: 1
+        destinationDialogueID: 108
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 20
+        y: 3186.1516
+        width: 160
+        height: 30
+    - id: 124
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: require SendMessage(SFX2,,SoundEffectsPlayer2);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 124
+        destinationConversationID: 1
+        destinationDialogueID: 109
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1.5384674
+        y: 3250.7668
+        width: 160
+        height: 30
+    - id: 125
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: require SendMessage(SFX2,,SoundEffectsPlayer2);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 125
+        destinationConversationID: 1
+        destinationDialogueID: 110
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 10.769226
+        y: 3316.9202
+        width: 160
+        height: 30
+    - id: 126
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: require SendMessage(SFX2,,SoundEffectsPlayer2);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 126
+        destinationConversationID: 1
+        destinationDialogueID: 111
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 36.923077
+        y: 3392.3047
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 52.30768}
+    canvasScrollPosition: {x: 195.38461, y: 2552.302}
     canvasZoom: 0.65
   - id: 2
     fields:
@@ -7562,7 +8001,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(SFX1,,SoundEffectsPlayer);
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -7677,13 +8118,20 @@ MonoBehaviour:
           require
           SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+
           require
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          SendMessage(SFX2,,SoundEffectsPlayer2)@Message(Hidden)->Message(Hidden2);
+
+
+          require
+          Delay(2)@Message(Hidden2)->Message(Reappear);
 
           require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          require Continue()@Message(MyContinue);'
+          //require Continue()@Message(MyContinue);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -8080,7 +8528,9 @@ MonoBehaviour:
           require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          require Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -8417,13 +8867,20 @@ MonoBehaviour:
           require
           SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+
           require
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          SendMessage(SFX3,,SoundEffectsPlayer2)@Message(Hidden)->Message(Hidden2);
+
+
+          require
+          Delay(2)@Message(Hidden2)->Message(Reappear);
 
           require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          require Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -8538,13 +8995,20 @@ MonoBehaviour:
           require
           SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+
           require
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          SendMessage(SFX3,,SoundEffectsPlayer2)@Message(Hidden)->Message(Hidden2);
+
+
+          require
+          Delay(2)@Message(Hidden2)->Message(Reappear);
 
           require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          require Continue()@Message(MyContinue);'
+          //require Continue()@Message(MyContinue);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       - title: EventGuid
@@ -8811,7 +9275,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 26}
+    canvasScrollPosition: {x: 0, y: 1033}
     canvasZoom: 1
   - id: 4
     fields:
@@ -9052,7 +9516,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'require SendMessage(SFX1,,SoundEffectsPlayer2);
+        value: 'require SendMessage(SFX3,,SoundEffectsPlayer2);
 
           require
           SendMessage(ChangeImageToSand,,FirstRealFriend);

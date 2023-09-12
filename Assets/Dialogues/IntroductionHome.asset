@@ -3871,7 +3871,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 2161.1768}
+    canvasScrollPosition: {x: 0, y: 56.470642}
     canvasZoom: 0.84999996
   - id: 2
     fields:
@@ -4001,7 +4001,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer);
+
+          require
+          SendMessage(SFX1,,SoundEffectsPlayer2);
+
+          {{default}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -5424,7 +5429,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -5436,7 +5441,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Oh, yeah, yeah...
+        value: Oh, yeah, yeah... (Completely overwhelmed)
         type: 0
         typeString: 
       - title: Sequence
@@ -5945,7 +5950,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer3);
+
+          require
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -6776,7 +6784,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(SpawnRosesFriend,false,IntroductionHomeEvents);
+        value: 'require SendMessage(DespawnRosesFriend,,IntroductionHomeEvents);
+
+          require
+          SendMessage(SFX2,,SoundEffectsPlayer3);
+
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -6998,7 +7011,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(SpawnRosesFriend,true,IntroductionHomeEvents);
+        value: 'require SendMessage(SpawnRosesFriend,true,IntroductionHomeEvents);
+
+          require
+          SendMessage(SFX2,,SoundEffectsPlayer3);'
         type: 0
         typeString: 
       conversationID: 2
@@ -7899,7 +7915,9 @@ MonoBehaviour:
         value: 'require SendMessage(MakeThoughtAppear,Just as expected...,IntrusiveThoughtManager)@Message(Typed);
 
           require
-          Delay({{end}})'
+          SendMessage(SFX1,,SoundEffectsPlayer3);
+
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -8423,7 +8441,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 18.07228, y: 1215.664}
     canvasZoom: 0.83
   syncInfo:
     syncActors: 0
