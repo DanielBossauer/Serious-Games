@@ -269,7 +269,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -1137,7 +1139,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3
+        x: 2
         y: 982
         width: 160
         height: 30
@@ -3171,7 +3173,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 3, y: 0}
+    canvasScrollPosition: {x: 0, y: 609}
     canvasZoom: 1
   - id: 2
     fields:

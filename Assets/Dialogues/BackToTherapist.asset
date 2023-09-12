@@ -1279,7 +1279,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 130, y: 163}
     canvasZoom: 1
   - id: 2
     fields:
@@ -9182,7 +9182,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 129, y: 806}
+    canvasScrollPosition: {x: 60, y: 1}
     canvasZoom: 1
   - id: 9
     fields:
@@ -9728,7 +9728,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 54, y: 73}
+    canvasScrollPosition: {x: 33, y: 25}
     canvasZoom: 1
   - id: 10
     fields:
@@ -9860,6 +9860,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 6a4a16b8-2fab-421c-aa09-b35dd5d8ba26
         type: 0
         typeString: 
       conversationID: 10
@@ -14713,7 +14717,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 42, y: 201}
+    canvasScrollPosition: {x: 37, y: 65}
     canvasZoom: 1
   syncInfo:
     syncActors: 0

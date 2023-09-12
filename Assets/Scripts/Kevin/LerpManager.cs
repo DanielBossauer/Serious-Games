@@ -791,4 +791,14 @@ public class LerpManager : MonoBehaviour
 
 
     }
+
+    public void SetActiveFalse()
+    {
+        Rect.gameObject.SetActive(false);
+    }
+
+    public void SetActiveTrue()
+    {
+        Rect.gameObject.SetActive(true);
+    }
 }

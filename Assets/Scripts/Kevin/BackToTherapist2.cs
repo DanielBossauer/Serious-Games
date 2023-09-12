@@ -424,7 +424,9 @@ public class BackToTherapist2 : MonoBehaviour
         lerpManagers[1].Rect = notebookArrowLeft.gameObject;
 
         //StartCoroutine(lerpManagers[1].FadeInOneWayCanvas(true,1f));
-        lerpManagers[1].FadeInOneWayCanvas(true, 1f);
+
+        //lerpManagers[1].FadeInOneWayCanvas(true, 1f);
+        lerpManagers[1].SetActiveTrue();
 
         lerpManagers[2].SetSpeeds(1, 2);
 
@@ -434,7 +436,9 @@ public class BackToTherapist2 : MonoBehaviour
         lerpManagers[2].Rect = notebookArrowRight.gameObject;
 
         //StartCoroutine(lerpManagers[2].FadeInOneWayCanvas());
-        lerpManagers[2].FadeInOneWayCanvas(true, 1f);
+
+        //lerpManagers[2].FadeInOneWayCanvas(true, 1f);
+        lerpManagers[2].SetActiveTrue();
 
         lerpManagers[3].SetSpeeds(1, 2);
 
@@ -444,7 +448,8 @@ public class BackToTherapist2 : MonoBehaviour
         lerpManagers[3].Rect = notebookHideButton.gameObject;
 
         //StartCoroutine(lerpManagers[3].FadeInOneWayCanvas());
-        lerpManagers[3].FadeInOneWayCanvas(true, 1f);
+        //lerpManagers[3].FadeInOneWayCanvas(true, 1f);
+        lerpManagers[3].SetActiveTrue();
         yield return StartCoroutine(lerpManagers[0].LerpRectFixedTimeOneWay());
 
         notebooksDisplayed = true;
@@ -585,6 +590,7 @@ public class BackToTherapist2 : MonoBehaviour
             StartCoroutine(lerpManagers[0].LerpRectFixedTimeOneWay());
             yield return StartCoroutine(lerpManagers[1].LerpRectFixedTimeOneWay());
 
+            notebookInstancesList[notebookCounter].transform.position = new Vector3(Screen.width * 0.5f, 0f, 0);
             notebookInstancesList[notebookCounter].SetActive(false);
 
             notebookCounter--;
@@ -645,6 +651,7 @@ public class BackToTherapist2 : MonoBehaviour
             StartCoroutine(lerpManagers[0].LerpRectFixedTimeOneWay());
             yield return StartCoroutine(lerpManagers[1].LerpRectFixedTimeOneWay());
 
+            notebookInstancesList[notebookCounter].transform.position = new Vector3(Screen.width * 0.5f, 0f, 0);
             notebookInstancesList[notebookCounter].SetActive(false);
 
             notebookCounter++;
@@ -652,6 +659,8 @@ public class BackToTherapist2 : MonoBehaviour
             notebookArrowLeft.SetClickable(true);
             notebookArrowRight.SetClickable(true);
             notebookHideButton.SetClickable(true);
+
+
         }
 
         yield return null;
@@ -694,7 +703,8 @@ public class BackToTherapist2 : MonoBehaviour
             lerpManagers[1].Rect = notebookArrowLeft.gameObject;
 
             //StartCoroutine(lerpManagers[1].FadeOutOneWayCanvas());
-            lerpManagers[1].FadeOutOneWayCanvas(true,1f);
+            //lerpManagers[1].FadeOutOneWayCanvas(true,1f);
+            lerpManagers[1].SetActiveFalse();
 
             lerpManagers[2].SetSpeeds(0.5f, 1);
 
@@ -704,7 +714,8 @@ public class BackToTherapist2 : MonoBehaviour
             lerpManagers[2].Rect = notebookArrowRight.gameObject;
 
             //StartCoroutine(lerpManagers[2].FadeOutOneWayCanvas());
-            lerpManagers[2].FadeOutOneWayCanvas(true, 1f);
+            //lerpManagers[2].FadeOutOneWayCanvas(true, 1f);
+            lerpManagers[2].SetActiveFalse();
 
             /*
             lerpManagers[3].SetSpeeds(1, 2);
