@@ -295,7 +295,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -907,7 +909,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX2,,SoundEffectsPlayer2);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -2069,7 +2073,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer2);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -2393,7 +2399,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer2);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -2890,7 +2898,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(SpawnRosesFriend,false,IntroductionHomeEvents);
+        value: 'require SendMessage(DespawnRosesFriend,,IntroductionHomeEvents);
+
+          require
+          SendMessage(SFX1,,SoundEffectsPlayer2);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -2941,7 +2954,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: ...
         type: 0
         typeString: 
       - title: Sequence
@@ -3108,7 +3121,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(SpawnRosesFriend,true,IntroductionHomeEvents);
+        value: 'require SendMessage(SpawnRosesFriend,true,IntroductionHomeEvents);
+
+          require
+          SendMessage(SFX1,,SoundEffectsPlayer2);'
         type: 0
         typeString: 
       conversationID: 1
@@ -3441,7 +3457,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Continue()@Message(Typed)
+        value: //require Continue()@Message(Typed)
         type: 0
         typeString: 
       conversationID: 1
@@ -3465,7 +3481,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 284.05884
+        x: 282.88235
         y: 973.9412
         width: 160
         height: 30
@@ -3855,7 +3871,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 18.823517}
+    canvasScrollPosition: {x: 0, y: 56.470642}
     canvasZoom: 0.84999996
   - id: 2
     fields:
@@ -3985,7 +4001,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer);
+
+          require
+          SendMessage(SFX1,,SoundEffectsPlayer2);
+
+          {{default}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -4013,8 +4034,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77
-        y: 123
+        x: 78.20482
+        y: 101.31325
         width: 160
         height: 30
     - id: 55
@@ -4044,10 +4065,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,S T A Y   H E R E...  W I T H    M
-          E,IntrusiveThoughtManager);
+        value: 'require SendMessage(MakeThoughtAppear,S T A Y   H E R E...  W I T
+          H    M E,IntrusiveThoughtManager);
 
-          Delay({{end}})'
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -4071,8 +4092,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 78
-        y: 174
+        x: 79.20482
+        y: 146.28914
         width: 160
         height: 30
     - id: 56
@@ -4103,10 +4124,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,What is ever supposed to become of
-          you?,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,What is ever supposed to become
+          of you?,IntrusiveThoughtManager)@Message(Typed);
 
-          Delay({{end}})'
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -4131,7 +4152,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 78
-        y: 235
+        y: 196.44577
         width: 160
         height: 30
     - id: 57
@@ -4162,9 +4183,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: ' SendMessage(MakeThoughtAppear,Only me could ever understand you,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,Only me could ever understand
+          you,IntrusiveThoughtManager)@Message(Typed);
 
-          Delay({{end}})'
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -4188,8 +4210,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 78
-        y: 298
+        x: 81.614456
+        y: 240.16864
         width: 160
         height: 30
     - id: 58
@@ -4221,6 +4243,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'require SendMessage(MakeThoughtAppear,THE LONELINESS. . .,IntrusiveThoughtManager)@Message(Typed);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4245,8 +4268,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77
-        y: 355
+        x: 80.614456
+        y: 288.73492
         width: 160
         height: 30
     - id: 59
@@ -4280,6 +4303,7 @@ MonoBehaviour:
         value: 'require SendMessage(MakeThoughtAppear,No one wants to see you...
           like THIS. HAHAHA,IntrusiveThoughtManager)@Message(Typed);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4304,8 +4328,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77
-        y: 415
+        x: 80.614456
+        y: 342.71085
         width: 160
         height: 30
     - id: 60
@@ -4337,6 +4361,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'require SendMessage(MakeThoughtAppear,You fucking monster...,IntrusiveThoughtManager)@Message(Typed);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4362,7 +4387,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 77
-        y: 472
+        y: 392.4819
         width: 160
         height: 30
     - id: 61
@@ -4406,6 +4431,7 @@ MonoBehaviour:
           require
           SendMessage(MakeThoughtAppear,NO!,IntrusiveThoughtManager)@Message(Typed);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4430,8 +4456,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77
-        y: 522
+        x: 80.614456
+        y: 446.09637
         width: 160
         height: 30
     - id: 62
@@ -4485,8 +4511,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77
-        y: 572
+        x: 78.20482
+        y: 499.71088
         width: 160
         height: 30
     - id: 63
@@ -4516,11 +4542,17 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,NO!,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,NO!,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,What
-          do I do?,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear,What do I do?,IntrusiveThoughtManager)@Message(Typed);
 
+
+          require
+          SendMessage(ChangeContrast,30,VisualEffectsChanger)@Message(Typed);
+
+
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4549,8 +4581,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77
-        y: 634
+        x: 81.819275
+        y: 552.07227
         width: 160
         height: 30
     - id: 64
@@ -4580,8 +4612,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,What am I saying?,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,What am I saying?,IntrusiveThoughtManager)@Message(Typed);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4606,8 +4639,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 44.46988
-        y: 680.3373
+        x: 84.22891
+        y: 606.84326
         width: 160
         height: 30
     - id: 65
@@ -4661,8 +4694,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 96.12196
-        y: 749.65857
+        x: 49.134018
+        y: 674.9598
         width: 160
         height: 30
     - id: 66
@@ -4693,20 +4726,21 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,Please don''t betray me again,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,Please don''t betray me again,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,Please...
-          no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear,Please... no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,Please...
-          no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear,Please... no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,Please...
-          no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear,Please... no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,Please...
-          no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear,Please... no more betrayal!,IntrusiveThoughtManager)@Message(Typed);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4731,8 +4765,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 27.594193
-        y: 820.18445
+        x: 52.895386
+        y: 769.58203
         width: 160
         height: 30
     - id: 67
@@ -4762,37 +4796,43 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,Please... no more getting hurt!,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,Please... no more getting hurt!,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,Please...
-          no more getting hurt!,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear,Please... no more getting hurt!,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,Please...
-          no more getting hurt!,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear,Please... no more getting hurt!,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppearYou
-          suck!!,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppearYou suck!!,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,You
-          suck!!,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear,You suck!!,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,You
-          suck!!,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear,You suck!!,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,
-          The world sucks,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear, The world sucks,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,
-          The world sucks,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear, The world sucks,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,
-          Life sucks,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear, Life sucks,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,
-          Life sucks,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear, Life sucks,IntrusiveThoughtManager)@Message(Typed);
 
+          require
           SetTimeout(4);
 
+
+          require SendMessage(ChangeVisualsNervousHome,,VisualEffectsChanger)@Message(Typed);
+
+
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4835,8 +4875,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28.799004
-        y: 853.317
+        x: 39.64238
+        y: 819.58203
         width: 160
         height: 30
     - id: 68
@@ -4890,8 +4930,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 44.373505
-        y: 977.4458
+        x: 29.915672
+        y: 983.47
         width: 160
         height: 30
     - id: 69
@@ -5032,9 +5072,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear, Fuck! That sounded waaay too harsh,IntrusiveThoughtManager);
+        value: 'require SendMessage(MakeThoughtAppear, Fuck! That sounded waaay too
+          harsh,IntrusiveThoughtManager);
 
-          Delay({{end}})'
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -5090,9 +5131,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear, Can''t you formulate your thoughts
-          knowing what meaning they carry?,IntrusiveThoughtManager);
+        value: 'require SendMessage(MakeThoughtAppear, Can''t you formulate your
+          thoughts knowing what meaning they carry?,IntrusiveThoughtManager);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -5155,6 +5197,19 @@ MonoBehaviour:
           require SendMessage(MakeThoughtAppear,T
           H R O W     Y O U  R   A N G E R   A T   M E,IntrusiveThoughtManager);
 
+
+          require
+          SendMessage(StopAll,,VisualEffectsChanger);
+
+
+          require SendMessage(ChangeFilmGrain,1,VisualEffectsChanger);
+
+
+          require
+          SendMessage(ChangeFilmType,9,VisualEffectsChanger);
+
+
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -5272,6 +5327,7 @@ MonoBehaviour:
           require
           SendMessage(MakeThoughtAppear,YOU   HATE ME   THE INTRUSIVE THOUGHTS!,IntrusiveThoughtManager);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -5333,6 +5389,7 @@ MonoBehaviour:
           require SendMessage(MakeThoughtAppear,IRRITATED
           AT HAVING TO SHOOT ME DOWN ALL THE TIME,IntrusiveThoughtManager);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -5372,7 +5429,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -5384,7 +5441,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Oh, yeah, yeah...
+        value: Oh, yeah, yeah... (Completely overwhelmed)
         type: 0
         typeString: 
       - title: Sequence
@@ -5561,6 +5618,7 @@ MonoBehaviour:
           require
           SendMessage(MakeThoughtAppear,BE ANGRY AT ME,IntrusiveThoughtManager);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -5892,7 +5950,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer3);
+
+          require
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -6222,7 +6283,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: require SendMessage(ChangeBloomRed,,VisualEffectsChanger )@Message(Typed);
         type: 0
         typeString: 
       conversationID: 2
@@ -6668,7 +6729,7 @@ MonoBehaviour:
           me again,IntrusiveThoughtManager);
 
 
-          Delay({{end}})'
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -6723,7 +6784,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(SpawnRosesFriend,false,IntroductionHomeEvents);
+        value: 'require SendMessage(DespawnRosesFriend,,IntroductionHomeEvents);
+
+          require
+          SendMessage(SFX2,,SoundEffectsPlayer3);
+
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -6781,6 +6847,7 @@ MonoBehaviour:
         value: 'require SendMessage(MakeThoughtAppear,Loneliness your old friend,IntrusiveThoughtManager);
 
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -6944,7 +7011,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(SpawnRosesFriend,true,IntroductionHomeEvents);
+        value: 'require SendMessage(SpawnRosesFriend,true,IntroductionHomeEvents);
+
+          require
+          SendMessage(SFX2,,SoundEffectsPlayer3);'
         type: 0
         typeString: 
       conversationID: 2
@@ -6968,8 +7038,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 275
-        y: 608
+        x: 279.81927
+        y: 511.61444
         width: 160
         height: 30
     - id: 106
@@ -7024,8 +7094,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 280
-        y: 147
+        x: 289.63858
+        y: 131.33736
         width: 160
         height: 30
     - id: 107
@@ -7167,9 +7237,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,Why am I being so honest with her?,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,Why am I being so honest with
+          her?,IntrusiveThoughtManager)@Message(Typed);
 
-          Delay({{end}})'
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -7193,8 +7264,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 272
-        y: 740
+        x: 282.84335
+        y: 609.8795
         width: 160
         height: 30
     - id: 110
@@ -7224,9 +7295,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,There is no way she of all people will
-          understand,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,There is no way she of all
+          people will understand,IntrusiveThoughtManager)@Message(Typed);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -7251,8 +7323,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 271
-        y: 802
+        x: 275.81927
+        y: 665.8554
         width: 160
         height: 30
     - id: 111
@@ -7283,9 +7355,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,I got to make up an excuse for her,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,I got to make up an excuse
+          for her,IntrusiveThoughtManager)@Message(Typed);
 
-          Delay({{end}})'
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -7309,8 +7382,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 275
-        y: 860
+        x: 282.2289
+        y: 719.03613
         width: 160
         height: 30
     - id: 112
@@ -7340,9 +7413,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,I don''t have the energy for making
-          up one,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,I don''t have the energy for
+          making up one,IntrusiveThoughtManager)@Message(Typed);
 
+          require
           Delay({{end}})'
         type: 0
         typeString: 
@@ -7367,8 +7441,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 275
-        y: 915
+        x: 279.81927
+        y: 771.6265
         width: 160
         height: 30
     - id: 113
@@ -7401,28 +7475,35 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(2);
+          require SetTimeout(2);
 
-          SendMessage(MakeThoughtAppear,
-          DFNUGVBURBGZUGZSTFTVATVFOBDVFSZTVFEFZSZDVF,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear, DFNUGVBURBGZUGZSTFTVATVFOBDVFSZTVFEFZSZDVF,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,
-          DFNUGVBURBGZUGZSTFTVATVFOBDVFSZTVFEFZSZDVF,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear, DFNUGVBURBGZUGZSTFTVATVFOBDVFSZTVFEFZSZDVF,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,
-          dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear, dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,
-          dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear, dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,
-          dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear, dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,
-          dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
+          require
+          SendMessage(MakeThoughtAppear, dfngugpwgbuuifbzgrguguzgsdg,IntrusiveThoughtManager)@Message(Typed);
 
-          SendMessage(MakeThoughtAppear,
-          DFNUGVBURBGZUGZSTFTVATVFOBDVFSZTVFEFZSZDVF,IntrusiveThoughtManager)@Message(Typed);'
+          require
+          SendMessage(MakeThoughtAppear, DFNUGVBURBGZUGZSTFTVATVFOBDVFSZTVFEFZSZDVF,IntrusiveThoughtManager)@Message(Typed);
+
+
+          require
+          SendMessage(ChangeBloomHalfRed,,VisualEffectsChanger )@Message(Typed);
+
+          require
+          SendMessage(ChangeVignette,0.5|1,VisualEffectsChanger )@Message(Typed);'
         type: 0
         typeString: 
       conversationID: 2
@@ -7470,8 +7551,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 275
-        y: 973
+        x: 471.3855
+        y: 783.8434
         width: 160
         height: 30
     - id: 114
@@ -7525,8 +7606,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 393
-        y: 1076
+        x: 413.48193
+        y: 1039.8555
         width: 160
         height: 30
     - id: 115
@@ -7580,8 +7661,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 614
-        y: 1042
+        x: 627.253
+        y: 1057.6627
         width: 160
         height: 30
     - id: 116
@@ -7635,8 +7716,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 488
-        y: 1111
+        x: 481.9759
+        y: 1126.6626
         width: 160
         height: 30
     - id: 117
@@ -7690,8 +7771,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 647
-        y: 1139
+        x: 651.8193
+        y: 1177.5542
         width: 160
         height: 30
     - id: 118
@@ -7745,8 +7826,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 348
-        y: 1137
+        x: 372.0964
+        y: 1164.7109
         width: 160
         height: 30
     - id: 119
@@ -7776,7 +7857,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(MakeThoughtAppear, D O N T   F I G H T    I T,IntrusiveThoughtManager);
+        value: require SendMessage(MakeThoughtAppear, D O N T   F I G H T    I T,IntrusiveThoughtManager);
         type: 0
         typeString: 
       conversationID: 2
@@ -7800,8 +7881,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 537
-        y: 825
+        x: 677.96387
+        y: 887.6506
         width: 160
         height: 30
     - id: 120
@@ -7831,9 +7912,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MakeThoughtAppear,Just as expected...,IntrusiveThoughtManager)@Message(Typed);
+        value: 'require SendMessage(MakeThoughtAppear,Just as expected...,IntrusiveThoughtManager)@Message(Typed);
 
-          Delay({{end}})'
+          require
+          SendMessage(SFX1,,SoundEffectsPlayer3);
+
+          require Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 2
@@ -7857,8 +7941,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28.710869
-        y: 783.9958
+        x: 39.554245
+        y: 722.55
         width: 160
         height: 30
     - id: 121
@@ -7912,8 +7996,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 64.85542
-        y: 905.7266
+        x: 101
+        y: 891.2688
         width: 160
         height: 30
     - id: 122
@@ -7967,8 +8051,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 176.90361
-        y: 896.7618
+        x: 250.39758
+        y: 852.1834
         width: 160
         height: 30
     - id: 123
@@ -8022,8 +8106,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 157.3494
-        y: 952.18365
+        x: 262.16867
+        y: 935.3162
         width: 160
         height: 30
     - id: 124
@@ -8077,8 +8161,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 171.80724
-        y: 1029.292
+        x: 215.18074
+        y: 1031.7015
         width: 160
         height: 30
     - id: 125
@@ -8108,7 +8192,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(MakeThoughtAppear, D O N T   F I G H T    I T,IntrusiveThoughtManager);
+        value: require SendMessage(MakeThoughtAppear, D O N T   F I G H T    I T,IntrusiveThoughtManager);
         type: 0
         typeString: 
       conversationID: 2
@@ -8132,8 +8216,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1
-        y: 941.2686
+        x: 79.313255
+        y: 934.03973
         width: 160
         height: 30
     - id: 126
@@ -8357,7 +8441,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 4.819275, y: 2166.6448}
+    canvasScrollPosition: {x: 18.07228, y: 1215.664}
     canvasZoom: 0.83
   syncInfo:
     syncActors: 0
