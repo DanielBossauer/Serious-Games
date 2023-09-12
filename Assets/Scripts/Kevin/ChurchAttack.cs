@@ -25,6 +25,6 @@ public class ChurchAttack : MonoBehaviour
             DialogueManager.StopAllConversations();
             Destroy(DialogueManager.instance.gameObject);
         }
-        SceneManager.LoadScene("CantGetOutOfBed");
+        SceneManager.LoadScene("Home");
     }
 }

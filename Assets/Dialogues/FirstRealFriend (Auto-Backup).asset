@@ -339,8 +339,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(MakeThoughtAppear,I really really hate the feeling
+        value: 'require SendMessage(MakeThoughtAppear,I really really hate the feeling
           of touching sand...,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -588,16 +590,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide
-          UI as soon as typewriter finishes.
+        value: 'require SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
+          // Hide UI as soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
-          SetDialoguePanel(true)@Message(Reappear);
-          // ...then show the UI again.
-
-          require '
+          require SetDialoguePanel(true)@Message(Reappear);
+          // ...then show the UI again.'
         type: 0
         typeString: 
       - title: EventGuid
@@ -670,7 +670,7 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(3);'
+          require SetTimeout(3);'
         type: 0
         typeString: 
       conversationID: 1
@@ -726,16 +726,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide
-          UI as soon as typewriter finishes.
+        value: 'require SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
+          // Hide UI as soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
-          SetDialoguePanel(true)@Message(Reappear);
-          // ...then show the UI again.
-
-          require '
+          require SetDialoguePanel(true)@Message(Reappear);
+          // ...then show the UI again.'
         type: 0
         typeString: 
       conversationID: 1
@@ -803,7 +801,9 @@ MonoBehaviour:
           SendMessage(MakeThoughtAppear,What a bitch!,IntrusiveThoughtManager);
 
           require
-          SendMessage(MakeThoughtAppear,I can''t,IntrusiveThoughtManager);'
+          SendMessage(MakeThoughtAppear,I can''t,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -1265,7 +1265,9 @@ MonoBehaviour:
           H E   S A N D !,IntrusiveThoughtManager);
 
           require SendMessage(MakeThoughtAppear,T
-          H E   S A N D !,IntrusiveThoughtManager);'
+          H E   S A N D !,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -1394,7 +1396,9 @@ MonoBehaviour:
           SendMessage(MakeThoughtAppear,I have to save the situation!,IntrusiveThoughtManager);
 
           require
-          SendMessage(MakeThoughtAppear,But she is a bitch!,IntrusiveThoughtManager);'
+          SendMessage(MakeThoughtAppear,But she is a bitch!,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -1802,7 +1806,9 @@ MonoBehaviour:
 
           require
           SendMessage(MakeThoughtAppear,I have never felt so bad for what I have
-          done before,IntrusiveThoughtManager);'
+          done before,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -1916,7 +1922,9 @@ MonoBehaviour:
           game,IntrusiveThoughtManager);
 
           require SendMessage(MakeThoughtAppear,Help!
-          I''m not a gamer!,IntrusiveThoughtManager);'
+          I''m not a gamer!,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -2151,7 +2159,9 @@ MonoBehaviour:
         value: 'require SendMessage(MakeThoughtAppear,Why did I say that?!,IntrusiveThoughtManager);
 
           require
-          SendMessage(MakeThoughtAppear,How can I be so so stupid...,IntrusiveThoughtManager);'
+          SendMessage(MakeThoughtAppear,How can I be so so stupid...,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -2214,7 +2224,9 @@ MonoBehaviour:
 
           require
           SendMessage(MakeThoughtAppear,I need to do everything so she doesn''t hate
-          me,IntrusiveThoughtManager);'
+          me,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3300,8 +3312,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(MakeThoughtAppear,What's happening? I can't believe
-          it,IntrusiveThoughtManager);
+        value: 'require SendMessage(MakeThoughtAppear,What''s happening? I can''t
+          believe it,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3356,17 +3370,20 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
 
-          SetDialoguePanel(false)@Message(MyWait)->
-          Message(Hidden);
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+          require
           Delay(2)@Message(Hidden)->Message(Reappear);
 
-          SetDialoguePanel(true)@Message(Reappear)
+          require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3662,7 +3679,9 @@ MonoBehaviour:
 
           require
           SendMessage(MakeThoughtAppear,But if I let go she will ask questions. She
-          will hate me.,IntrusiveThoughtManager);'
+          will hate me.,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3840,7 +3859,9 @@ MonoBehaviour:
           SendMessage(MakeThoughtAppear,I will be so tired after this once she leaves.,IntrusiveThoughtManager);
 
           require
-          SendMessage(MakeThoughtAppear,I gotta keep going, as long as she is here.,IntrusiveThoughtManager);'
+          SendMessage(MakeThoughtAppear,I gotta keep going, as long as she is here.,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -3956,7 +3977,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(MakeThoughtAppear,Oh THANKS GOD!,IntrusiveThoughtManager);
+        value: 'require SendMessage(MakeThoughtAppear,Oh THANKS GOD!,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4067,17 +4090,18 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
 
-          SetDialoguePanel(false)@Message(MyWait)->
-          Message(Hidden);
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+          require
           Delay(2)@Message(Hidden)->Message(Reappear);
 
-          SetDialoguePanel(true)@Message(Reappear)
+          require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);'
         type: 0
         typeString: 
       conversationID: 1
@@ -4194,13 +4218,14 @@ MonoBehaviour:
           require SendMessage(MakeThoughtAppear,I
           don''t wanna play that game!,IntrusiveThoughtManager);
 
-          SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
-          // Hide UI as soon as typewriter finishes.
+          require
+          SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide UI as
+          soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
-          SetDialoguePanel(true)@Message(Reappear);
+          require SetDialoguePanel(true)@Message(Reappear);
           // ...then show the UI again. '
         type: 0
         typeString: 
@@ -4422,7 +4447,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(MakeThoughtAppear,nobody can match my skills,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4479,7 +4506,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(MakeThoughtAppear,I always liked this game,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4534,16 +4563,19 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetDialoguePanel(false)@Message(Typed)->Message(Hidden); // Hide
-          UI as soon as typewriter finishes.
+        value: 'require SetDialoguePanel(false)@Message(Typed)->Message(Hidden);
+          // Hide UI as soon as typewriter finishes.
 
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          require Delay(2)@Message(Hidden)->Message(Reappear);
           // When UI is hidden, wait 2 more seconds...
 
-          SetDialoguePanel(true)@Message(Reappear);
+          require SetDialoguePanel(true)@Message(Reappear);
           // ...then show the UI again.
 
-          require '
+          require SendMessage(MakeThoughtAppear,I
+          don''t remember a time where I didn''t like doing it.,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4599,26 +4631,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'require SendMessage(MakeThoughtAppear,nobody can match my skills,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,I always liked this game,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,I don''t remember a time where I didn''t
-          like doing it.,IntrusiveThoughtManager);
-
-          require SendMessage(MakeThoughtAppear,Everyone
-          including her are in awe looking at my skills.,IntrusiveThoughtManager);
+        value: 'require SendMessage(MakeThoughtAppear,Everyone including her are
+          in awe looking at my skills.,IntrusiveThoughtManager);
 
           require
           SendMessage(MakeThoughtAppear,I need to do it.,IntrusiveThoughtManager);
 
-          require
-          SendMessage(MakeThoughtAppear,It is me,IntrusiveThoughtManager);
-
-          require
-          SendMessage(MakeThoughtAppear,This is my favourite game,IntrusiveThoughtManager);'
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -4673,7 +4692,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(MakeThoughtAppear,It is me,IntrusiveThoughtManager);
+
+          require
+          SendMessage(MakeThoughtAppear,This is my favourite game,IntrusiveThoughtManager);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -6012,11 +6036,12 @@ MonoBehaviour:
       - title: Sequence
         value: '{{default}};
 
-          SetTimeout(15);
+          require SetTimeout(15);
 
-          require SendMessage(MakeThoughtAppear,I
-          CAN''T ENDURE THIS ANYMORE,IntrusiveThoughtManager);
+          require
+          SendMessage(MakeThoughtAppear,I CAN''T ENDURE THIS ANYMORE,IntrusiveThoughtManager);
 
+          require 
           SendMessage(MakeThoughtAppear,AAAAAAAH,IntrusiveThoughtManager);
 
           require
@@ -6087,17 +6112,18 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
 
-          SetDialoguePanel(false)@Message(MyWait)->
-          Message(Hidden);
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+          require
           Delay(2)@Message(Hidden)->Message(Reappear);
 
-          SetDialoguePanel(true)@Message(Reappear)
+          require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);'
         type: 0
         typeString: 
       conversationID: 1
@@ -7084,17 +7110,20 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
 
-          SetDialoguePanel(false)@Message(MyWait)->
-          Message(Hidden);
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+          require
           Delay(2)@Message(Hidden)->Message(Reappear);
 
-          SetDialoguePanel(true)@Message(Reappear)
+          require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -7178,7 +7207,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 184.61526, y: 2767.6973}
+    canvasScrollPosition: {x: 0, y: 52.30768}
     canvasZoom: 0.65
   - id: 2
     fields:
@@ -7364,7 +7393,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: require SendMessage(SFX1,,SoundEffectsPlayer2);
         type: 0
         typeString: 
       - title: EventGuid
@@ -7533,7 +7562,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: require SendMessage(SFX1,,SoundEffectsPlayer);
         type: 0
         typeString: 
       conversationID: 3
@@ -7643,17 +7672,18 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
 
-          SetDialoguePanel(false)@Message(MyWait)->
-          Message(Hidden);
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+          require
           Delay(2)@Message(Hidden)->Message(Reappear);
 
-          SetDialoguePanel(true)@Message(Reappear)
+          require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);'
         type: 0
         typeString: 
       conversationID: 3
@@ -8039,17 +8069,18 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
 
-          SetDialoguePanel(false)@Message(MyWait)->
-          Message(Hidden);
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+          require
           Delay(2)@Message(Hidden)->Message(Reappear);
 
-          SetDialoguePanel(true)@Message(Reappear)
+          require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);'
         type: 0
         typeString: 
       conversationID: 3
@@ -8381,17 +8412,18 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
 
-          SetDialoguePanel(false)@Message(MyWait)->
-          Message(Hidden);
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+          require
           Delay(2)@Message(Hidden)->Message(Reappear);
 
-          SetDialoguePanel(true)@Message(Reappear)
+          require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);'
         type: 0
         typeString: 
       conversationID: 3
@@ -8501,17 +8533,18 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(2)@Message(Typed) -> Message(MyWait);
+        value: 'require Delay(2)@Message(Typed) -> Message(MyWait);
 
-          SetDialoguePanel(false)@Message(MyWait)->
-          Message(Hidden);
+          require
+          SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+          require
           Delay(2)@Message(Hidden)->Message(Reappear);
 
-          SetDialoguePanel(true)@Message(Reappear)
+          require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);'
         type: 0
         typeString: 
       - title: EventGuid
@@ -8778,7 +8811,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 5, y: 469}
+    canvasScrollPosition: {x: 0, y: 26}
     canvasZoom: 1
   - id: 4
     fields:
@@ -9019,7 +9052,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(ChangeImageToSand,,FirstRealFriend);
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer2);
+
+          require
+          SendMessage(ChangeImageToSand,,FirstRealFriend);
+
+'
         type: 0
         typeString: 
       conversationID: 4

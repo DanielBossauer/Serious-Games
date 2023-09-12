@@ -97,6 +97,9 @@ public class CantGetOutOfBed : MonoBehaviour
 
     bool messengerIsOpen;
 
+    [SerializeField] SoundEffectsPlayer soundEffectsPlayer;
+    [SerializeField] SoundEffectsPlayer2 soundEffectsPlayer2;
+
     private void Awake()
     {
         player2.SetActive(false);
@@ -123,18 +126,21 @@ public class CantGetOutOfBed : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        PlayAllSounds();
+
         //storedButtons = new List<OutOfBedClickButton>();
 
         //Initialize clock
-        
-            clock = Instantiate(clockPrefab);
 
-            clock.updateTime = 1/clockTimeSpeed;
+        clock = Instantiate(clockPrefab);
 
-            clock.gameObject.transform.parent = canvas.gameObject.transform;
-            clock.gameObject.transform.position = new Vector3(Screen.width * 0.2f, Screen.height * 0.2f, 0f);
-            clock.Run(this);
-            clock.SetTime(6f);
+        clock.updateTime = 1/clockTimeSpeed;
+
+        clock.gameObject.transform.parent = canvas.gameObject.transform;
+        clock.gameObject.transform.position = new Vector3(Screen.width * 0.2f, Screen.height * 0.2f, 0f);
+        clock.Run(this);
+        clock.SetTime(6f);
 
         if (crazyClock)
         {
@@ -689,6 +695,9 @@ public class CantGetOutOfBed : MonoBehaviour
     {
         if (!watchingOnPhone)
         {
+
+            StopAllSounds();
+
             visualEffectsChanger.ChangeBloom(10f, new Color(0.2470588f, 0.5845474f, 0.7647059f), 0.1f);
             if (!isNightTime) effectsOnStart.Start();
             else visualEffectsChanger.HouseDayTime();
@@ -702,6 +711,8 @@ public class CantGetOutOfBed : MonoBehaviour
     {
         if (watchingOnPhone)
         {
+            PlayAllSounds();
+
             visualEffectsChanger.ChangeBloom(0.9f, new Color(0.4235294f, 0.3019608f, 0.1215686f), 0.9f);
             clock.ResetSpeed();
             watchingOnPhone = false;
@@ -710,6 +721,22 @@ public class CantGetOutOfBed : MonoBehaviour
             else if (!isNightTime && gotThroughOneNightTrigger) visualEffectsChanger.HouseDayTime();
             else effectsOnStart.Start();
         }
+    }
+
+    public void PlayAllSounds()
+    {
+        
+            soundEffectsPlayer.SFX1();
+            soundEffectsPlayer2.SFX1();
+        
+
+        
+    }
+
+    public void StopAllSounds()
+    {
+        soundEffectsPlayer.Stop();
+        soundEffectsPlayer2.Stop();
     }
 
 }

@@ -41,6 +41,8 @@ public class BackToTherapist : MonoBehaviour
 
     [SerializeField] SpriteRenderer background;
 
+    [SerializeField] SoundEffectsPlayer2 soundEffectsPlayer2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -181,6 +183,7 @@ public class BackToTherapist : MonoBehaviour
 
     void TopLeftToTopRight()
     {
+        PlaySound();
 
         DialogueManager.StopAllConversations();
 
@@ -221,6 +224,7 @@ public class BackToTherapist : MonoBehaviour
 
     void TopRightToBottomRight()
     {
+        PlaySound();
 
         if (breathingRounds >= 0)
         {
@@ -252,6 +256,8 @@ public class BackToTherapist : MonoBehaviour
 
     void BottomRightToBottomLeft()
     {
+        PlaySound();
+
         if (breathingRounds >= 0)
         {
             SetBreathingText("Breathe out");
@@ -281,6 +287,8 @@ public class BackToTherapist : MonoBehaviour
 
     void BottomLeftToTopLeft()
     {
+        PlaySound();
+
         if (breathingRounds >= 0)
         {
             SetBreathingText("Hold your breath");
@@ -528,5 +536,10 @@ public class BackToTherapist : MonoBehaviour
 
         SceneManager.LoadScene(sceneIndex + 1);
         
+    }
+
+    void PlaySound()
+    {
+        soundEffectsPlayer2.SFX2();
     }
 }

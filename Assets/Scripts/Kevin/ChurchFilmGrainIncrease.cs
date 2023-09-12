@@ -33,9 +33,14 @@ public class ChurchFilmGrainIncrease : MonoBehaviour
 
     bool outsideWithFriend;
 
+    [SerializeField] SoundEffectsPlayer soundEffectsPlayer;
+    [SerializeField] SoundEffectsPlayer2 soundEffectsPlayer2;
+
     // Start is called before the first frame update
     void Start()
     {
+        SetVolume(0);
+
         superCharacter = player.gameObject.GetComponent<SUPERCharacterAIO>();
         initialWalkingSpeed = superCharacter.walkingSpeed;
         initialRoationWeight = superCharacter.rotationWeight;
@@ -142,12 +147,17 @@ public class ChurchFilmGrainIncrease : MonoBehaviour
 
                 if (!lostControl) StartCoroutine(LosingControl());
             }
+
+
+
+            SetVolume(2/distance);
         }
 
 
 
         if (outsideWithFriend)
         {
+            SetVolume(0);
             player.transform.position = outsidePosition.position;
             player.GetComponent<Animator>().enabled = false;
         }
@@ -203,5 +213,17 @@ public class ChurchFilmGrainIncrease : MonoBehaviour
 
         DialogueManager.StopAllConversations();
         DialogueManager.StartConversation(friendConvo);
+    }
+
+    public void SetVolume(float volume)
+    {
+        soundEffectsPlayer.ChangeVolume(volume.ToString());
+        soundEffectsPlayer2.ChangeVolume(volume.ToString());
+    }
+
+    public void SoundStop()
+    {
+        soundEffectsPlayer.Stop();
+        soundEffectsPlayer2.Stop();
     }
 }

@@ -38,7 +38,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Rose
+      value: lel
       type: 0
       typeString: 
     - title: Pictures
@@ -7207,7 +7207,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 339.9999, y: 1963.0759}
+    canvasScrollPosition: {x: 0, y: 52.30768}
     canvasZoom: 0.65
   - id: 2
     fields:
@@ -7393,7 +7393,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: require SendMessage(SFX1,,SoundEffectsPlayer2);
         type: 0
         typeString: 
       - title: EventGuid
@@ -7562,7 +7562,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -7677,13 +7679,20 @@ MonoBehaviour:
           require
           SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+
           require
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          SendMessage(SFX2,,SoundEffectsPlayer2)@Message(Hidden)->Message(Hidden2);
+
+
+          require
+          Delay(2)@Message(Hidden2)->Message(Reappear);
 
           require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          require Continue()@Message(MyContinue);'
+          //require Continue()@Message(MyContinue);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -8080,7 +8089,9 @@ MonoBehaviour:
           require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          require Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -8417,13 +8428,20 @@ MonoBehaviour:
           require
           SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+
           require
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          SendMessage(SFX3,,SoundEffectsPlayer2)@Message(Hidden)->Message(Hidden2);
+
+
+          require
+          Delay(2)@Message(Hidden2)->Message(Reappear);
 
           require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          require Continue()@Message(MyContinue);'
+          require Continue()@Message(MyContinue);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -8538,13 +8556,20 @@ MonoBehaviour:
           require
           SetDialoguePanel(false)@Message(MyWait)-> Message(Hidden);
 
+
           require
-          Delay(2)@Message(Hidden)->Message(Reappear);
+          SendMessage(SFX3,,SoundEffectsPlayer2)@Message(Hidden)->Message(Hidden2);
+
+
+          require
+          Delay(2)@Message(Hidden2)->Message(Reappear);
 
           require SetDialoguePanel(true)@Message(Reappear)
           ->Message(MyContinue);
 
-          require Continue()@Message(MyContinue);'
+          //require Continue()@Message(MyContinue);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       - title: EventGuid
@@ -8811,7 +8836,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1070}
+    canvasScrollPosition: {x: 5, y: 972}
     canvasZoom: 1
   - id: 4
     fields:
@@ -9052,7 +9077,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(ChangeImageToSand,,FirstRealFriend);
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer2);
+
+          require
+          SendMessage(ChangeImageToSand,,FirstRealFriend);
+
+'
         type: 0
         typeString: 
       conversationID: 4

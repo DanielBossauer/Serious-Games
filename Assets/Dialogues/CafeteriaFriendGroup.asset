@@ -399,7 +399,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer);
+
+          {{default}};'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -424,7 +426,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 76
-        y: 137
+        y: 135.7013
         width: 160
         height: 30
     - id: 2
@@ -582,7 +584,21 @@ MonoBehaviour:
           SendMessage(ChangeContrast,10,VisualEffectsChanger)@Message(Typed);
 
           require
-          SendMessage(ChangeBloomThreshold,0.8,VisualEffectsChanger)@Message(Typed);'
+          SendMessage(ChangeBloomThreshold,0.8,VisualEffectsChanger)@Message(Typed);
+
+
+          require
+          SendMessage(SFX1,,SoundEffectsPlayer2)@Message(Typed);
+
+          require
+          SendMessage(ChangePitch,0.5,SoundEffectsPlayer2)@Message(Typed);
+
+
+          require
+          SendMessage(SFX1,,SoundEffectsPlayer3)@Message(Typed);
+
+          require
+          SendMessage(ChangeVolume,0.2,SoundEffectsPlayer3)@Message(Typed);'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -1344,8 +1360,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(MakeThoughtAppear,None of them are going to listen
+        value: 'require SendMessage(MakeThoughtAppear,None of them are going to listen
           anyways , IntrusiveThoughtManager)@Message(Typed);
+
+
+          require
+          SendMessage(ChangePitch,1,SoundEffectsPlayer2)@Message(Typed);
+
+          SendMessage(ChangeVolume,0.3,SoundEffectsPlayer3)@Message(Typed);
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -2271,7 +2295,14 @@ MonoBehaviour:
           require SetTimeout(4);
 
           require
-          SendMessage(ChangeFilmGrain,1, VisualEffectsChanger)@Message(Typed);'
+          SendMessage(ChangeFilmGrain,1, VisualEffectsChanger)@Message(Typed);
+
+
+          require
+          SendMessage(ChangePitch,1.5,SoundEffectsPlayer2)@Message(Typed);
+
+
+          SendMessage(ChangeVolume,0.5,SoundEffectsPlayer3)@Message(Typed);'
         type: 0
         typeString: 
       conversationID: 1
@@ -3828,7 +3859,14 @@ MonoBehaviour:
         value: 'require SendMessage(MakeNotebookAppear,, NotebookManager)@Message(Typed);
 
           require
-          SendMessage(SadAndLonely,, VisualEffectsChanger)@Message(Typed);'
+          SendMessage(SadAndLonely,, VisualEffectsChanger)@Message(Typed);
+
+
+          require
+          SendMessage(Stop,,SoundEffectsPlayer2)@Message(Typed);
+
+          require
+          SendMessage(ChangeVolume,0.2,SoundEffectsPlayer3)@Message(Typed);'
         type: 0
         typeString: 
       conversationID: 1
@@ -4361,7 +4399,7 @@ MonoBehaviour:
         width: 224.88058
         height: 144.28357
       color: {r: 1, g: 1, b: 1, a: 0.5}
-    canvasScrollPosition: {x: 716.8831, y: 2171.4277}
+    canvasScrollPosition: {x: 572.7273, y: 2403.896}
     canvasZoom: 0.77
   syncInfo:
     syncActors: 0

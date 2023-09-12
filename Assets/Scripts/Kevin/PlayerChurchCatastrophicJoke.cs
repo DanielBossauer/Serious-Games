@@ -30,6 +30,10 @@ public class PlayerChurchCatastrophicJoke : MonoBehaviour
 
     [SerializeField] LerpManager lerper;
 
+    [SerializeField] SoundEffectsPlayer soundEffectsPlayer;
+
+    [SerializeField] SoundEffectsPlayer2 soundEffectsPlayer2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,6 +85,7 @@ public class PlayerChurchCatastrophicJoke : MonoBehaviour
         if (!alreadyCalled)
         {
             alreadyCalled = true;
+            PlayStatic();
         }
     }
 
@@ -162,5 +167,23 @@ public class PlayerChurchCatastrophicJoke : MonoBehaviour
         
 
         yield return null;
+    }
+
+    public void PlayStaticAndHeart()
+    {
+        soundEffectsPlayer.SFX1();
+        soundEffectsPlayer2.SFX1();
+    }
+
+    public void PlayEpilepsy()
+    {
+        soundEffectsPlayer.SFX2();
+        soundEffectsPlayer2.SFX2();
+    }
+
+    public void PlayStatic()
+    {
+        soundEffectsPlayer.SFX1();
+        soundEffectsPlayer.Stop();
     }
 }
