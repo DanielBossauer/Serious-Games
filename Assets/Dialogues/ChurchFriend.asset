@@ -357,7 +357,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer3);
+
+          
+
+          {{default}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -2431,7 +2435,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 14, y: 1228}
+    canvasScrollPosition: {x: 134, y: 334}
     canvasZoom: 1
   - id: 2
     fields:
@@ -4113,6 +4117,10 @@ MonoBehaviour:
         value: require SendMessage(DidiDialogue2,,VisualEffectsChanger);
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 9901dad1-a434-4b2a-833b-97d10b0e8c0b
+        type: 0
+        typeString: 
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -4174,6 +4182,10 @@ MonoBehaviour:
           require SendMessage(SadAndLonely,, VisualEffectsChanger)@Message(Typed);'
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: ee620ec6-b9ee-4abc-8176-a64d958ef71e
+        type: 0
+        typeString: 
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -4194,7 +4206,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1, y: 0}
+    canvasScrollPosition: {x: 24, y: 315}
     canvasZoom: 1
   - id: 3
     fields:

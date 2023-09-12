@@ -1498,11 +1498,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: require SendMessage(MakeNotebooksAppear,,BackToTherapist2);
         type: 0
         typeString: 
       - title: EventGuid
-        value: b1e7f813-a1f7-4b2e-8ede-5251eed41e04
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -1523,19 +1523,7 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: 
-            m_MethodName: 
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: 
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
+          m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 11
@@ -3173,7 +3161,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 913}
+    canvasScrollPosition: {x: 0, y: 1302}
     canvasZoom: 1
   - id: 2
     fields:
@@ -15889,6 +15877,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 5e414e45-26b5-452f-9c4e-0ea8e2895df0
+        type: 0
+        typeString: 
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -25672,7 +25664,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 8268}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
   - id: 15
     fields:
@@ -26255,6 +26247,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 075bb81e-7894-4b9c-83a4-0c73f4b4c7d8
+        type: 0
+        typeString: 
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -26439,7 +26435,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 195}
+    canvasScrollPosition: {x: 0, y: 219}
     canvasZoom: 1
   syncInfo:
     syncActors: 0

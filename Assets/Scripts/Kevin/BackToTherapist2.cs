@@ -65,6 +65,8 @@ public class BackToTherapist2 : MonoBehaviour
 
     [SerializeField] SoundEffectsPlayer soundEffectsPlayer;
 
+    [SerializeField] bool useStaticVariables = false;
+
     private void Awake()
     {
         notebookArrowLeft.gameObject.SetActive(false);
@@ -238,13 +240,35 @@ public class BackToTherapist2 : MonoBehaviour
     {
         
         if(debugBool) DebugSetNotebookEntries();
-        
 
-        finalNotebooks = StaticVariables.notebookDict;
+
+        //if (useStaticVariables) finalNotebooks = StaticVariables.notebookDict;
+        //else
+        //{
+        //    StringSaver[] stringSavers = FindObjectsOfType<StringSaver>();
+        //    finalNotebooks = stringSavers[0].GetTexts();
+        //}
+
+        StringSaver[] stringSavers = FindObjectsOfType<StringSaver>();
+        if (stringSavers != null)
+        {
+            if (stringSavers.Length > 0)
+            {
+                finalNotebooks = stringSavers[0].GetTexts();
+            }
+            
+            
+        }
+
+        if (finalNotebooks == null)
+        {
+            finalNotebooks = new Dictionary<string, string>();
+        }
 
 
         //////
         ///
+
 
         //DATING NOTES
         if (finalNotebooks.ContainsKey("Dating"))
@@ -259,7 +283,9 @@ public class BackToTherapist2 : MonoBehaviour
         else
         {
             GameObject notebookInstance = Instantiate(finalNotebookPrefab);
-            string defaultText = "Hi";
+            string defaultText = "Even though the dates are more or less successful, Rose never manages to stay in contact for a long" +
+                "period of time with the other person. Plus there is an internal voice keeping her back during the dates and she has to find a lot of" +
+                "excuses for how she is.";
             notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Dating";
             notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
             notebookInstancesList.Add(notebookInstance);
@@ -280,7 +306,9 @@ public class BackToTherapist2 : MonoBehaviour
         else
         {
             GameObject notebookInstance = Instantiate(finalNotebookPrefab);
-            string defaultText = "Hi";
+            string defaultText = "Rose wants to prepare for a test but her parents cannot find any time to help her. No matter the result, she" +
+                "always finds an excuse to diminish her own abilities. She suffered from an anxiety attack during the test which prevented her from" +
+                "solving the exercises.";
             notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "School";
             notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
             notebookInstancesList.Add(notebookInstance);
@@ -301,7 +329,9 @@ public class BackToTherapist2 : MonoBehaviour
         else
         {
             GameObject notebookInstance = Instantiate(finalNotebookPrefab);
-            string defaultText = "Hi";
+            string defaultText = "Rose has to fight for the attention of the others as well as her own anxious thoughts. Her friends don't" +
+                "really listen to her and think they know what problems she has even though they do not. Plus Rose seems to be fixated on not wanting" +
+                "to make a single mistake during the conversation.";
             notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Cafeteria";
             notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
             notebookInstancesList.Add(notebookInstance);
@@ -322,7 +352,7 @@ public class BackToTherapist2 : MonoBehaviour
         else
         {
             GameObject notebookInstance = Instantiate(finalNotebookPrefab);
-            string defaultText = "Hi";
+            string defaultText = "Rose immediately becomes friends with someone and their mother on the first day they meet.";
             notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Church Dance Group";
             notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
             notebookInstancesList.Add(notebookInstance);
@@ -343,7 +373,8 @@ public class BackToTherapist2 : MonoBehaviour
         else
         {
             GameObject notebookInstance = Instantiate(finalNotebookPrefab);
-            string defaultText = "Hi";
+            string defaultText = "Rose's friend seems to be disappointed and angry at Rose that she would trust someone over her or her mother." +
+                "Plus, she doesn't understand Rose's reason to take therapy because she fails to see her problems.";
             notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Church Bible Group";
             notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
             notebookInstancesList.Add(notebookInstance);
@@ -364,7 +395,8 @@ public class BackToTherapist2 : MonoBehaviour
         else
         {
             GameObject notebookInstance = Instantiate(finalNotebookPrefab);
-            string defaultText = "Hi";
+            string defaultText = "Rose is suffering from loneliness and the expectations of her parents to make her first ever lasting friend." +
+                "With each and every failure she learns to people please more and more in order for people to like her, ignoring her own boundaries.";
             notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Sandbox";
             notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
             notebookInstancesList.Add(notebookInstance);
@@ -385,7 +417,8 @@ public class BackToTherapist2 : MonoBehaviour
         else
         {
             GameObject notebookInstance = Instantiate(finalNotebookPrefab);
-            string defaultText = "Hi";
+            string defaultText = "Rose is absolutely overwhelmed with the voices and noise in her own mind which takes away a great amount of her energy" +
+                "and prevents her from maintaining her relationships.";
             notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "At Home";
             notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
             notebookInstancesList.Add(notebookInstance);
@@ -408,6 +441,7 @@ public class BackToTherapist2 : MonoBehaviour
         lerpManagers[0].StartPoint = tmp.transform;
 
         StartCoroutine(MakeNotebooksAppear2());
+        
     }
 
 
@@ -870,5 +904,77 @@ public class BackToTherapist2 : MonoBehaviour
     public void PlayLayton()
     {
         soundEffectsPlayer.SFX2();
+    }
+
+    public void PlayMukaku()
+    {
+        soundEffectsPlayer.SFX3();
+    }
+
+
+
+    public void UseDefaultNotes()
+    {
+        foreach (GameObject notebookInstance in notebookInstancesList)
+        {
+
+            
+
+            if (notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "Dating")
+            {
+                string defaultText = "Even though the dates are more or less successful, Rose never manages to stay in contact for a long" +
+                "period of time with the other person. Plus there is an internal voice keeping her back during the dates and she has to find a lot of" +
+                "excuses for how she is.";
+                notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
+            }
+            else if (notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "School")
+            {
+                string defaultText = "Rose wants to prepare for a test but her parents cannot find any time to help her. No matter the result, she" +
+                "always finds an excuse to diminish her own abilities. She suffered from an anxiety attack during the test which prevented her from" +
+                "solving the exercises.";
+                
+                notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
+            }
+            else if (notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "Cafeteria")
+            {
+                string defaultText = "Rose has to fight for the attention of the others as well as her own anxious thoughts. Her friends don't" +
+                "really listen to her and think they know what problems she has even though they do not. Plus Rose seems to be fixated on not wanting" +
+                "to make a single mistake during the conversation.";
+                
+                notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
+            }
+            else if (notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "Church Dance Group")
+            {
+                string defaultText = "Rose immediately becomes friends with someone and their mother on the first day they meet.";
+                
+                notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
+            }
+            else if (notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "Church Bible Group")
+            {
+                string defaultText = "Rose's friend seems to be disappointed and angry at Rose that she would trust someone over her or her mother." +
+                "Plus, she doesn't understand Rose's reason to take therapy because she fails to see her problems.";
+                
+                notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
+            }
+            else if (notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "Sandbox")
+            {
+                string defaultText = "Rose is suffering from loneliness and the expectations of her parents to make her first ever lasting friend." +
+                "With each and every failure she learns to people please more and more in order for people to like her, ignoring her own boundaries.";
+                
+                notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
+            }
+            else if (notebookInstance.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "At Home")
+            {
+                string defaultText = "Rose is absolutely overwhelmed with the voices and noise in her own mind which takes away a great amount of her energy" +
+                "and prevents her from maintaining her relationships.";
+                
+                notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text = defaultText;
+            }
+            
+
+
+
+
+        }
     }
 }

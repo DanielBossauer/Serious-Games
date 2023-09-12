@@ -31,6 +31,12 @@ public class SoundEffectsPlayer : MonoBehaviour
         src.Play();
     }
 
+    public void SFX3()
+    {
+        src.clip = audioClips[2];
+        src.Play();
+    }
+
     public void Stop()
     {
         src.Stop();

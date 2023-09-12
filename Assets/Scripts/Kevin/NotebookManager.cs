@@ -96,6 +96,14 @@ public class NotebookManager : MonoBehaviour
 
         }
         StaticVariables.notebookDict.Add(SceneManager.GetActiveScene().name, notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text);
+
+        StringSaver[] stringSavers = FindObjectsOfType<StringSaver>();
+
+        if (stringSavers != null && stringSavers[0] != null)
+        {
+            stringSavers[0].SaveText(notebookInstance.gameObject.transform.GetChild(1).GetComponent<TMP_InputField>().text);
+        }
+    
     }
 
 

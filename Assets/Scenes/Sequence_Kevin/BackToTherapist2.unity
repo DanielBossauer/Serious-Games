@@ -4051,7 +4051,7 @@ MonoBehaviour:
   - {fileID: 1895338297}
   - {fileID: 950362493}
   - {fileID: 1882247267}
-  debugBool: 1
+  debugBool: 0
   finalNotebookPrefab: {fileID: 5551653032605887909, guid: c6afad0ca70002948941a6052030a974,
     type: 3}
   lerpManagers:
@@ -4076,6 +4076,7 @@ MonoBehaviour:
   swapMinigame: {fileID: 107325741}
   swapMinigameHider: {fileID: 221523504}
   soundEffectsPlayer: {fileID: 823179133}
+  useStaticVariables: 0
 --- !u!1 &409487881
 GameObject:
   m_ObjectHideFlags: 0
@@ -7256,6 +7257,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 17a202143ed7b4149a620cf306cc3d38, type: 3}
   - {fileID: 8300000, guid: e13ef603fb3e69c408754ac91639e102, type: 3}
+  - {fileID: 8300000, guid: f26e34fafecb7384c8e0f21f220e61ba, type: 3}
 --- !u!4 &823179134
 Transform:
   m_ObjectHideFlags: 0
@@ -16854,22 +16856,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - guid: b1e7f813-a1f7-4b2e-8ede-5251eed41e04
-    onExecute:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 404982988}
-          m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
-          m_MethodName: MakeNotebooksAppear
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - guid: 36cf469b-53c7-43fc-8538-fb58cbfc49be
     onExecute:
       m_PersistentCalls:
@@ -17177,6 +17163,54 @@ MonoBehaviour:
         - m_Target: {fileID: 404982988}
           m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
           m_MethodName: PIOSEEs_Deactivate
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 5e414e45-26b5-452f-9c4e-0ea8e2895df0
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982988}
+          m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
+          m_MethodName: PlayMukaku
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 075bb81e-7894-4b9c-83a4-0c73f4b4c7d8
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982988}
+          m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
+          m_MethodName: UseDefaultNotes
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 09cb03ce-a5eb-4c73-b79c-42c0258bef3d
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 404982988}
+          m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
+          m_MethodName: MakeNotebooksAppear
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

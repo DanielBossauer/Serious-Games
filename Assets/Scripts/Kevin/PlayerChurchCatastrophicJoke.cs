@@ -184,6 +184,6 @@ public class PlayerChurchCatastrophicJoke : MonoBehaviour
     public void PlayStatic()
     {
         soundEffectsPlayer.SFX1();
-        soundEffectsPlayer.Stop();
+        soundEffectsPlayer2.Stop();
     }
 }
