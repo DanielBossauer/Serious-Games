@@ -63,6 +63,8 @@ public class BackToTherapist2 : MonoBehaviour
 
     [SerializeField] Image swapMinigameHider;
 
+    [SerializeField] SoundEffectsPlayer soundEffectsPlayer;
+
     private void Awake()
     {
         notebookArrowLeft.gameObject.SetActive(false);
@@ -863,5 +865,10 @@ public class BackToTherapist2 : MonoBehaviour
     public void ShowFinalMap()
     {
         finalMindMap.gameObject.SetActive(true);
+    }
+
+    public void PlayLayton()
+    {
+        soundEffectsPlayer.SFX2();
     }
 }

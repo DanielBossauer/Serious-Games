@@ -38,7 +38,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Rose
+      value: lel
       type: 0
       typeString: 
     - title: Pictures
@@ -1279,7 +1279,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 130, y: 163}
+    canvasScrollPosition: {x: 5, y: 181}
     canvasZoom: 1
   - id: 2
     fields:
@@ -9182,7 +9182,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 60, y: 1}
+    canvasScrollPosition: {x: 0, y: 85}
     canvasZoom: 1
   - id: 9
     fields:
@@ -14717,7 +14717,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 37, y: 65}
+    canvasScrollPosition: {x: 0, y: 15}
     canvasZoom: 1
   syncInfo:
     syncActors: 0

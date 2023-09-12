@@ -7646,7 +7646,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 2558.4563}
+    canvasScrollPosition: {x: 0, y: 2439.9944}
     canvasZoom: 0.65
   - id: 2
     fields:
@@ -7832,7 +7832,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: require SendMessage(SFX1,,SoundEffectsPlayer2);
+        value: 'require SendMessage(SFX1,,SoundEffectsPlayer2);
+
+          Delay({{end}});'
         type: 0
         typeString: 
       - title: EventGuid
@@ -9275,7 +9277,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1033}
+    canvasScrollPosition: {x: 0, y: 980}
     canvasZoom: 1
   - id: 4
     fields:

@@ -4075,6 +4075,7 @@ MonoBehaviour:
   swapMindMap: {fileID: 1895032426}
   swapMinigame: {fileID: 107325741}
   swapMinigameHider: {fileID: 221523504}
+  soundEffectsPlayer: {fileID: 823179133}
 --- !u!1 &409487881
 GameObject:
   m_ObjectHideFlags: 0
@@ -7254,6 +7255,7 @@ MonoBehaviour:
   src: {fileID: 823179132}
   audioClips:
   - {fileID: 8300000, guid: 17a202143ed7b4149a620cf306cc3d38, type: 3}
+  - {fileID: 8300000, guid: e13ef603fb3e69c408754ac91639e102, type: 3}
 --- !u!4 &823179134
 Transform:
   m_ObjectHideFlags: 0
@@ -15324,6 +15326,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756233493}
   m_CullTransparentMesh: 1
+--- !u!1 &1761148606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761148608}
+  - component: {fileID: 1761148607}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1761148607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761148606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: Rose
+  persistentDataName: 
+  portrait: {fileID: 0}
+  spritePortrait: {fileID: 0}
+  barkUISettings:
+    barkUI: {fileID: 0}
+    barkUIOffset: {x: 0, y: 2, z: 0}
+  standardDialogueUISettings:
+    subtitlePanelNumber: 0
+    customSubtitlePanel: {fileID: 0}
+    customSubtitlePanelOffset: {x: 0, y: 0, z: 0}
+    menuPanelNumber: 0
+    customMenuPanel: {fileID: 0}
+    customMenuPanelOffset: {x: 0, y: 0, z: 0}
+    useMenuPanelFor: 0
+    portraitAnimatorController: {fileID: 0}
+    setSubtitleColor: 1
+    applyColorToPrependedName: 0
+    prependActorNameSeparator: ': '
+    prependActorNameFormat: '{0}{1}'
+    subtitleColor: {r: 0.8666667, g: 0.50980395, b: 0.94509804, a: 1}
+--- !u!4 &1761148608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761148606}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.624, y: 2.09, z: -6.58}
+  m_LocalScale: {x: 0.465, y: 0.465, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775488629
 GameObject:
   m_ObjectHideFlags: 0
@@ -16810,6 +16877,18 @@ MonoBehaviour:
         - m_Target: {fileID: 404982988}
           m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
           m_MethodName: HideBackground
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 404982988}
+          m_TargetAssemblyTypeName: BackToTherapist2, Assembly-CSharp
+          m_MethodName: PlayLayton
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
