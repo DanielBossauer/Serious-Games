@@ -17,7 +17,7 @@ public class StartMenu : MonoBehaviour
     {
         pauseScreen.SetActive(true);
         background = GameObject.Find("GamePoster").gameObject;
-        background.gameObject.SetActive(false);
+        background.gameObject.SetActive(true);
         sceneIndex = GetCurrentSceneIndex();
     }
 
