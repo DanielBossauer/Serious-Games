@@ -422,7 +422,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Remember if it is too much for you, we can always take a break.
+        value: Remember, if it is too much for you, we can always take a break.
         type: 0
         typeString: 
       - title: Sequence
