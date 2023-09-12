@@ -82,7 +82,7 @@ MonoBehaviour:
   - id: 3
     fields:
     - title: Name
-      value: Mum
+      value: Mom
       type: 0
       typeString: 
     - title: Pictures
@@ -1140,8 +1140,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 42
-        y: 108
+        x: 39
+        y: 110
         width: 160
         height: 30
     - id: 2
@@ -1667,7 +1667,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 70
-        y: 90
+        y: 88
         width: 160
         height: 30
     - id: 2
@@ -4583,11 +4583,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
