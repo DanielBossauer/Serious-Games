@@ -359,7 +359,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'require SendMessage(SFX1,,SoundEffectsPlayer3);
 
-          
+
 
           {{default}};'
         type: 0
