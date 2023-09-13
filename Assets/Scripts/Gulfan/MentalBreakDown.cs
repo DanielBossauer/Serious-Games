@@ -27,7 +27,6 @@ public class MentalBreakDown : MonoBehaviour
         audio2 = this.gameObject.transform.GetChild(1).GetComponent<AudioSource>();
     }
 
-
     public void LoadBackground(Sprite sprite) {
         background.GetComponent<SpriteRenderer>().sprite = sprite;
     }
@@ -84,6 +83,6 @@ public class MentalBreakDown : MonoBehaviour
     }
 
     private void Awake() {
-        background = GameObject.Find("Background");
+        background = GameObject.Find("TrueBackground");
     }
 }

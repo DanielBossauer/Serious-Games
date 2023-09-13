@@ -112,7 +112,7 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
     }
 
     private void Awake() {
-        background = GameObject.Find("Background");
+        background = GameObject.Find("TrueBackground");
     }
 
 }
