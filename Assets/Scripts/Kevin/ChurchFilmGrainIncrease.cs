@@ -36,6 +36,8 @@ public class ChurchFilmGrainIncrease : MonoBehaviour
     [SerializeField] SoundEffectsPlayer soundEffectsPlayer;
     [SerializeField] SoundEffectsPlayer2 soundEffectsPlayer2;
 
+    //[SerializeField] float volumeChanger = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {

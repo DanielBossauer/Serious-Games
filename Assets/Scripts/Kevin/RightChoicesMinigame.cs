@@ -2,6 +2,7 @@ using PixelCrushers.DialogueSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class RightChoicesMinigame : MonoBehaviour
@@ -35,6 +36,8 @@ public class RightChoicesMinigame : MonoBehaviour
 
     string[] textsChoice;
     List<string> correctTextsChoice;
+
+    [SerializeField] string[] prompts;
 
     private void Awake()
     {
@@ -103,6 +106,8 @@ public class RightChoicesMinigame : MonoBehaviour
 
     public void StartChoicesMinigame()
     {
+        UpdatePrompt(0);
+
         nextConvo = "New Conversation 3";
         correctTextsChoice = correctTextsChoice1;
         textsChoice = textsChoice1;
@@ -114,6 +119,8 @@ public class RightChoicesMinigame : MonoBehaviour
 
     public void StartChoicesMinigame2()
     {
+        UpdatePrompt(1);
+
         nextConvo = "New Conversation 6";
         correctTextsChoice = correctTextsChoice2;
         textsChoice = textsChoice2;
@@ -125,6 +132,8 @@ public class RightChoicesMinigame : MonoBehaviour
 
     public void StartChoicesMinigame3()
     {
+        UpdatePrompt(2);
+
         nextConvo = "New Conversation 7";
         correctTextsChoice = correctTextsChoice3;
         textsChoice = textsChoice3;
@@ -196,5 +205,11 @@ public class RightChoicesMinigame : MonoBehaviour
             //DialogueManager.StartConversation(nextConvo);
         }
 
+    }
+
+    void UpdatePrompt(int i)
+    {
+        canvas.transform.GetChild(1).gameObject.SetActive(true);
+        canvas.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = prompts[i];
     }
 }

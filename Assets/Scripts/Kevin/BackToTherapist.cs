@@ -39,9 +39,11 @@ public class BackToTherapist : MonoBehaviour
 
     [SerializeField] IntrusiveThoughtManager intrusiveThoughtManager;
 
-    [SerializeField] SpriteRenderer background;
+    [SerializeField] SpriteRenderer[] backgrounds;
 
     [SerializeField] SoundEffectsPlayer2 soundEffectsPlayer2;
+
+    [SerializeField] SoundEffectsPlayer3 soundEffectsPlayer3;
 
     // Start is called before the first frame update
     void Start()
@@ -508,13 +510,22 @@ public class BackToTherapist : MonoBehaviour
 
         Debug.Log("Convo10");
 
-        background.color = new Color(0.6f, 0.5f, 0.5f);
+        foreach(SpriteRenderer background in backgrounds)
+        {
+            background.color = new Color(0.6f, 0.5f, 0.5f);
+        }
+        
 
         StartCoroutine(intrusiveThoughtManager.SpawnIntrusiveThoughts());
+        PlayStatic();
         yield return new WaitForSeconds(15);
+        StopStatic();
         intrusiveThoughtManager.StopSpawning();
 
-        background.color = new Color(1f,1f,1f);
+        foreach (SpriteRenderer background in backgrounds)
+        {
+            background.color = new Color(1f, 1f, 1f);
+        }
 
         DialogueManager.StopAllConversations();
         this.GetComponent<DialogueSystemTrigger>().conversation = "New Conversation 1";
@@ -541,5 +552,15 @@ public class BackToTherapist : MonoBehaviour
     void PlaySound()
     {
         soundEffectsPlayer2.SFX2();
+    }
+
+    void PlayStatic()
+    {
+        soundEffectsPlayer3.SFX1();
+    }
+
+    void StopStatic()
+    {
+        soundEffectsPlayer3.Stop();
     }
 }

@@ -425,6 +425,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2039947947794070621, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039947947794070621, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622259531914540397, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622259531914540397, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622259531914540397, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
         type: 3}
       propertyPath: m_RootOrder
@@ -1077,6 +1102,7 @@ MonoBehaviour:
   src: {fileID: 394684115}
   audioClips:
   - {fileID: 8300000, guid: a4096b083c2fa15418d8a8748da9522b, type: 3}
+  volumeReducer: 0.5
 --- !u!82 &394684115
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1089,7 +1115,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3452,6 +3478,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 617773914}
+  intrusiveThoughtManager: {fileID: 0}
+  button: {fileID: 0}
 --- !u!4 &1287010935
 Transform:
   m_ObjectHideFlags: 0
@@ -3712,6 +3740,7 @@ MonoBehaviour:
   messenger: {fileID: 0}
   soundEffectsPlayer: {fileID: 0}
   soundEffectsPlayer2: {fileID: 0}
+  door: {fileID: 0}
 --- !u!4 &1354681047
 Transform:
   m_ObjectHideFlags: 0
@@ -5168,7 +5197,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.803
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5268,6 +5297,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 112a9eda41333cc4abacb88afa367f5d, type: 3}
   - {fileID: 8300000, guid: 75d778ac90eec2247801fc7e0c390fbd, type: 3}
+  volumeReducer: 0.5
 --- !u!4 &1775805333
 Transform:
   m_ObjectHideFlags: 0

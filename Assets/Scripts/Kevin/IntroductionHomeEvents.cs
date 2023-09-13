@@ -9,6 +9,12 @@ public class IntroductionHomeEvents : MonoBehaviour
 
     [SerializeField] GameObject objectToSpawn;
 
+    [SerializeField] IntrusiveThoughtManager intrusiveThoughtManager;
+
+    [SerializeField] GameObject button;
+
+    int indexButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,5 +55,18 @@ public class IntroductionHomeEvents : MonoBehaviour
         DialogueManager.StopAllConversations();
         Destroy(DialogueManager.instance.gameObject);
         SceneManager.LoadScene("BackToTherapist2");
+    }
+
+    public void GetOutOfBedButton()
+    {
+        if (indexButton < 4)
+        {
+            indexButton++;
+            intrusiveThoughtManager.ItsUseless();
+        }
+        else
+        {
+            button.SetActive(false);
+        }
     }
 }

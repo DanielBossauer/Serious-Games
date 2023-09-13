@@ -45,7 +45,7 @@ public class BackToTherapist2 : MonoBehaviour
     //[SerializeField] FinalNotebookArrow arrowRightInstance;
     //[SerializeField] FinalNotebookHideButton hideButtonInstance;
 
-    [SerializeField] GameObject notebookCanvas;
+    [SerializeField] Canvas notebookCanvas;
 
     int notebookCounter;
 
@@ -66,6 +66,11 @@ public class BackToTherapist2 : MonoBehaviour
     [SerializeField] SoundEffectsPlayer soundEffectsPlayer;
 
     [SerializeField] bool useStaticVariables = false;
+
+    [SerializeField] GameObject resetButton;
+
+    [SerializeField] Canvas defaultCanvas;
+    
 
     private void Awake()
     {
@@ -207,6 +212,8 @@ public class BackToTherapist2 : MonoBehaviour
 
     public void StartConvo11()
     {
+        PlayTherapist();
+        HideNotebookCanvas();
         DialogueManager.StopAllConversations();
         ShowBackground();
         StartConvo("New Conversation 11");
@@ -214,6 +221,8 @@ public class BackToTherapist2 : MonoBehaviour
 
     public void StartConvo12()
     {
+        ShowNotebookCanvas();
+        PlayLayton();
         DialogueManager.StopAllConversations();
         HideBackground();
         ShowOverviewOfProblems();
@@ -229,6 +238,7 @@ public class BackToTherapist2 : MonoBehaviour
 
     public void StartConvo14()
     {
+        HideNotebookCanvas();
         HideOverviewOfProblems();
         ShowBackground();
         DialogueManager.StopAllConversations();
@@ -238,8 +248,9 @@ public class BackToTherapist2 : MonoBehaviour
 
     public void MakeNotebooksAppear()
     {
-        
-        if(debugBool) DebugSetNotebookEntries();
+        HideResetButton();
+
+        if (debugBool) DebugSetNotebookEntries();
 
 
         //if (useStaticVariables) finalNotebooks = StaticVariables.notebookDict;
@@ -480,7 +491,8 @@ public class BackToTherapist2 : MonoBehaviour
 
         //hideButtonInstance = Instantiate(notebookHideButton);
         notebookHideButton.gameObject.transform.SetParent(notebookCanvas.transform);
-        notebookHideButton.transform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.8f, 1f);
+        notebookHideButton.transform.position = new Vector3(Screen.width * 0.4f, Screen.height * 0.8f, 1f);
+        resetButton.transform.position = new Vector3(Screen.width * 0.6f, Screen.height * 0.8f, 1f);
         lerpManagers[3].Rect = notebookHideButton.gameObject;
 
         //StartCoroutine(lerpManagers[3].FadeInOneWayCanvas());
@@ -497,8 +509,10 @@ public class BackToTherapist2 : MonoBehaviour
 
     public void ClickMakeNotebooksAppear()
     {
-        lerpManagers[0].SetSpeeds(1, 2);
 
+        lerpManagers[0].StopAllLerps();
+        lerpManagers[0].SetSpeeds(1, 2);
+        //lerpManagers[0].Rect.transform.position = new Vector3(Screen.width * 0.5f, -Screen.height * 1f, 0);
         lerpManagers[0].Rect = notebookInstancesList[notebookCounter];
 
         Vector3 endPoint = new Vector3(Screen.width * 0.5f, Screen.height * 0.25f, 0);
@@ -506,7 +520,7 @@ public class BackToTherapist2 : MonoBehaviour
         tmp.transform.position = endPoint;
         lerpManagers[0].EndPoint = tmp.transform;
 
-        Vector3 startPoint = new Vector3(Screen.width * 0.5f, 0f, 0);
+        Vector3 startPoint = new Vector3(Screen.width * 0.5f, -Screen.height * 1f, 0);
         tmp = new GameObject();
         tmp.transform.position = startPoint;
         lerpManagers[0].StartPoint = tmp.transform;
@@ -593,7 +607,7 @@ public class BackToTherapist2 : MonoBehaviour
 
             lerpManagers[0].Rect = notebookInstancesList[notebookCounter];
 
-            Vector3 endPoint = new Vector3(Screen.width, Screen.height * 0.25f, 0);
+            Vector3 endPoint = new Vector3(Screen.width*2f, Screen.height * 0.25f, 0);
             GameObject tmp = new GameObject();
             tmp.transform.position = endPoint;
             lerpManagers[0].EndPoint = tmp.transform;
@@ -654,7 +668,7 @@ public class BackToTherapist2 : MonoBehaviour
 
             lerpManagers[0].Rect = notebookInstancesList[notebookCounter];
 
-            Vector3 endPoint = new Vector3(0, Screen.height * 0.25f, 0);
+            Vector3 endPoint = new Vector3(-Screen.width*2f, Screen.height * 0.25f, 0);
             GameObject tmp = new GameObject();
             tmp.transform.position = endPoint;
             lerpManagers[0].EndPoint = tmp.transform;
@@ -715,7 +729,7 @@ public class BackToTherapist2 : MonoBehaviour
 
             lerpManagers[0].Rect = notebookInstancesList[notebookCounter];
 
-            Vector3 endPoint = new Vector3(Screen.width * 0.5f, 0f, 0);
+            Vector3 endPoint = new Vector3(Screen.width * 0.5f, -Screen.height*2f, 0f);
             GameObject tmp = new GameObject();
             tmp.transform.position = endPoint;
             lerpManagers[0].EndPoint = tmp.transform;
@@ -911,6 +925,11 @@ public class BackToTherapist2 : MonoBehaviour
         soundEffectsPlayer.SFX3();
     }
 
+    public void PlayTherapist()
+    {
+        soundEffectsPlayer.SFX1();
+    }
+
 
 
     public void UseDefaultNotes()
@@ -976,5 +995,45 @@ public class BackToTherapist2 : MonoBehaviour
 
 
         }
+    }
+
+    public void HideNotebookCanvas()
+    {
+        if (notebookCanvas.gameObject.activeInHierarchy)
+        {
+            notebookCanvas.gameObject.SetActive(false);
+        }
+        //else
+        //{
+        //notebookCanvas = Instantiate(defaultCanvas);
+        //notebookCanvas.gameObject.SetActive(true);
+        //MakeNotebooksAppear();
+        //notebookCanvas.SetActive(true);
+        //}
+    }
+
+    public void ShowNotebookCanvas()
+    {
+        if (!notebookCanvas.gameObject.activeInHierarchy)
+        {
+            notebookCanvas.gameObject.SetActive(true);
+        }
+    }
+
+    public void HideResetButton()
+    {
+        if (resetButton.activeInHierarchy)
+        {
+            resetButton.SetActive(false);
+        }
+        else
+        {
+            resetButton.SetActive(true);
+        }
+    }
+
+    public void HideEverything()
+    {
+        notebookCanvas.gameObject.SetActive(false);
     }
 }

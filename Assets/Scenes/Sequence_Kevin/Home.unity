@@ -749,7 +749,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -848,6 +848,7 @@ MonoBehaviour:
   src: {fileID: 214142804}
   audioClips:
   - {fileID: 8300000, guid: d3e724309be03e349bfeed0db14813aa, type: 3}
+  volumeReducer: 0.5
 --- !u!4 &214142806
 Transform:
   m_ObjectHideFlags: 0
@@ -1144,6 +1145,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 75d778ac90eec2247801fc7e0c390fbd, type: 3}
   - {fileID: 8300000, guid: 112a9eda41333cc4abacb88afa367f5d, type: 3}
+  volumeReducer: 0.5
 --- !u!82 &370982252
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1156,7 +1158,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2817,9 +2819,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 535574734}
-        m_TargetAssemblyTypeName: IntrusiveThoughtManager, Assembly-CSharp
-        m_MethodName: ItsUseless
+      - m_Target: {fileID: 1287010934}
+        m_TargetAssemblyTypeName: IntroductionHomeEvents, Assembly-CSharp
+        m_MethodName: GetOutOfBedButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3784,6 +3786,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 617773914}
+  intrusiveThoughtManager: {fileID: 535574734}
+  button: {fileID: 905583467}
 --- !u!4 &1287010935
 Transform:
   m_ObjectHideFlags: 0
@@ -4983,6 +4987,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2039947947794070621, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039947947794070621, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622259531914540397, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622259531914540397, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622259531914540397, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
         type: 3}
       propertyPath: m_RootOrder
@@ -5420,7 +5449,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5519,6 +5548,7 @@ MonoBehaviour:
   src: {fileID: 1701448811}
   audioClips:
   - {fileID: 8300000, guid: f231a5abc9633e7438e93ddc4d7dd3f5, type: 3}
+  volumeReducer: 0.5
 --- !u!4 &1701448813
 Transform:
   m_ObjectHideFlags: 0

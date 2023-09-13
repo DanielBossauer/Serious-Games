@@ -44,8 +44,8 @@ public class HouseDoor : MonoBehaviour, IInteractable
         }
         else if(doorAppeared)
         {
-            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+            //this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            //this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
             escapeButton.SetActive(false);
             doorAppeared = false;
         }

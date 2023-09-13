@@ -801,4 +801,9 @@ public class LerpManager : MonoBehaviour
     {
         Rect.gameObject.SetActive(true);
     }
+
+    public void StopAllLerps()
+    {
+        StopAllCoroutines();
+    }
 }

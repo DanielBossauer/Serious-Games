@@ -4399,7 +4399,7 @@ MonoBehaviour:
         width: 224.88058
         height: 144.28357
       color: {r: 1, g: 1, b: 1, a: 0.5}
-    canvasScrollPosition: {x: 572.7273, y: 2403.896}
+    canvasScrollPosition: {x: 24.675308, y: 50.649323}
     canvasZoom: 0.77
   syncInfo:
     syncActors: 0

@@ -7,6 +7,8 @@ public class SoundEffectsPlayer2 : MonoBehaviour
     [SerializeField] AudioSource src;
     [SerializeField] AudioClip[] audioClips;
 
+    [SerializeField] float volumeReducer = 0.5f;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -53,6 +55,6 @@ public class SoundEffectsPlayer2 : MonoBehaviour
     {
         var sStrings = newVolume.Split(","[0]);
         float x = float.Parse(sStrings[0]);
-        src.volume = x;
+        src.volume = x* volumeReducer;
     }
 }

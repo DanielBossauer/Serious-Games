@@ -2,6 +2,7 @@ using PixelCrushers.DialogueSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class WordsAppearingMinigame : MonoBehaviour
@@ -45,6 +46,10 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     List<string> correctTextsPhase;
 
+    [SerializeField] string[] prompts;
+
+    [SerializeField] Canvas wordsAppearingCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +73,7 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     public void StartWordsMinigamePhase1()
     {
+        UpdatePrompt(0);
         correctTextsPhase = correctTextsPhase1;
         StartWordsMinigame(1, StartWordsMinigamePhase1);
     }
@@ -122,6 +128,7 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     public void StartWordsMinigamePhase2()
     {
+        UpdatePrompt(1);
         correctTextsPhase = correctTextsPhase2;
         nextCoversation = "New Conversation 4";
         StartWordsMinigame(2, StartWordsMinigamePhase2);
@@ -129,6 +136,7 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     public void StartWordsMinigamePhase3()
     {
+        UpdatePrompt(2);
         correctTextsPhase = correctTextsPhase3;
         nextCoversation = "New Conversation 8";
         StartWordsMinigame(3, StartWordsMinigamePhase3);
@@ -136,6 +144,7 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     public void StartWordsMinigamePhase4()
     {
+        UpdatePrompt(3);
         correctTextsPhase = correctTextsPhase4;
         nextCoversation = "New Conversation 9";
         StartWordsMinigame(4, StartWordsMinigamePhase4);
@@ -224,6 +233,7 @@ public class WordsAppearingMinigame : MonoBehaviour
 
     void AllCorrectChoices()
     {
+        wordsAppearingCanvas.transform.GetChild(0).gameObject.SetActive(false);
         EndWordsMinigame();
     }
 
@@ -252,7 +262,11 @@ public class WordsAppearingMinigame : MonoBehaviour
     }
 
 
-
+    void UpdatePrompt(int i)
+    {
+        wordsAppearingCanvas.transform.GetChild(0).gameObject.SetActive(true);
+        wordsAppearingCanvas.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = prompts[i];
+    }
 
 
 }

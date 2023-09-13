@@ -100,6 +100,8 @@ public class CantGetOutOfBed : MonoBehaviour
     [SerializeField] SoundEffectsPlayer soundEffectsPlayer;
     [SerializeField] SoundEffectsPlayer2 soundEffectsPlayer2;
 
+    [SerializeField] GameObject door;
+
     private void Awake()
     {
         player2.SetActive(false);
@@ -448,6 +450,8 @@ public class CantGetOutOfBed : MonoBehaviour
 
         //clock.Stop();
 
+        ShowDoor();
+
         StartCoroutine(IntrusiveThoughtsWhileWalking());
     }
 
@@ -737,6 +741,12 @@ public class CantGetOutOfBed : MonoBehaviour
     {
         soundEffectsPlayer.Stop();
         soundEffectsPlayer2.Stop();
+    }
+
+    public void ShowDoor()
+    {
+        door.transform.GetChild(0).gameObject.SetActive(true);
+        door.transform.GetChild(1).gameObject.SetActive(true);
     }
 
 }

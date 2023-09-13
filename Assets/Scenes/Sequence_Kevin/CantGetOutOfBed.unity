@@ -4894,6 +4894,7 @@ MonoBehaviour:
   src: {fileID: 1205428564}
   audioClips:
   - {fileID: 8300000, guid: f231a5abc9633e7438e93ddc4d7dd3f5, type: 3}
+  volumeReducer: 0.5
 --- !u!82 &1205428564
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4906,9 +4907,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5656,6 +5657,7 @@ MonoBehaviour:
   messenger: {fileID: 2016611059}
   soundEffectsPlayer: {fileID: 1609575301}
   soundEffectsPlayer2: {fileID: 1205428563}
+  door: {fileID: 1766906479}
 --- !u!4 &1354681047
 Transform:
   m_ObjectHideFlags: 0
@@ -7142,6 +7144,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2039947947794070621, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039947947794070621, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622259531914540397, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622259531914540397, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622259531914540397, guid: 78950994aa5c6c248971c69626b46648,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4068363636803261716, guid: 78950994aa5c6c248971c69626b46648,
         type: 3}
       propertyPath: m_RootOrder
@@ -7724,6 +7751,7 @@ MonoBehaviour:
   src: {fileID: 1609575302}
   audioClips:
   - {fileID: 8300000, guid: d3e724309be03e349bfeed0db14813aa, type: 3}
+  volumeReducer: 0.25
 --- !u!82 &1609575302
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7736,9 +7764,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -8878,6 +8906,8 @@ MonoBehaviour:
   player: {fileID: 919132148771058329}
   m_Volume: {fileID: 832575518}
   lerper: {fileID: 954030859}
+  soundEffectsPlayer: {fileID: 0}
+  soundEffectsPlayer2: {fileID: 0}
 --- !u!1001 &1766906478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9026,6 +9056,8 @@ MonoBehaviour:
   friendConvo: 
   blackScreen: {fileID: 0}
   friend: {fileID: 0}
+  soundEffectsPlayer: {fileID: 0}
+  soundEffectsPlayer2: {fileID: 0}
 --- !u!4 &1767201121
 Transform:
   m_ObjectHideFlags: 0
