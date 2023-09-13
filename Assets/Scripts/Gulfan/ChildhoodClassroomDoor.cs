@@ -7,6 +7,9 @@ using PixelCrushers.DialogueSystem;
 public class ChildhoodClassroomDoor : MonoBehaviour
 {
     AudioSource audio;
+
+    [SerializeField] DialogueSystemTrigger extraConvo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +25,28 @@ public class ChildhoodClassroomDoor : MonoBehaviour
 
 
     public IEnumerator NextSceneWithDelay() {
-        yield return new WaitForSeconds(0.2f);
-        int sceneIndex = GetCurrentSceneIndex();
-        // Test for existing dialogue manager
-        if (DialogueManager.instance != null)
+
+        if (DialogueManager.isConversationActive)
         {
-            DialogueManager.StopAllConversations();
-            Destroy(DialogueManager.instance.gameObject);
+            
+            DialogueManager.StopAllConversations(); 
+            extraConvo.OnUse();
+            yield return new WaitForSeconds(3f);
+
         }
-        SceneManager.LoadScene(sceneIndex + 1);
+        
+            yield return new WaitForSeconds(0.2f);
+            int sceneIndex = GetCurrentSceneIndex();
+            // Test for existing dialogue manager
+            if (DialogueManager.instance != null)
+            {
+                DialogueManager.StopAllConversations();
+                Destroy(DialogueManager.instance.gameObject);
+            }
+            SceneManager.LoadScene(sceneIndex + 1);
+        
+
+        
     }
 
 
