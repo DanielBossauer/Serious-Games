@@ -5254,7 +5254,7 @@ MonoBehaviour:
   - id: 19
     fields:
     - title: Title
-      value: New Conversation 19
+      value: Szene_1_Early_School_Exit
       type: 0
       typeString: 
     - title: Description
@@ -5375,8 +5375,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I shouldn't have just walked out, but then again, does it really matter
-          what I try doing for my grades anymore?
+        value: I shouldn't have just walked out, but then again, nobody will notice
+          me being away anyway.
         type: 0
         typeString: 
       - title: Sequence
