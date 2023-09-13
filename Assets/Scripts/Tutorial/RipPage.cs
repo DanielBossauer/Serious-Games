@@ -11,6 +11,9 @@ public class RipPage : MonoBehaviour
     [SerializeField] string triggerName = "Rip";
     [SerializeField] GameObject eIcon;
 
+    [SerializeField] GameObject trigger;
+    [SerializeField] GameObject wall2;
+
     void Start() {
         audio = GetComponent<AudioSource>();
     }
@@ -20,6 +23,8 @@ public class RipPage : MonoBehaviour
         {
             animator.SetTrigger(triggerName);
             audio.Play();
+            trigger.SetActive(true);
+            wall2.SetActive(false);
         }
         eIcon.SetActive(true);
     }
