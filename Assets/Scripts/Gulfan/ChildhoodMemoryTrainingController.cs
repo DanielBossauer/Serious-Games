@@ -59,6 +59,7 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
         if (DialogueManager.instance != null)
         {
             DialogueManager.StopConversation();
+            DialogueManager.StopAllConversations();
         }
         
         if (memoryPrefab.GetComponentInChildren<GameControl>().gameSuccess) {
