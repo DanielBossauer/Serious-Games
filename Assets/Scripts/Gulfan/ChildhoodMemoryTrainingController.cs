@@ -101,7 +101,7 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
         }
 
         // Check if the second Conversation just finished
-        if (firstCoversationDone && gameDone && DialogueLua.GetVariable("Finished_Scene").AsBool) {
+        if (firstCoversationDone && gameDone && (DialogueLua.GetVariable("Finished_Scene").AsBool || !conversationActive())) {
             LoadNextScene();
         }    
 
@@ -112,7 +112,7 @@ public class ChildhoodMemoryTrainingController : MonoBehaviour
     }
 
     private void Awake() {
-        background = GameObject.Find("Background");
+        background = GameObject.Find("TrueBackground");
     }
 
 }

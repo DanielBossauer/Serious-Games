@@ -15,7 +15,7 @@ public class StartConversationThenSkipScene : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         if (!DialogueManager.IsConversationActive) {
             int sceneIndex = GetCurrentSceneIndex();
             // Test for existing dialogue manager
