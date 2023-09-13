@@ -10,5 +10,5 @@ public class newPath : MonoBehaviour
     public void triggerDialogueUtility()
     {
         obj.SplitAndEnqueue(index);
-    } 
+    }
 }
