@@ -16,6 +16,8 @@ public class HouseDoor : MonoBehaviour, IInteractable
     [SerializeField] Canvas canvas;
     [SerializeField] GameObject escapeButton;
 
+    float savedTime;
+
     public bool Interact()
     {
         //throw new System.NotImplementedException();
@@ -39,7 +41,11 @@ public class HouseDoor : MonoBehaviour, IInteractable
             this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             this.gameObject.transform.GetChild(1).gameObject.SetActive(true);
             escapeButton.SetActive(true);
-            escapeButton.transform.position = new Vector3(Random.Range(Screen.width*0.3f,Screen.width*0.7f),Random.Range(Screen.height * 0.3f, Screen.height * 0.7f),1f);
+            if (Time.realtimeSinceStartup > savedTime + 0.5f) {
+                savedTime = Time.realtimeSinceStartup;
+                escapeButton.transform.position = new Vector3(Random.Range(Screen.width * 0.3f, Screen.width * 0.7f), Random.Range(Screen.height * 0.3f, Screen.height * 0.7f), 1f);
+            }
+                
             doorAppeared = true;
         }
         else if(doorAppeared)

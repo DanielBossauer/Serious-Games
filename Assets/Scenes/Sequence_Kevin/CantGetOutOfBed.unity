@@ -7751,7 +7751,7 @@ MonoBehaviour:
   src: {fileID: 1609575302}
   audioClips:
   - {fileID: 8300000, guid: d3e724309be03e349bfeed0db14813aa, type: 3}
-  volumeReducer: 0.25
+  volumeReducer: 0.5
 --- !u!82 &1609575302
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7764,7 +7764,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
