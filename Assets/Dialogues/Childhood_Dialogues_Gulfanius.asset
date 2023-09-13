@@ -38,7 +38,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: lel
+      value: 
       type: 0
       typeString: 
     - title: Pictures
@@ -127,6 +127,28 @@ MonoBehaviour:
     fields:
     - title: Name
       value: Rose
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 6
+    fields:
+    - title: Name
+      value: 
       type: 0
       typeString: 
     - title: Pictures
@@ -248,11 +270,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -289,7 +311,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 82
-        y: 47
+        y: 46
         width: 160
         height: 30
     - id: 1
@@ -307,7 +329,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -343,8 +365,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 82
-        y: 94
+        x: 83
+        y: 96
         width: 160
         height: 30
     - id: 2
@@ -362,7 +384,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -399,7 +421,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 83
-        y: 148
+        y: 150
         width: 160
         height: 30
     - id: 3
@@ -417,7 +439,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -5193,7 +5215,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 50
+        y: 48
         width: 160
         height: 30
     - id: 1
@@ -5207,11 +5229,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
+        value: 6
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -5245,7 +5267,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 100
+        y: 99
         width: 160
         height: 30
     entryGroups: []
@@ -5254,7 +5276,7 @@ MonoBehaviour:
   - id: 19
     fields:
     - title: Title
-      value: New Conversation 19
+      value: Szene_1_Early_School_Exit
       type: 0
       typeString: 
     - title: Description
@@ -5375,8 +5397,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I shouldn't have just walked out, but then again, does it really matter
-          what I try doing for my grades anymore?
+        value: I shouldn't have just walked out, but then again, nobody will notice
+          me being away anyway.
         type: 0
         typeString: 
       - title: Sequence
@@ -5398,8 +5420,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 85
-        y: 129
+        x: 77
+        y: 111
         width: 160
         height: 30
     entryGroups: []
