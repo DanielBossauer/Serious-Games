@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using static PixelCrushers.DialogueSystem.DisplaySettings.SubtitleSettings;
 
 public class PlayerChurchCatastrophicJoke : MonoBehaviour
 {
@@ -185,5 +186,13 @@ public class PlayerChurchCatastrophicJoke : MonoBehaviour
     {
         soundEffectsPlayer.SFX1();
         soundEffectsPlayer2.Stop();
+    }
+
+    public void NoContinueButton()
+    {
+        
+        DialogueManager.displaySettings.subtitleSettings.continueButton = ContinueButtonMode.Never;
+
+
     }
 }
